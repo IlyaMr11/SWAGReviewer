@@ -1,0 +1,368 @@
+:root {
+  --bg-0: #f8f8f2;
+  --bg-1: #e9efe7;
+  --bg-2: #e0f2ef;
+  --panel: rgba(255, 255, 255, 0.78);
+  --stroke: rgba(16, 40, 46, 0.15);
+  --ink: #132f36;
+  --muted: #4e656d;
+  --accent: #0f766e;
+  --accent-2: #d97706;
+  --danger: #c2410c;
+  --ok: #0f766e;
+  --warn: #b45309;
+  --shadow: 0 18px 50px rgba(19, 47, 54, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(249, 115, 22, 0.17), transparent),
+    radial-gradient(900px 500px at 100% 0%, rgba(16, 185, 129, 0.2), transparent),
+    linear-gradient(150deg, var(--bg-0), var(--bg-1) 52%, var(--bg-2));
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 32px 18px 52px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin: 0;
+  font-size: 12px;
+}
+
+h1 {
+  margin: 8px 0 10px;
+  font-size: clamp(1.65rem, 4vw, 2.6rem);
+  line-height: 1.08;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 1.08rem;
+}
+
+h3 {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+}
+
+.subtle {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.status-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-family: "IBM Plex Mono", monospace;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.pill.ok {
+  color: var(--ok);
+}
+
+.pill.warn {
+  color: var(--warn);
+}
+
+.error-banner {
+  margin: 0 0 16px;
+  border: 1px solid rgba(194, 65, 12, 0.34);
+  background: rgba(254, 215, 170, 0.65);
+  color: #9a3412;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.panel {
+  border: 1px solid var(--stroke);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  border-radius: 16px;
+  padding: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.panel.wide {
+  grid-column: span 2;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+}
+
+label.compact {
+  margin: 0;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 9px;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  background: linear-gradient(140deg, var(--accent), #0ea5a0);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 600;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.ghost {
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--ink);
+  border: 1px solid var(--stroke);
+}
+
+button.tiny {
+  padding: 7px 10px;
+  font-size: 0.82rem;
+}
+
+button.danger {
+  background: linear-gradient(145deg, var(--danger), #ea580c);
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.chip {
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--ink);
+  border: 1px solid var(--stroke);
+}
+
+.chip.active {
+  background: linear-gradient(145deg, #14b8a6, #0f766e);
+  color: white;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid rgba(19, 47, 54, 0.1);
+  vertical-align: top;
+  font-size: 0.92rem;
+}
+
+td p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+a {
+  color: #0b7285;
+}
+
+.severity {
+  display: inline-flex;
+  padding: 3px 7px;
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.severity.info { background: rgba(56, 189, 248, 0.2); color: #0369a1; }
+.severity.low { background: rgba(20, 184, 166, 0.2); color: #0f766e; }
+.severity.medium { background: rgba(249, 115, 22, 0.2); color: #c2410c; }
+.severity.high { background: rgba(234, 88, 12, 0.23); color: #9a3412; }
+.severity.critical { background: rgba(185, 28, 28, 0.2); color: #991b1b; }
+
+.feedback-list {
+  display: grid;
+  gap: 8px;
+}
+
+.feedback-item {
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.feedback-item p {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+}
+
+.kv p,
+.analytics-grid p {
+  margin: 0 0 6px;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.analytics-grid article {
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.log-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.log-list li {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  align-items: start;
+  gap: 8px;
+  border-bottom: 1px dashed rgba(19, 47, 54, 0.14);
+  padding-bottom: 6px;
+}
+
+.log-list span {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.77rem;
+  color: var(--muted);
+}
+
+.log-list p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.reveal {
+  animation: fadeIn 420ms ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel.wide {
+    grid-column: auto;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .log-list li {
+    grid-template-columns: 1fr;
+  }
+}

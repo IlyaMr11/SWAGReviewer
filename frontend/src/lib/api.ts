@@ -1,0 +1,148 @@
+import type {
+  AnalysisJob,
+  AnalysisJobCreateResponse,
+  CursorPage,
+  FeedbackSummary,
+  GithubPr,
+  GithubRepo,
+  GithubSession,
+  PublishedComment,
+  PublishMode,
+  Suggestion,
+  SuggestionScope,
+  SyncResponse,
+} from "../types";
+
+export interface ApiClientConfig {
+  baseUrl: string;
+  serviceToken?: string;
+}
+
+export class ApiClient {
+  constructor(private readonly config: ApiClientConfig) {}
+
+  private async request<T>(path: string, init: RequestInit = {}): Promise<T> {
+    const headers = new Headers(init.headers ?? {});
+
+    if (!headers.has("Content-Type") && init.body) {
+      headers.set("Content-Type", "application/json");
+    }
+
+    if (this.config.serviceToken) {
+      headers.set("Authorization", `Bearer ${this.config.serviceToken}`);
+    }
+
+    const response = await fetch(`${this.config.baseUrl}${path}`, {
+      ...init,
+      headers,
+    });
+
+    if (response.status === 204) {
+      return undefined as T;
+    }
+
+    const text = await response.text();
+    const data = text ? JSON.parse(text) : null;
+
+    if (!response.ok) {
+      const message = data?.error?.message ?? `Request failed: ${response.status}`;
+      throw new Error(message);
+    }
+
+    return data as T;
+  }
+
+  createGithubSession(token: string) {
+    return this.request<GithubSession>("/github/session", {
+      method: "POST",
+      body: JSON.stringify({ token }),
+    });
+  }
+
+  deleteGithubSession(sessionId: string) {
+    return this.request<void>(`/github/session/${sessionId}`, {
+      method: "DELETE",
+    });
+  }
+
+  getGithubRepos(sessionId: string, cursor?: string | null) {
+    const search = new URLSearchParams();
+    if (cursor) {
+      search.set("cursor", cursor);
+    }
+    return this.request<CursorPage<GithubRepo>>(
+      `/github/session/${sessionId}/repos${search.size ? `?${search.toString()}` : ""}`,
+    );
+  }
+
+  getGithubPrs(sessionId: string, owner: string, repo: string, state: "open" | "closed" | "all" = "open") {
+    return this.request<{ items: GithubPr[]; count: number }>(
+      `/github/session/${sessionId}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/prs?state=${state}`,
+    );
+  }
+
+  syncGithubPr(sessionId: string, owner: string, repo: string, prNumber: number) {
+    return this.request<SyncResponse>(
+      `/github/session/${sessionId}/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/prs/${prNumber}/sync`,
+      {
+        method: "POST",
+      },
+    );
+  }
+
+  createAnalysisJob(prId: string, body: { snapshotId: string; scope: SuggestionScope[]; maxComments: number }) {
+    return this.request<AnalysisJobCreateResponse>(`/prs/${prId}/analysis-jobs`, {
+      method: "POST",
+      body: JSON.stringify(body),
+    });
+  }
+
+  getAnalysisJob(jobId: string) {
+    return this.request<AnalysisJob>(`/analysis-jobs/${jobId}`);
+  }
+
+  getAnalysisResults(jobId: string, cursor?: string | null) {
+    const search = new URLSearchParams();
+    if (cursor) {
+      search.set("cursor", cursor);
+    }
+    return this.request<CursorPage<Suggestion>>(
+      `/analysis-jobs/${jobId}/results${search.size ? `?${search.toString()}` : ""}`,
+    );
+  }
+
+  publishSuggestions(prId: string, body: { jobId: string; mode: PublishMode; dryRun: boolean }) {
+    return this.request<{
+      publishRunId: string;
+      publishedCount: number;
+      errors: string[];
+      comments: PublishedComment[];
+      idempotent: boolean;
+    }>(`/prs/${prId}/publish`, {
+      method: "POST",
+      body: JSON.stringify(body),
+    });
+  }
+
+  getPrComments(prId: string, cursor?: string | null) {
+    const search = new URLSearchParams();
+    if (cursor) {
+      search.set("cursor", cursor);
+    }
+
+    return this.request<CursorPage<PublishedComment>>(
+      `/prs/${prId}/comments${search.size ? `?${search.toString()}` : ""}`,
+    );
+  }
+
+  putFeedback(commentId: string, body: { userId: string; vote: "up" | "down"; reason?: string }) {
+    return this.request(`/comments/${commentId}/feedback`, {
+      method: "PUT",
+      body: JSON.stringify(body),
+    });
+  }
+
+  getFeedbackSummary(prId: string) {
+    return this.request<FeedbackSummary>(`/prs/${prId}/feedback-summary`);
+  }
+}
