@@ -1,13 +1,17 @@
 import type {
   AnalysisJob,
+  AnalysisJobEvent,
   AnalysisJobCreateResponse,
   CursorPage,
   FeedbackSummary,
   GithubPr,
   GithubRepo,
   GithubSession,
+  PrDiffResponse,
+  PrMetaResponse,
   PublishedComment,
   PublishMode,
+  RepoRunSummary,
   Suggestion,
   SuggestionScope,
   SyncResponse,
@@ -111,6 +115,22 @@ export class ApiClient {
     );
   }
 
+  getAnalysisJobEvents(jobId: string, cursor?: string | null) {
+    const search = new URLSearchParams();
+    if (cursor) {
+      search.set("cursor", cursor);
+    }
+    return this.request<CursorPage<AnalysisJobEvent>>(
+      `/analysis-jobs/${jobId}/events${search.size ? `?${search.toString()}` : ""}`,
+    );
+  }
+
+  cancelAnalysisJob(jobId: string) {
+    return this.request<AnalysisJob>(`/analysis-jobs/${jobId}/cancel`, {
+      method: "POST",
+    });
+  }
+
   publishSuggestions(prId: string, body: { jobId: string; mode: PublishMode; dryRun: boolean }) {
     return this.request<{
       publishRunId: string;
@@ -144,5 +164,28 @@ export class ApiClient {
 
   getFeedbackSummary(prId: string) {
     return this.request<FeedbackSummary>(`/prs/${prId}/feedback-summary`);
+  }
+
+  getPr(prId: string) {
+    return this.request<PrMetaResponse>(`/prs/${prId}`);
+  }
+
+  getPrDiff(prId: string, filePath?: string) {
+    const search = new URLSearchParams();
+    if (filePath) {
+      search.set("file", filePath);
+    }
+
+    return this.request<PrDiffResponse>(`/prs/${prId}/diff${search.size ? `?${search.toString()}` : ""}`);
+  }
+
+  getRepoRuns(repoId: string, cursor?: string | null) {
+    const search = new URLSearchParams();
+    if (cursor) {
+      search.set("cursor", cursor);
+    }
+    return this.request<CursorPage<RepoRunSummary>>(
+      `/repos/${repoId}/runs${search.size ? `?${search.toString()}` : ""}`,
+    );
   }
 }

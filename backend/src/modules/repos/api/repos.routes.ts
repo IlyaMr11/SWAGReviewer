@@ -14,5 +14,15 @@ export function createReposRoutes() {
     });
   });
 
+  router.get("/repos/:repoId/runs", (req, res) => {
+    const page = store.listRepoRuns(String(req.params.repoId), req.query.cursor, req.query.limit);
+
+    res.status(200).json({
+      items: page.items,
+      nextCursor: page.nextCursor,
+      limit: page.limit,
+    });
+  });
+
   return router;
 }

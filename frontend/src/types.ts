@@ -1,5 +1,6 @@
 export type SuggestionScope = "security" | "style" | "bugs" | "performance";
 export type PublishMode = "review_comments" | "issue_comments";
+export type WorkspaceStep = "pr" | "params" | "job" | "results" | "publish" | "feedback" | "history";
 
 export interface GithubSession {
   sessionId: string;
@@ -68,6 +69,18 @@ export interface AnalysisJob {
     warnings: string[];
   };
   errorMessage: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface AnalysisJobEvent {
+  id: string;
+  jobId: string;
+  level: "info" | "warn" | "error";
+  message: string;
+  filePath: string | null;
+  meta: Record<string, unknown> | null;
+  createdAt: string;
 }
 
 export interface Citation {
@@ -132,6 +145,72 @@ export interface FeedbackSummary {
     down: number;
     score: number;
   }>;
+}
+
+export interface PullRequestMeta {
+  id: string;
+  repoId: string;
+  number: number;
+  title: string;
+  state: "open" | "closed" | "merged";
+  authorLogin: string;
+  url: string;
+  baseSha: string;
+  headSha: string;
+  latestSnapshotId: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SnapshotMeta {
+  id: string;
+  prId: string;
+  commitSha: string;
+  baseSha: string;
+  headSha: string;
+  filesCount: number;
+  additions: number;
+  deletions: number;
+  createdAt: string;
+}
+
+export interface PrMetaResponse {
+  pr: PullRequestMeta;
+  latestSnapshot: SnapshotMeta | null;
+}
+
+export interface SnapshotDiffFile {
+  id: string;
+  snapshotId: string;
+  path: string;
+  status: "added" | "modified" | "removed" | "renamed";
+  language: string;
+  additions: number;
+  deletions: number;
+  patch: string;
+  isTooLarge: boolean;
+  createdAt: string;
+}
+
+export interface PrDiffResponse {
+  items: SnapshotDiffFile[];
+  count: number;
+}
+
+export interface RepoRunSummary {
+  runId: string;
+  jobId: string;
+  repoId: string;
+  repoFullName: string;
+  prId: string;
+  prNumber: number;
+  prTitle: string;
+  status: AnalysisJob["status"];
+  totalSuggestions: number;
+  publishedComments: number;
+  feedbackScore: number;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface CursorPage<T> {

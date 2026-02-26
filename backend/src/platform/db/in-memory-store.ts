@@ -8,6 +8,8 @@ import { countPatchChanges, detectLanguage, parseUnifiedDiff } from "../../modul
 import { HttpError } from "../../shared/errors/http-error.js";
 import type {
   AnalysisJob,
+  AnalysisJobEvent,
+  AnalysisJobEventLevel,
   AnalysisJobInput,
   CursorPage,
   FeedbackVote,
@@ -19,6 +21,7 @@ import type {
   PublishedComment,
   PullRequest,
   Repository,
+  RepoRunSummary,
   SnapshotFile,
   Suggestion,
   SuggestionCategory,
@@ -52,6 +55,8 @@ export class InMemoryStore {
   private readonly snapshotFilesBySnapshot = new Map<string, string[]>();
   private readonly jobs = new Map<string, AnalysisJob>();
   private readonly jobsByPr = new Map<string, string[]>();
+  private readonly jobEventsByJob = new Map<string, string[]>();
+  private readonly jobEvents = new Map<string, AnalysisJobEvent>();
   private readonly suggestions = new Map<string, Suggestion>();
   private readonly suggestionsByJob = new Map<string, string[]>();
   private readonly comments = new Map<string, PublishedComment>();
@@ -436,7 +441,9 @@ export class InMemoryStore {
 
     this.jobs.set(job.id, job);
     this.jobsByPr.get(prId)?.push(job.id);
+    this.jobEventsByJob.set(job.id, []);
     this.suggestionsByJob.set(job.id, []);
+    this.appendJobEvent(job.id, "info", "Задача анализа создана и поставлена в очередь.");
 
     await this.runAnalysisJob(job.id, files);
 
@@ -451,6 +458,21 @@ export class InMemoryStore {
 
     job.status = "running";
     job.updatedAt = this.now();
+    this.appendJobEvent(job.id, "info", "Задача анализа запущена.");
+
+    for (const [index, file] of files.entries()) {
+      if (file.isTooLarge) {
+        this.appendJobEvent(job.id, "warn", "Файл пропущен из-за лимита размера patch.", file.path, {
+          index: index + 1,
+          total: files.length,
+        });
+      } else {
+        this.appendJobEvent(job.id, "info", "Файл передан в анализ.", file.path, {
+          index: index + 1,
+          total: files.length,
+        });
+      }
+    }
 
     const ragRequest: RagAnalyzeRequest = {
       jobId: job.id,
@@ -523,10 +545,16 @@ export class InMemoryStore {
 
       job.status = "done";
       job.updatedAt = this.now();
+      this.appendJobEvent(job.id, "info", "Анализ завершен.", null, {
+        suggestions: job.summary.totalSuggestions,
+        partialFailures: job.summary.partialFailures,
+        filesSkipped: job.summary.filesSkipped,
+      });
     } catch (error) {
       job.status = "failed";
       job.errorMessage = error instanceof Error ? error.message : "Failed to process analysis job";
       job.updatedAt = this.now();
+      this.appendJobEvent(job.id, "error", job.errorMessage);
     }
   }
 
@@ -558,7 +586,19 @@ export class InMemoryStore {
 
     job.status = "canceled";
     job.updatedAt = this.now();
+    this.appendJobEvent(job.id, "warn", "Задача отменена пользователем.");
     return job;
+  }
+
+  listJobEvents(jobId: string, cursor: unknown, limit: unknown): CursorPage<AnalysisJobEvent> {
+    this.getJob(jobId);
+    const ids = this.jobEventsByJob.get(jobId) ?? [];
+    const events = ids
+      .map((id) => this.jobEvents.get(id))
+      .filter((item): item is AnalysisJobEvent => Boolean(item))
+      .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+
+    return paginate(events, cursor, limit);
   }
 
   listJobSuggestions(jobId: string, cursor: unknown, limit: unknown): CursorPage<Suggestion> {
@@ -682,6 +722,53 @@ export class InMemoryStore {
       .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
 
     return paginate(comments, cursor, limit);
+  }
+
+  listRepoRuns(repoId: string, cursor: unknown, limit: unknown): CursorPage<RepoRunSummary> {
+    const repo = this.getRepo(repoId);
+    const prs = [...this.pullRequests.values()].filter((item) => item.repoId === repo.id);
+    const runs: RepoRunSummary[] = [];
+
+    for (const pr of prs) {
+      const jobIds = this.jobsByPr.get(pr.id) ?? [];
+      for (const jobId of jobIds) {
+        const job = this.jobs.get(jobId);
+        if (!job) {
+          continue;
+        }
+
+        const suggestionCount = (this.suggestionsByJob.get(job.id) ?? []).length;
+        const comments = [...this.comments.values()].filter((comment) => comment.jobId === job.id);
+
+        let feedbackScore = 0;
+        for (const comment of comments) {
+          const votes = (this.feedbackByComment.get(comment.id) ?? [])
+            .map((id) => this.feedbackVotes.get(id))
+            .filter((item): item is FeedbackVote => Boolean(item));
+
+          feedbackScore += votes.reduce((acc, vote) => acc + (vote.vote === "up" ? 1 : -1), 0);
+        }
+
+        runs.push({
+          runId: job.id,
+          jobId: job.id,
+          repoId: repo.id,
+          repoFullName: repo.fullName,
+          prId: pr.id,
+          prNumber: pr.number,
+          prTitle: pr.title,
+          status: job.status,
+          totalSuggestions: suggestionCount,
+          publishedComments: comments.length,
+          feedbackScore,
+          createdAt: job.createdAt,
+          updatedAt: job.updatedAt,
+        });
+      }
+    }
+
+    runs.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+    return paginate(runs, cursor, limit);
   }
 
   upsertFeedback(commentId: string, userId: string, vote: FeedbackVoteValue, reason?: string): FeedbackVote {
@@ -824,6 +911,32 @@ export class InMemoryStore {
         ...value,
       })),
     };
+  }
+
+  private appendJobEvent(
+    jobId: string,
+    level: AnalysisJobEventLevel,
+    message: string,
+    filePath?: string | null,
+    meta?: Record<string, unknown>,
+  ) {
+    const now = this.now();
+    const event: AnalysisJobEvent = {
+      id: `evt_${randomUUID()}`,
+      jobId,
+      level,
+      message,
+      filePath: filePath ?? null,
+      meta: meta ?? null,
+      createdAt: now,
+    };
+
+    this.jobEvents.set(event.id, event);
+
+    if (!this.jobEventsByJob.has(jobId)) {
+      this.jobEventsByJob.set(jobId, []);
+    }
+    this.jobEventsByJob.get(jobId)?.push(event.id);
   }
 }
 

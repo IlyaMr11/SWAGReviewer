@@ -115,6 +115,18 @@ export interface AnalysisJob {
   updatedAt: string;
 }
 
+export type AnalysisJobEventLevel = "info" | "warn" | "error";
+
+export interface AnalysisJobEvent {
+  id: string;
+  jobId: string;
+  level: AnalysisJobEventLevel;
+  message: string;
+  filePath: string | null;
+  meta: Record<string, unknown> | null;
+  createdAt: string;
+}
+
 export interface Citation {
   sourceId: string;
   title: string;
@@ -196,4 +208,20 @@ export interface AnalysisJobInput {
   scope: SuggestionCategory[];
   files?: string[];
   maxComments: number;
+}
+
+export interface RepoRunSummary {
+  runId: string;
+  jobId: string;
+  repoId: string;
+  repoFullName: string;
+  prId: string;
+  prNumber: number;
+  prTitle: string;
+  status: JobStatus;
+  totalSuggestions: number;
+  publishedComments: number;
+  feedbackScore: number;
+  createdAt: string;
+  updatedAt: string;
 }

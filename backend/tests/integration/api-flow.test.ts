@@ -40,6 +40,9 @@ test("full backend flow: sync -> job -> results -> publish -> feedback", async (
   const resultsResponse = await request(app).get(`/analysis-jobs/${jobId}/results`).expect(200);
   assert.ok(resultsResponse.body.items.length > 0);
 
+  const eventsResponse = await request(app).get(`/analysis-jobs/${jobId}/events`).expect(200);
+  assert.ok(eventsResponse.body.items.length > 0);
+
   const publishResponse = await request(app)
     .post(`/prs/${prId}/publish`)
     .send({
@@ -66,4 +69,8 @@ test("full backend flow: sync -> job -> results -> publish -> feedback", async (
 
   const summaryResponse = await request(app).get(`/prs/${prId}/feedback-summary`).expect(200);
   assert.equal(summaryResponse.body.overall.up, 1);
+
+  const runsResponse = await request(app).get(`/repos/${repoId}/runs`).expect(200);
+  assert.ok(runsResponse.body.items.length > 0);
+  assert.equal(runsResponse.body.items[0].jobId, jobId);
 });

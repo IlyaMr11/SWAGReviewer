@@ -68,6 +68,16 @@ export function createAnalysisJobRoutes() {
     });
   });
 
+  router.get("/analysis-jobs/:jobId/events", (req, res) => {
+    const page = store.listJobEvents(String(req.params.jobId), req.query.cursor, req.query.limit);
+
+    res.status(200).json({
+      items: page.items,
+      nextCursor: page.nextCursor,
+      limit: page.limit,
+    });
+  });
+
   return router;
 }
 
