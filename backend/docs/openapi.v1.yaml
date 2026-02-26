@@ -1,0 +1,1061 @@
+openapi: 3.1.0
+info:
+  title: SWAGReviewer Backend API
+  version: 1.0.0
+  description: |
+    MVP backend contract for AI-assisted pull request review.
+    Scope: GitHub App integration, PR snapshots, analysis jobs, publishing, feedback.
+servers:
+  - url: http://localhost:4000
+security:
+  - bearerAuth: []
+tags:
+  - name: Health
+  - name: Integrations
+  - name: Repos
+  - name: Pull Requests
+  - name: Snapshots
+  - name: Analysis Jobs
+  - name: Publishing
+  - name: Feedback
+paths:
+  /healthz:
+    get:
+      tags: [Health]
+      security: []
+      summary: Liveness probe
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    const: ok
+                required: [status]
+
+  /readyz:
+    get:
+      tags: [Health]
+      security: []
+      summary: Readiness probe
+      responses:
+        '200':
+          description: Ready
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    const: ready
+                required: [status]
+
+  /webhooks/github:
+    post:
+      tags: [Integrations]
+      security: []
+      summary: GitHub webhook ingest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  received:
+                    type: boolean
+                  event:
+                    type: string
+                  deliveryId:
+                    type: string
+                  processedAt:
+                    type: string
+                    format: date-time
+                required: [received, event, deliveryId, processedAt]
+        '401':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /integrations/github/install:
+    post:
+      tags: [Integrations]
+      summary: Register GitHub installation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                installation_id:
+                  type: integer
+                account_login:
+                  type: string
+              required: [installation_id]
+      responses:
+        '201':
+          description: Installation upserted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  installation:
+                    $ref: '#/components/schemas/GithubInstallation'
+                required: [installation]
+        '400':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /repos:
+    get:
+      tags: [Repos]
+      summary: List available repositories
+      parameters:
+        - $ref: '#/components/parameters/CursorParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Repository page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RepositoriesPage'
+
+  /repos/{repoId}/prs/{prNumber}/sync:
+    post:
+      tags: [Pull Requests]
+      summary: Pull PR metadata/files/diff and store snapshot
+      parameters:
+        - $ref: '#/components/parameters/RepoIdParam'
+        - name: prNumber
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SyncPrRequest'
+      responses:
+        '200':
+          description: Synced
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  prId:
+                    type: string
+                  snapshotId:
+                    type: string
+                  counts:
+                    $ref: '#/components/schemas/SnapshotCounts'
+                  idempotent:
+                    type: boolean
+                required: [prId, snapshotId, counts, idempotent]
+        '400':
+          $ref: '#/components/responses/ErrorResponse'
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+        '422':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /prs/{prId}:
+    get:
+      tags: [Pull Requests]
+      summary: Get PR metadata and latest snapshot
+      parameters:
+        - $ref: '#/components/parameters/PrIdParam'
+      responses:
+        '200':
+          description: PR details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pr:
+                    $ref: '#/components/schemas/PullRequest'
+                  latestSnapshot:
+                    anyOf:
+                      - $ref: '#/components/schemas/PRSnapshot'
+                      - type: 'null'
+                required: [pr, latestSnapshot]
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /prs/{prId}/files:
+    get:
+      tags: [Pull Requests]
+      summary: List files from latest snapshot
+      parameters:
+        - $ref: '#/components/parameters/PrIdParam'
+        - $ref: '#/components/parameters/CursorParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: File page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SnapshotFilesPage'
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /prs/{prId}/diff:
+    get:
+      tags: [Pull Requests]
+      summary: Get normalized diff from latest snapshot
+      parameters:
+        - $ref: '#/components/parameters/PrIdParam'
+        - name: file
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Diff payload
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SnapshotFile'
+                  count:
+                    type: integer
+                    minimum: 0
+                required: [items, count]
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /prs/{prId}/snapshots:
+    get:
+      tags: [Snapshots]
+      summary: List snapshots for PR
+      parameters:
+        - $ref: '#/components/parameters/PrIdParam'
+      responses:
+        '200':
+          description: Snapshot list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/PRSnapshot'
+                  count:
+                    type: integer
+                    minimum: 0
+                required: [items, count]
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /snapshots/{snapshotId}:
+    get:
+      tags: [Snapshots]
+      summary: Get snapshot and file payload
+      parameters:
+        - $ref: '#/components/parameters/SnapshotIdParam'
+      responses:
+        '200':
+          description: Snapshot payload
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  snapshot:
+                    $ref: '#/components/schemas/PRSnapshot'
+                  files:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SnapshotFile'
+                  counts:
+                    $ref: '#/components/schemas/SnapshotCounts'
+                required: [snapshot, files, counts]
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /prs/{prId}/analysis-jobs:
+    post:
+      tags: [Analysis Jobs]
+      summary: Create and start analysis job
+      parameters:
+        - $ref: '#/components/parameters/PrIdParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateAnalysisJobRequest'
+      responses:
+        '201':
+          description: Job created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobId:
+                    type: string
+                  status:
+                    $ref: '#/components/schemas/JobStatus'
+                  progress:
+                    $ref: '#/components/schemas/JobProgress'
+                required: [jobId, status, progress]
+        '400':
+          $ref: '#/components/responses/ErrorResponse'
+        '422':
+          $ref: '#/components/responses/ErrorResponse'
+
+    get:
+      tags: [Analysis Jobs]
+      summary: List analysis jobs for PR
+      parameters:
+        - $ref: '#/components/parameters/PrIdParam'
+        - $ref: '#/components/parameters/CursorParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Job page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalysisJobsPage'
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /analysis-jobs/{jobId}:
+    get:
+      tags: [Analysis Jobs]
+      summary: Get analysis job status
+      parameters:
+        - $ref: '#/components/parameters/JobIdParam'
+      responses:
+        '200':
+          description: Analysis job
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalysisJob'
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /analysis-jobs/{jobId}/cancel:
+    post:
+      tags: [Analysis Jobs]
+      summary: Cancel analysis job
+      parameters:
+        - $ref: '#/components/parameters/JobIdParam'
+      responses:
+        '200':
+          description: Canceled (or terminal status)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalysisJob'
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /analysis-jobs/{jobId}/results:
+    get:
+      tags: [Analysis Jobs]
+      summary: Get analysis suggestions
+      parameters:
+        - $ref: '#/components/parameters/JobIdParam'
+        - $ref: '#/components/parameters/CursorParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Suggestion page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuggestionsPage'
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /prs/{prId}/publish:
+    post:
+      tags: [Publishing]
+      summary: Publish job suggestions to GitHub PR
+      parameters:
+        - $ref: '#/components/parameters/PrIdParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PublishRequest'
+      responses:
+        '200':
+          description: Publish result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublishResponse'
+        '400':
+          $ref: '#/components/responses/ErrorResponse'
+        '422':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /prs/{prId}/comments:
+    get:
+      tags: [Publishing]
+      summary: List published comments for PR
+      parameters:
+        - $ref: '#/components/parameters/PrIdParam'
+        - $ref: '#/components/parameters/CursorParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Comment page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommentsPage'
+
+  /comments/{commentId}/feedback:
+    put:
+      tags: [Feedback]
+      summary: Upsert feedback for a comment
+      parameters:
+        - $ref: '#/components/parameters/CommentIdParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpsertFeedbackRequest'
+      responses:
+        '200':
+          description: Upserted feedback
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeedbackVote'
+        '400':
+          $ref: '#/components/responses/ErrorResponse'
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+    get:
+      tags: [Feedback]
+      summary: Get feedback votes for comment
+      parameters:
+        - $ref: '#/components/parameters/CommentIdParam'
+      responses:
+        '200':
+          description: Feedback details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  comment:
+                    $ref: '#/components/schemas/PublishedComment'
+                  votes:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/FeedbackVote'
+                  totals:
+                    $ref: '#/components/schemas/FeedbackTotals'
+                required: [comment, votes, totals]
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+  /prs/{prId}/feedback-summary:
+    get:
+      tags: [Feedback]
+      summary: Aggregated feedback across PR
+      parameters:
+        - $ref: '#/components/parameters/PrIdParam'
+      responses:
+        '200':
+          description: Feedback summary
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeedbackSummary'
+        '404':
+          $ref: '#/components/responses/ErrorResponse'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+
+  parameters:
+    CursorParam:
+      name: cursor
+      in: query
+      required: false
+      schema:
+        type: string
+    LimitParam:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 200
+        default: 50
+    RepoIdParam:
+      name: repoId
+      in: path
+      required: true
+      schema:
+        type: string
+    PrIdParam:
+      name: prId
+      in: path
+      required: true
+      schema:
+        type: string
+    SnapshotIdParam:
+      name: snapshotId
+      in: path
+      required: true
+      schema:
+        type: string
+    JobIdParam:
+      name: jobId
+      in: path
+      required: true
+      schema:
+        type: string
+    CommentIdParam:
+      name: commentId
+      in: path
+      required: true
+      schema:
+        type: string
+
+  responses:
+    ErrorResponse:
+      description: API error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details: {}
+          required: [code, message]
+      required: [error]
+
+    GithubInstallation:
+      type: object
+      properties:
+        id: { type: string }
+        installationId: { type: integer }
+        accountLogin: { type: string }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+      required: [id, installationId, accountLogin, createdAt, updatedAt]
+
+    Repository:
+      type: object
+      properties:
+        id: { type: string }
+        provider:
+          type: string
+          enum: [github]
+        installationId: { type: string }
+        owner: { type: string }
+        name: { type: string }
+        fullName: { type: string }
+        defaultBranch: { type: string }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+      required: [id, provider, installationId, owner, name, fullName, defaultBranch, createdAt, updatedAt]
+
+    PullRequest:
+      type: object
+      properties:
+        id: { type: string }
+        repoId: { type: string }
+        number: { type: integer, minimum: 1 }
+        title: { type: string }
+        state:
+          type: string
+          enum: [open, closed, merged]
+        authorLogin: { type: string }
+        url: { type: string }
+        baseSha: { type: string }
+        headSha: { type: string }
+        latestSnapshotId:
+          anyOf:
+            - type: string
+            - type: 'null'
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+      required: [id, repoId, number, title, state, authorLogin, url, baseSha, headSha, latestSnapshotId, createdAt, updatedAt]
+
+    SnapshotCounts:
+      type: object
+      properties:
+        files: { type: integer, minimum: 0 }
+        additions: { type: integer, minimum: 0 }
+        deletions: { type: integer, minimum: 0 }
+      required: [files, additions, deletions]
+
+    Hunk:
+      type: object
+      properties:
+        oldStart: { type: integer, minimum: 0 }
+        oldLines: { type: integer, minimum: 0 }
+        newStart: { type: integer, minimum: 0 }
+        newLines: { type: integer, minimum: 0 }
+        header: { type: string }
+      required: [oldStart, oldLines, newStart, newLines, header]
+
+    LineMapEntry:
+      type: object
+      properties:
+        patchLine: { type: integer, minimum: 1 }
+        oldLine:
+          anyOf:
+            - type: integer
+            - type: 'null'
+        newLine:
+          anyOf:
+            - type: integer
+            - type: 'null'
+        type:
+          type: string
+          enum: [add, del, ctx]
+      required: [patchLine, oldLine, newLine, type]
+
+    SnapshotFile:
+      type: object
+      properties:
+        id: { type: string }
+        snapshotId: { type: string }
+        path: { type: string }
+        status:
+          type: string
+          enum: [added, modified, removed, renamed]
+        language: { type: string }
+        additions: { type: integer, minimum: 0 }
+        deletions: { type: integer, minimum: 0 }
+        patch: { type: string }
+        hunks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Hunk'
+        lineMap:
+          type: array
+          items:
+            $ref: '#/components/schemas/LineMapEntry'
+        patchHash: { type: string }
+        isTooLarge: { type: boolean }
+        createdAt: { type: string, format: date-time }
+      required: [id, snapshotId, path, status, language, additions, deletions, patch, patchHash, isTooLarge, createdAt]
+
+    PRSnapshot:
+      type: object
+      properties:
+        id: { type: string }
+        prId: { type: string }
+        commitSha: { type: string }
+        baseSha: { type: string }
+        headSha: { type: string }
+        filesCount: { type: integer, minimum: 0 }
+        additions: { type: integer, minimum: 0 }
+        deletions: { type: integer, minimum: 0 }
+        createdAt: { type: string, format: date-time }
+      required: [id, prId, commitSha, baseSha, headSha, filesCount, additions, deletions, createdAt]
+
+    JobStatus:
+      type: string
+      enum: [queued, running, done, failed, canceled]
+
+    JobProgress:
+      type: object
+      properties:
+        filesDone: { type: integer, minimum: 0 }
+        total: { type: integer, minimum: 0 }
+      required: [filesDone, total]
+
+    AnalysisJobSummary:
+      type: object
+      properties:
+        totalSuggestions: { type: integer, minimum: 0 }
+        partialFailures: { type: integer, minimum: 0 }
+        filesSkipped: { type: integer, minimum: 0 }
+        warnings:
+          type: array
+          items:
+            type: string
+      required: [totalSuggestions, partialFailures, filesSkipped, warnings]
+
+    AnalysisJob:
+      type: object
+      properties:
+        id: { type: string }
+        prId: { type: string }
+        snapshotId: { type: string }
+        status:
+          $ref: '#/components/schemas/JobStatus'
+        scope:
+          type: array
+          items:
+            $ref: '#/components/schemas/SuggestionCategory'
+        filesFilter:
+          anyOf:
+            - type: array
+              items:
+                type: string
+            - type: 'null'
+        maxComments: { type: integer, minimum: 1 }
+        progress:
+          $ref: '#/components/schemas/JobProgress'
+        summary:
+          $ref: '#/components/schemas/AnalysisJobSummary'
+        errorMessage:
+          anyOf:
+            - type: string
+            - type: 'null'
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+      required: [id, prId, snapshotId, status, scope, filesFilter, maxComments, progress, summary, errorMessage, createdAt, updatedAt]
+
+    Citation:
+      type: object
+      properties:
+        sourceId: { type: string }
+        title: { type: string }
+        url: { type: string, format: uri }
+        snippet: { type: string }
+      required: [sourceId, title, url, snippet]
+
+    Severity:
+      type: string
+      enum: [info, low, medium, high, critical]
+
+    SuggestionCategory:
+      type: string
+      enum: [security, style, bugs, performance]
+
+    Suggestion:
+      type: object
+      properties:
+        id: { type: string }
+        jobId: { type: string }
+        prId: { type: string }
+        snapshotId: { type: string }
+        fingerprint: { type: string }
+        filePath: { type: string }
+        lineStart: { type: integer, minimum: 1 }
+        lineEnd: { type: integer, minimum: 1 }
+        severity:
+          $ref: '#/components/schemas/Severity'
+        category:
+          $ref: '#/components/schemas/SuggestionCategory'
+        title: { type: string }
+        body: { type: string }
+        citations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Citation'
+        confidence: { type: number, minimum: 0, maximum: 1 }
+        createdAt: { type: string, format: date-time }
+      required: [id, jobId, prId, snapshotId, fingerprint, filePath, lineStart, lineEnd, severity, category, title, body, citations, confidence, createdAt]
+
+    PublishMode:
+      type: string
+      enum: [review_comments, issue_comments]
+
+    CommentState:
+      type: string
+      enum: [pending, posted, failed]
+
+    PublishedComment:
+      type: object
+      properties:
+        id: { type: string }
+        prId: { type: string }
+        jobId: { type: string }
+        suggestionId: { type: string }
+        providerCommentId:
+          anyOf:
+            - type: string
+            - type: 'null'
+        mode:
+          $ref: '#/components/schemas/PublishMode'
+        state:
+          $ref: '#/components/schemas/CommentState'
+        filePath: { type: string }
+        lineStart: { type: integer, minimum: 1 }
+        lineEnd: { type: integer, minimum: 1 }
+        body: { type: string }
+        createdAt: { type: string, format: date-time }
+      required: [id, prId, jobId, suggestionId, providerCommentId, mode, state, filePath, lineStart, lineEnd, body, createdAt]
+
+    FeedbackVoteValue:
+      type: string
+      enum: [up, down]
+
+    FeedbackVote:
+      type: object
+      properties:
+        id: { type: string }
+        commentId: { type: string }
+        userId: { type: string }
+        vote:
+          $ref: '#/components/schemas/FeedbackVoteValue'
+        reason:
+          anyOf:
+            - type: string
+            - type: 'null'
+        updatedAt: { type: string, format: date-time }
+        createdAt: { type: string, format: date-time }
+      required: [id, commentId, userId, vote, reason, updatedAt, createdAt]
+
+    FeedbackTotals:
+      type: object
+      properties:
+        up: { type: integer, minimum: 0 }
+        down: { type: integer, minimum: 0 }
+        score: { type: integer }
+      required: [up, down, score]
+
+    SyncPrFileInput:
+      type: object
+      properties:
+        path: { type: string }
+        status:
+          type: string
+          enum: [added, modified, removed, renamed]
+        language: { type: string }
+        patch: { type: string }
+        additions: { type: integer, minimum: 0 }
+        deletions: { type: integer, minimum: 0 }
+      required: [path, patch]
+
+    SyncPrRequest:
+      type: object
+      properties:
+        title: { type: string }
+        state:
+          type: string
+          enum: [open, closed, merged]
+        authorLogin: { type: string }
+        url: { type: string }
+        baseSha: { type: string }
+        headSha: { type: string }
+        commitSha: { type: string }
+        files:
+          type: array
+          items:
+            $ref: '#/components/schemas/SyncPrFileInput'
+
+    CreateAnalysisJobRequest:
+      type: object
+      properties:
+        snapshotId: { type: string }
+        scope:
+          type: array
+          items:
+            $ref: '#/components/schemas/SuggestionCategory'
+        files:
+          type: array
+          items:
+            type: string
+        maxComments:
+          type: integer
+          minimum: 1
+          maximum: 500
+      required: [snapshotId, scope, maxComments]
+
+    PublishRequest:
+      type: object
+      properties:
+        jobId: { type: string }
+        mode:
+          $ref: '#/components/schemas/PublishMode'
+        dryRun: { type: boolean }
+      required: [jobId, mode, dryRun]
+
+    PublishResponse:
+      type: object
+      properties:
+        publishRunId: { type: string }
+        publishedCount: { type: integer, minimum: 0 }
+        errors:
+          type: array
+          items:
+            type: string
+        comments:
+          type: array
+          items:
+            $ref: '#/components/schemas/PublishedComment'
+        idempotent: { type: boolean }
+      required: [publishRunId, publishedCount, errors, comments, idempotent]
+
+    UpsertFeedbackRequest:
+      type: object
+      properties:
+        vote:
+          $ref: '#/components/schemas/FeedbackVoteValue'
+        reason:
+          type: string
+        userId:
+          type: string
+      required: [vote]
+
+    RepositoriesPage:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Repository'
+        nextCursor:
+          anyOf:
+            - type: string
+            - type: 'null'
+        limit:
+          type: integer
+          minimum: 1
+      required: [items, nextCursor, limit]
+
+    SnapshotFilesPage:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/SnapshotFile'
+        nextCursor:
+          anyOf:
+            - type: string
+            - type: 'null'
+        limit:
+          type: integer
+          minimum: 1
+      required: [items, nextCursor, limit]
+
+    AnalysisJobsPage:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/AnalysisJob'
+        nextCursor:
+          anyOf:
+            - type: string
+            - type: 'null'
+        limit:
+          type: integer
+          minimum: 1
+      required: [items, nextCursor, limit]
+
+    SuggestionsPage:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Suggestion'
+        nextCursor:
+          anyOf:
+            - type: string
+            - type: 'null'
+        limit:
+          type: integer
+          minimum: 1
+      required: [items, nextCursor, limit]
+
+    CommentsPage:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/PublishedComment'
+        nextCursor:
+          anyOf:
+            - type: string
+            - type: 'null'
+        limit:
+          type: integer
+          minimum: 1
+      required: [items, nextCursor, limit]
+
+    FeedbackSummary:
+      type: object
+      properties:
+        prId: { type: string }
+        overall:
+          $ref: '#/components/schemas/FeedbackTotals'
+        byFile:
+          type: array
+          items:
+            type: object
+            properties:
+              filePath: { type: string }
+              up: { type: integer, minimum: 0 }
+              down: { type: integer, minimum: 0 }
+              score: { type: integer }
+              comments: { type: integer, minimum: 0 }
+            required: [filePath, up, down, score, comments]
+        byCategory:
+          type: array
+          items:
+            type: object
+            properties:
+              category:
+                $ref: '#/components/schemas/SuggestionCategory'
+              up: { type: integer, minimum: 0 }
+              down: { type: integer, minimum: 0 }
+              score: { type: integer }
+            required: [category, up, down, score]
+        bySeverity:
+          type: array
+          items:
+            type: object
+            properties:
+              severity:
+                $ref: '#/components/schemas/Severity'
+              up: { type: integer, minimum: 0 }
+              down: { type: integer, minimum: 0 }
+              score: { type: integer }
+            required: [severity, up, down, score]
+      required: [prId, overall, byFile, byCategory, bySeverity]

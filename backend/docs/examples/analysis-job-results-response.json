@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "id": "sug_6d93a881-baf3-4f18-9f28-4323f89a4e3b",
+      "jobId": "job_92b7784a-fd82-4e66-8bf6-97db9ffca5b2",
+      "prId": "pr_26ad9f2f-87f0-4fe8-8ef8-8cc8ea4ba4d8",
+      "snapshotId": "snap_8c723843-6626-4d67-940e-2e87f084e67f",
+      "fingerprint": "81ef7a7a2f2e05a2f6a95ecb522c6f4d4d0914f6e43f2f734ec7586348e4ca36",
+      "filePath": "src/security/auth.ts",
+      "lineStart": 11,
+      "lineEnd": 11,
+      "severity": "high",
+      "category": "security",
+      "title": "Potential security issue in src/security/auth.ts",
+      "body": "Check this change for security risks and ensure it follows team standards.",
+      "citations": [
+        {
+          "sourceId": "owasp-top-10",
+          "title": "OWASP Top 10",
+          "url": "https://owasp.org/www-project-top-ten/",
+          "snippet": "Validate all untrusted input and use context-aware output encoding."
+        }
+      ],
+      "confidence": 0.72,
+      "createdAt": "2026-02-26T09:10:00.000Z"
+    }
+  ],
+  "nextCursor": null,
+  "limit": 50
+}

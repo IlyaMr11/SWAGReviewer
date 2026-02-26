@@ -1,0 +1,144 @@
+openapi: 3.1.0
+info:
+  title: SWAGReviewer GitHub Session API
+  version: 1.0.0
+  description: Temporary token-based GitHub session endpoints for UI demo workflow.
+servers:
+  - url: http://localhost:4000
+security:
+  - bearerAuth: []
+paths:
+  /github/session:
+    post:
+      summary: Create temporary GitHub session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+              required: [token]
+      responses:
+        '201':
+          description: Session created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sessionId: { type: string }
+                  githubLogin: { type: string }
+                  expiresAt: { type: string, format: date-time }
+                required: [sessionId, githubLogin, expiresAt]
+
+  /github/session/{sessionId}:
+    get:
+      summary: Get session metadata
+      parameters:
+        - in: path
+          name: sessionId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Session metadata
+    delete:
+      summary: Delete session
+      parameters:
+        - in: path
+          name: sessionId
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Deleted
+
+  /github/session/{sessionId}/repos:
+    get:
+      summary: List repositories available for token
+      parameters:
+        - in: path
+          name: sessionId
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: cursor
+          schema:
+            type: string
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 200
+      responses:
+        '200':
+          description: Repositories page
+
+  /github/session/{sessionId}/repos/{owner}/{repo}/prs:
+    get:
+      summary: List pull requests from GitHub
+      parameters:
+        - in: path
+          name: sessionId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: owner
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: repo
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: state
+          schema:
+            type: string
+            enum: [open, closed, all]
+      responses:
+        '200':
+          description: Pull requests
+
+  /github/session/{sessionId}/repos/{owner}/{repo}/prs/{prNumber}/sync:
+    post:
+      summary: Sync PR from GitHub and ingest into backend snapshot
+      parameters:
+        - in: path
+          name: sessionId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: owner
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: repo
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: prNumber
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: Synced
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

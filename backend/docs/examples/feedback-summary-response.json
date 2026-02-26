@@ -1,0 +1,33 @@
+{
+  "prId": "pr_26ad9f2f-87f0-4fe8-8ef8-8cc8ea4ba4d8",
+  "overall": {
+    "up": 2,
+    "down": 1,
+    "score": 1
+  },
+  "byFile": [
+    {
+      "filePath": "src/security/auth.ts",
+      "up": 2,
+      "down": 1,
+      "score": 1,
+      "comments": 1
+    }
+  ],
+  "byCategory": [
+    {
+      "category": "security",
+      "up": 2,
+      "down": 1,
+      "score": 1
+    }
+  ],
+  "bySeverity": [
+    {
+      "severity": "high",
+      "up": 2,
+      "down": 1,
+      "score": 1
+    }
+  ]
+}

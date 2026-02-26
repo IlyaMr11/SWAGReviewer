@@ -1,0 +1,16 @@
+{
+  "title": "Harden auth query",
+  "state": "open",
+  "authorLogin": "alice",
+  "url": "https://github.com/acme-org/demo-service/pull/42",
+  "baseSha": "9c07b17f5cf4af2e0a0de9f4400c50cc424aa111",
+  "headSha": "e0de019a231f8f955f622dc83c6cb2f72f8b8c77",
+  "commitSha": "e0de019a231f8f955f622dc83c6cb2f72f8b8c77",
+  "files": [
+    {
+      "path": "src/security/auth.ts",
+      "status": "modified",
+      "patch": "@@ -10,6 +10,9 @@ export async function login(userInput) {\n-  const query = `SELECT * FROM users WHERE email = '${userInput.email}'`;\n+  const query = `SELECT * FROM users WHERE email = $1`;\n+  const params = [userInput.email];\n+  return db.query(query, params);\n   return db.query(query);\n }"
+    }
+  ]
+}

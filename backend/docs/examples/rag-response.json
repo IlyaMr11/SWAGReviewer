@@ -1,0 +1,24 @@
+{
+  "suggestions": [
+    {
+      "filePath": "src/security/auth.ts",
+      "lineStart": 11,
+      "lineEnd": 11,
+      "severity": "high",
+      "category": "security",
+      "title": "Potential security issue in src/security/auth.ts",
+      "body": "Prefer parameterized queries to prevent SQL injection paths.",
+      "citations": [
+        {
+          "sourceId": "owasp-top-10",
+          "title": "OWASP Top 10",
+          "url": "https://owasp.org/www-project-top-ten/",
+          "snippet": "Validate all untrusted input and use context-aware output encoding."
+        }
+      ],
+      "confidence": 0.82,
+      "fingerprint": "81ef7a7a2f2e05a2f6a95ecb522c6f4d4d0914f6e43f2f734ec7586348e4ca36"
+    }
+  ],
+  "partialFailures": 0
+}

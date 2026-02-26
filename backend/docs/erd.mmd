@@ -1,0 +1,79 @@
+erDiagram
+    github_installations ||--o{ repositories : owns
+    repositories ||--o{ pull_requests : contains
+    pull_requests ||--o{ pr_snapshots : has
+    pr_snapshots ||--o{ snapshot_files : includes
+
+    pull_requests ||--o{ analysis_jobs : runs
+    analysis_jobs ||--o{ analysis_job_events : emits
+    analysis_jobs ||--o{ suggestions : creates
+    analysis_jobs ||--o{ job_queue : queues
+
+    pull_requests ||--o{ published_comments : publishes
+    suggestions ||--o{ published_comments : maps
+    published_comments ||--o{ feedback_votes : collects
+
+    pull_requests {
+      uuid id PK
+      uuid repo_id FK
+      int pr_number
+      text base_sha
+      text head_sha
+      uuid latest_snapshot_id FK
+    }
+
+    pr_snapshots {
+      uuid id PK
+      uuid pr_id FK
+      text commit_sha
+      text base_sha
+      text head_sha
+      int files_count
+      int additions
+      int deletions
+    }
+
+    snapshot_files {
+      uuid id PK
+      uuid snapshot_id FK
+      text path
+      text patch_hash
+      bool is_too_large
+    }
+
+    analysis_jobs {
+      uuid id PK
+      uuid pr_id FK
+      uuid snapshot_id FK
+      job_status status
+      suggestion_category[] scope
+      int max_comments
+    }
+
+    suggestions {
+      uuid id PK
+      uuid job_id FK
+      text fingerprint
+      text file_path
+      int line_start
+      int line_end
+      suggestion_severity severity
+      suggestion_category category
+    }
+
+    published_comments {
+      uuid id PK
+      uuid pr_id FK
+      uuid job_id FK
+      uuid suggestion_id FK
+      publish_mode mode
+      comment_state state
+      text provider_comment_id
+    }
+
+    feedback_votes {
+      uuid id PK
+      uuid comment_id FK
+      text user_id
+      feedback_vote_value vote
+    }

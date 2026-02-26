@@ -1,0 +1,22 @@
+{
+  "publishRunId": "pubrun_8f65b8f8-5f11-4f07-9f3e-5d79fe86f748",
+  "publishedCount": 1,
+  "errors": [],
+  "comments": [
+    {
+      "id": "cmt_47f6d7ac-1fc3-4f75-9d56-005e9d0f900e",
+      "prId": "pr_26ad9f2f-87f0-4fe8-8ef8-8cc8ea4ba4d8",
+      "jobId": "job_92b7784a-fd82-4e66-8bf6-97db9ffca5b2",
+      "suggestionId": "sug_6d93a881-baf3-4f18-9f28-4323f89a4e3b",
+      "providerCommentId": "ghc_ab12cd34",
+      "mode": "review_comments",
+      "state": "posted",
+      "filePath": "src/security/auth.ts",
+      "lineStart": 11,
+      "lineEnd": 11,
+      "body": "Check this change for security risks and ensure it follows team standards.",
+      "createdAt": "2026-02-26T09:11:00.000Z"
+    }
+  ],
+  "idempotent": false
+}

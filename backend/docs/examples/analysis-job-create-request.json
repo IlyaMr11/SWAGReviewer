@@ -1,0 +1,6 @@
+{
+  "snapshotId": "snap_8c723843-6626-4d67-940e-2e87f084e67f",
+  "scope": ["security", "bugs"],
+  "files": ["src/security/auth.ts"],
+  "maxComments": 20
+}

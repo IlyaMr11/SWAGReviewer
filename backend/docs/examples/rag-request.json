@@ -1,0 +1,29 @@
+{
+  "jobId": "job_92b7784a-fd82-4e66-8bf6-97db9ffca5b2",
+  "snapshotId": "snap_8c723843-6626-4d67-940e-2e87f084e67f",
+  "scope": ["security", "bugs"],
+  "files": [
+    {
+      "path": "src/security/auth.ts",
+      "language": "TypeScript",
+      "patch": "@@ -10,6 +10,9 @@ export async function login(userInput) {\n-  const query = `SELECT * FROM users WHERE email = '${userInput.email}'`;\n+  const query = `SELECT * FROM users WHERE email = $1`;\n+  const params = [userInput.email];\n+  return db.query(query, params);\n   return db.query(query);\n }",
+      "hunks": [
+        {
+          "oldStart": 10,
+          "oldLines": 6,
+          "newStart": 10,
+          "newLines": 9,
+          "header": "export async function login(userInput)"
+        }
+      ],
+      "lineMap": [
+        { "patchLine": 2, "oldLine": 11, "newLine": null, "type": "del" },
+        { "patchLine": 3, "oldLine": null, "newLine": 11, "type": "add" }
+      ]
+    }
+  ],
+  "limits": {
+    "maxComments": 20,
+    "maxPerFile": 3
+  }
+}
