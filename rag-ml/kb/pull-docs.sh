@@ -23,7 +23,7 @@ import urllib.request
 
 url = "https://docs.python.org/3/archives/"
 html = urllib.request.urlopen(url, timeout=30).read().decode("utf-8", "ignore")
-versions = re.findall(r"python-(3\\.[0-9]+\\.[0-9]+)-docs-text\\.zip", html)
+versions = re.findall(r"python-(3\.[0-9]+(?:\.[0-9]+)?)-docs-text\.zip", html)
 if not versions:
     raise SystemExit("No python-*-docs-text.zip links found in archives page")
 def key(v: str):
@@ -129,4 +129,3 @@ main() {
 }
 
 main "$@"
-
