@@ -2,7 +2,7 @@
   "language": "python",
   "displayName": "Python",
   "defaultVersion": "3.x",
-  "docRoots": ["docs", "raw/python-docs-text"],
+  "docRoots": ["docs"],
   "sources": [
     {
       "sourceId": "python-docs-text",

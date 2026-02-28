@@ -1,0 +1,5156 @@
+
+
+===== PAGE 2601 =====
+
+Dxxxx
+set_value, 2247
+set_value_at_thread_exit, 2247
+swap, 2246, 2248
+promise_already_satisfied
+future_errc, 2243
+prop, 2324
+propagate_on_container_copy_assignment
+allocator_traits, 677
+scoped_allocator_adaptor, 730
+propagate_on_container_move_assignment
+allocator, 678
+allocator_traits, 677
+scoped_allocator_adaptor, 730
+propagate_on_container_swap
+allocator_traits, 677
+scoped_allocator_adaptor, 730
+protect
+hazard_pointer, 2262
+proximate, 2143, 2144
+proxy
+istreambuf_iterator, 1231
+ptr
+allocation_result, 661
+from_chars_result, 1614
+to_chars_result, 1614
+ptr_fun
+zombie, 561
+PTRDIFF_MAX, 585
+PTRDIFF_MIN, 585
+ptrdiff_t, 567
+pubimbue
+basic_streambuf, 2027
+pubseekoff
+basic_streambuf, 2027
+pubseekpos
+basic_streambuf, 2027
+pubsetbuf
+basic_streambuf, 2027
+pubsync
+basic_streambuf, 2027
+punct
+ctype_base, 1625
+push
+priority_queue, 1074, 1075
+push_back
+basic_string, 1599
+deque, 980
+inplace_vector, 1018
+push_front
+deque, 980
+forward_list, 986
+push_heap, 1535
+push_range
+priority_queue, 1075
+queue, 1070
+stack, 1078
+put
+basic_ostream, 2053
+money_put, 1651
+num_put, 1638
+time_put, 1648
+put_money, 2056
+put_time, 2057
+putback
+basic_istream, 2043
+putc, 2147
+putchar, 2147
+putenv, 620
+puts, 2147
+putwc, 1727
+putwchar, 1727
+pword
+ios_base, 2016
+Q
+qsort, 568, 1567
+quecto, 802, 804
+query
+env, 2325
+query_parallel_scheduler_backend, 2346
+quetta, 803, 804
+queue, 1068
+constructor, 1069, 1070
+operator<, 1070
+operator<=, 1071
+operator<=>, 1071
+operator==, 1070
+operator>, 1070
+operator>=, 1071
+push_range, 1070
+swap, 1071
+quick_exit, 568, 588
+quiet_NaN
+numeric_limits, 581
+quoted, 2057, 2058
+R
+radix
+numeric_limits, 579
+raise, 621
+rand, 568, 1783
+discouraged, 1784
+RAND_MAX, 568
+random_access_iterator, 1189
+random_access_iterator_tag, 1197
+random_access_range, 1252
+random_device, 1759
+constructor, 1760
+entropy, 1760
+operator(), 1760
+result_type, 1759
+random_shuffle
+zombie, 561
+range, 1250
+range-default-formatter , 1685–1687
+constructor, 1686, 1687
+format, 1686–1688
+Index of library names © ISO/IEC
+2590
+
+===== PAGE 2602 =====
+
+Dxxxx
+parse, 1686, 1687
+set_brackets, 1686
+set_separator, 1686
+range_common_reference_t, 1237
+range_const_reference_t, 1237
+range_difference_t, 1237
+range_error, 638, 640
+constructor, 640
+range_format, 1666
+debug_string, 1666
+disabled, 1666
+map, 1666
+sequence, 1666
+set, 1666
+string, 1666
+range_formatter, 1683
+format, 1685
+parse, 1685
+set_brackets, 1684
+set_separator, 1684
+range_reference_t, 1237
+range_rvalue_reference_t, 1237
+range_size_t, 1237
+range_value_t, 1237
+ranges
+to, 1260, 1261
+rank, 754, 801
+rank_type
+layout_blas_packed::mapping, 1832
+layout_transpose::mapping, 1842
+rank_v, 741
+ranlux24, 1759
+ranlux24_base, 1759
+ranlux48, 1759
+ranlux48_base, 1759
+ratio, 802, 803
+ratio_add, 803
+ratio_divide, 803
+ratio_equal, 804
+ratio_equal_v, 802
+ratio_greater, 804
+ratio_greater_equal, 804
+ratio_greater_equal_v, 802
+ratio_greater_v, 802
+ratio_less, 804
+ratio_less_equal, 804
+ratio_less_equal_v, 802
+ratio_less_v, 802
+ratio_multiply, 803
+ratio_not_equal, 804
+ratio_not_equal_v, 802
+ratio_subtract, 803
+raw_storage_iterator
+zombie, 561
+rbegin, 1247
+basic_stacktrace, 656
+basic_string, 1595
+basic_string_view, 1579
+reversible containers, 942
+span, 1121
+rbegin(C&), 1234
+rbegin(initializer_list<E>), 1234
+rbegin(T (&array)[N]), 1234
+rcu_barrier, 2259
+rcu_default_domain, 2259
+rcu_domain
+lock, 2258
+try_lock, 2258
+unlock, 2258
+rcu_retire, 2259
+rcu_synchronize, 2259
+rdbuf
+basic_fstream, 2096
+basic_ifstream, 2092
+basic_ios, 2020
+basic_ispanstream, 2081
+basic_istringstream, 2069
+basic_ofstream, 2093
+basic_ospanstream, 2082
+basic_ostringstream, 2072
+basic_spanstream, 2083
+basic_stringstream, 2075
+rdstate
+basic_ios, 2021
+read
+basic_istream, 2042
+read_env, 2270
+read_symlink, 2144
+readsome
+basic_istream, 2043
+ready
+future_status, 2243
+match_results, 1712
+real, 1738
+basic_vec, 1889
+complex, 1734, 1736
+simd, 1905
+realloc, 568, 679, 2415
+rebind
+expected, 872
+expected<void>, 883
+pointer_traits, 671
+simd, 1883
+rebind_alloc
+allocator_traits, 677
+rebind_t
+simd, 1873
+receiver, 2275
+receiver_of, 2276
+receiver_proxy, 2345
+receiver_t, 2268
+recursion_pending
+recursive_directory_iterator, 2134
+recursive
+copy_options, 2124
+recursive_directory_iterator, 2132
+begin, 2135
+constructor, 2133, 2134
+Index of library names © ISO/IEC
+2591
+
+===== PAGE 2603 =====
+
+Dxxxx
+depth, 2134
+disable_recursion_pending, 2135
+end, 2135
+increment, 2134
+operator++, 2134
+operator=, 2134
+options, 2134
+pop, 2135
+recursion_pending, 2134
+recursive_mutex, 2215
+recursive_timed_mutex, 2217
+reduce, 1550
+simd, 1891, 1892
+reduce_count
+simd, 1910
+reduce_max
+simd, 1892
+reduce_max_index
+simd, 1910, 1911
+reduce_min
+simd, 1892
+reduce_min_index
+simd, 1910, 1911
+ref
+reference_wrapper, 903
+ref_view, 1278
+constructor, 1279
+reference
+basic_string, 1587
+basic_string_view, 1575
+conjugated_accessor, 1840
+containers, 939
+iterator_traits, 1179
+scaled_accessor, 1838
+vector<bool>, 1011
+reference_constructs_from_temporary, 753,
+799
+reference_constructs_from_temporary_v, 740
+reference_converts_from_temporary, 753, 799
+reference_converts_from_temporary_v, 741
+reference_wrapper, 901
+constructor, 902
+cref, 903
+get, 902
+operator T&, 902
+operator(), 902
+operator=, 902
+ref, 903
+reflect_constant, 795
+reflect_constant_array, 773
+reflect_constant_string, 772
+reflect_function, 795
+reflect_object, 795
+reflection_range, 794
+refresh
+directory_entry, 2129
+regex, 1695
+regex_constants, 1699
+error_type, 1700, 1701
+match_flag_type, 1700
+syntax_option_type, 1699
+regex_error, 1701, 1704, 1725
+constructor, 1701
+regex_iterator, 1719
+constructor, 1720
+increment, 1720
+operator*, 1720
+operator++, 1720, 1721
+operator->, 1720
+operator==, 1720
+regex_match, 1715, 1716
+regex_replace, 1718, 1719
+regex_search, 1716, 1717
+regex_token_iterator, 1721
+constructor, 1723
+end-of-sequence, 1721
+operator*, 1724
+operator++, 1724
+operator->, 1724
+operator==, 1721, 1723
+regex_traits, 1702
+char_class_type, 1702
+isctype, 1703
+length, 1702
+lookup_classname, 1703
+lookup_collatename, 1703
+transform, 1702
+transform_primary, 1702
+translate, 1702
+translate_nocase, 1702
+value, 1704
+register_callback
+ios_base, 2016
+regular, 636
+file_type, 2124
+regular expression traits
+isctype, 1725
+lookup_classname, 1725
+lookup_collatename, 1725
+regular_invocable, 637
+rehash
+unordered associative containers, 972
+reinterpret_pointer_cast
+shared_ptr, 699
+rel_ops, 2420
+relation, 637
+relative, 2144
+relative_path
+path, 2117
+relaxed
+memory_order, 2176
+release
+counting_semaphore, 2239
+execution::associate-data , 2313
+memory_order, 2176
+monotonic_buffer_resource, 728
+shared_lock, 2228
+synchronized_pool_resource, 726
+Index of library names © ISO/IEC
+2592
+
+===== PAGE 2604 =====
+
+Dxxxx
+unique_lock, 2225
+unique_ptr, 684
+unsynchronized_pool_resource, 726
+reload_tzdb, 1983
+remainder, 1803
+simd, 1900
+remainderf, 1803
+remainderl, 1803
+remote_version, 1983
+remove, 1501, 2147
+forward_list, 988
+list, 1004
+path, 2144
+perm_options, 2125
+remove_all, 2144
+remove_all_extents, 759, 800
+remove_all_extents_t, 737
+remove_const, 758, 800
+remove_const_t, 737
+remove_copy, 1502
+remove_copy_if, 1502
+remove_copy_if_result, 1438
+remove_copy_result, 1438
+remove_cv, 758, 800
+remove_cv_t, 737
+remove_cvref, 760, 800
+remove_cvref_t, 738
+remove_extent, 759, 800
+remove_extent_t, 737
+remove_filename
+path, 2115
+remove_if, 1501
+forward_list, 988
+remove_pointer, 760, 800
+remove_pointer_t, 737
+remove_prefix
+basic_string_view, 1580
+remove_reference, 758, 800
+remove_reference_t, 737
+remove_suffix
+basic_string_view, 1580
+remove_volatile, 758, 800
+remove_volatile_t, 737
+remquo, 1803
+simd, 1903
+remquof, 1803
+remquol, 1803
+rename, 2145, 2147
+rend, 1247
+basic_stacktrace, 656
+basic_string, 1595
+basic_string_view, 1579
+reversible containers, 943
+span, 1121
+rend(C&), 1234
+rend(initializer_list<E>), 1234
+rend(T (&array)[N]), 1234
+rep
+system_clock, 1939
+repeat
+views, 1270
+repeat_view, 1270
+begin, 1271
+constructor, 1271
+end, 1271
+size, 1271
+repeat_view::iterator , 1271
+constructor, 1272
+operator*, 1272
+operator+, 1273
+operator++, 1272
+operator+=, 1272
+operator-, 1273
+operator--, 1272
+operator-=, 1273
+operator<=>, 1273
+operator==, 1273
+operator[], 1273
+replace, 1496
+basic_string, 1602, 1603
+flat_map, 1091
+flat_multiset, 1114
+flat_set, 1106
+perm_options, 2125
+replace_copy, 1498
+replace_copy_if, 1498
+replace_copy_if_result, 1435
+replace_copy_result, 1434
+replace_extension
+path, 2115
+replace_filename
+directory_entry, 2128
+path, 2115
+replace_if, 1496
+replace_with_range
+basic_string, 1603
+request_stop
+execution::counting_scope, 2343
+inplace_stop_source, 2162
+jthread, 2170
+stop_source, 2159
+required_alignment
+atomic_ref, 2180
+atomic_ref<floating-point-type >, 2180
+atomic_ref<integral-type >, 2180
+atomic_ref<pointer-type >, 2180
+required_span_size
+layout_blas_packed::mapping, 1834
+layout_left::mapping, 1131
+layout_right::mapping, 1134
+layout_right_padded::mapping, 1148
+layout_stride::mapping, 1137
+layout_transpose::mapping, 1842
+reserve
+basic_string, 1596
+hive, 995
+inplace_vector, 1018
+unordered associative containers, 972
+Index of library names © ISO/IEC
+2593
+
+===== PAGE 2605 =====
+
+Dxxxx
+vector, 1009
+reserve_hint, 1248
+adjacent_transform_view, 1359
+adjacent_view, 1354
+cache_latest_view, 1395
+chunk_view, 1365, 1370
+chunk_view::outer-iterator ::value_-
+type, 1367
+slide_view, 1375
+stride_view, 1383
+to_input_view, 1398
+reset
+any, 867
+bitset, 894
+optional, 843
+packaged_task, 2256
+shared_ptr, 693
+unique_ptr, 684, 687
+weak_ptr, 701
+reset_protection
+hazard_pointer, 2262
+resetiosflags, 2054
+reshape
+hive, 996
+resize
+basic_string, 1596
+deque, 980
+forward_list, 987
+inplace_vector, 1017
+list, 1002
+simd, 1883
+valarray, 1793
+vector, 1009
+resize_and_overwrite
+basic_string, 1596
+resize_file, 2145
+resize_t
+simd, 1873
+resource
+polymorphic_allocator, 723
+result
+codecvt_base, 1630
+local_info, 1985
+result_of
+zombie, 561
+result_of_t
+zombie, 561
+result_type
+bernoulli_distribution, 1765
+binomial_distribution, 1766
+cauchy_distribution, 1776
+chi_squared_distribution, 1775
+discard_block_engine, 1755
+discrete_distribution, 1779
+exponential_distribution, 1769
+extreme_value_distribution, 1772
+fisher_f_distribution, 1777
+function, 916
+gamma_distribution, 1770
+geometric_distribution, 1766
+independent_bits_engine, 1756
+linear_congruential_engine, 1749
+lognormal_distribution, 1774
+mersenne_twister_engine, 1750
+negative_binomial_distribution, 1767
+normal_distribution, 1773
+philox_engine, 1753
+piecewise_constant_distribution, 1780
+piecewise_linear_distribution, 1782
+poisson_distribution, 1768
+random_device, 1759
+seed_seq, 1760
+shuffle_order_engine, 1757
+student_t_distribution, 1778
+subtract_with_carry_engine, 1751
+uniform_int_distribution, 1763
+uniform_real_distribution, 1764
+weibull_distribution, 1771
+resume
+coroutine_handle, 618
+coroutine_handle<noop_coroutine_-
+promise>, 620
+rethrow_exception, 602
+rethrow_if_nested
+nested_exception, 604
+rethrow_nested
+nested_exception, 603
+retire
+hazard_pointer_obj_base, 2261
+return_temporary_buffer
+zombie, 561
+return_type_of, 785
+return_value
+task::promise_type, 2337
+return_void
+task::promise_type, 2337
+reverse, 1506
+forward_list, 989
+list, 1004
+views, 1329
+reverse_copy, 1507
+reverse_copy_result, 1441
+reverse_copy_truncated_result, 1441
+reverse_iterator, 1201
+base, 1202
+basic_string, 1587
+basic_string_view, 1575
+constructor, 1202
+iter_move, 1204
+iter_swap, 1204
+make_reverse_iterator non-member
+function, 1205
+operator!=, 1203
+operator*, 1202
+operator+, 1203, 1204
+operator++, 1203
+operator+=, 1203
+operator-, 1203, 1204
+Index of library names © ISO/IEC
+2594
+
+===== PAGE 2606 =====
+
+Dxxxx
+operator--, 1203
+operator-=, 1203
+operator->, 1202
+operator<, 1203
+operator<=, 1204
+operator<=>, 1204
+operator=, 1202
+operator==, 1203
+operator>, 1204
+operator>=, 1204
+operator[], 1202
+reversible containers, 942
+reverse_view, 1330
+base, 1330
+begin, 1330
+constructor, 1330
+end, 1330
+size, 1330
+rewind, 2147
+rfind
+basic_string, 1604, 1605
+basic_string_view, 1582
+riemann_zeta, 1814
+simd, 1901
+riemann_zetaf, 1814
+riemann_zetal, 1814
+right, 2023
+rint, 1803
+simd, 1900
+rintf, 1803
+rintl, 1803
+ronna, 803, 804
+ronto, 802, 804
+root_directory
+path, 2117
+root_name
+path, 2117
+root_path
+path, 2117
+rotate, 1508
+rotate_copy, 1508
+rotate_copy_result, 1442
+rotate_copy_truncated_result, 1442
+rotl, 934
+simd, 1904, 1905
+rotr, 934
+simd, 1904, 1905
+round, 1803
+duration, 1933
+simd, 1900
+time_point, 1938
+round_error
+numeric_limits, 580
+round_indeterminate, 577
+round_style
+numeric_limits, 582
+round_to_nearest, 577
+round_toward_infinity, 577
+round_toward_neg_infinity, 577
+round_toward_zero, 577
+roundf, 1803
+roundl, 1803
+row_major, 1831
+row_major_t, 1831
+run
+run_loop, 2327
+run_loop, 2325
+constructor, 2327
+destructor, 2327
+finish, 2327
+get_scheduler, 2327
+run, 2327
+runtime_error, 638, 640
+constructor, 640
+S
+s
+lognormal_distribution, 1775
+same_as, 628
+sample, 1510
+saturate_cast, 1559
+save
+sys_info, 1985
+sbumpc
+basic_streambuf, 2028
+scalbln, 1803
+simd, 1900
+scalblnf, 1803
+scalblnl, 1803
+scalbn, 1803
+simd, 1900
+scalbnf, 1803
+scalbnl, 1803
+scale, 1846
+scaled, 1839
+scaled_accessor, 1838
+access, 1839
+constructor, 1838, 1839
+data_handle_type, 1838
+element_type, 1838
+nested_accessor, 1838
+offset, 1839
+offset_policy, 1838
+reference, 1838
+scaling_factor, 1838
+scaling_factor
+scaled_accessor, 1838
+scan_is
+ctype, 1626
+ctype<char>, 1629
+scan_not
+ctype, 1626
+ctype<char>, 1629
+scanf, 2147
+SCHAR_MAX, 583
+SCHAR_MIN, 583
+SCHAR_WIDTH, 583
+Index of library names © ISO/IEC
+2595
+
+===== PAGE 2607 =====
+
+Dxxxx
+schedule, 2270
+parallel_scheduler_backend, 2346
+schedule_bulk_chunked
+parallel_scheduler_backend, 2346
+schedule_bulk_unchunked
+parallel_scheduler_backend, 2347
+schedule_from, 2270
+schedule_from_t, 2270
+schedule_result_t, 2270
+schedule_t, 2269
+scheduler, 2275
+task_scheduler, 2332
+scheduler_t, 2268
+scientific, 2024
+chars_format, 1614
+SCNbFASTN, 2149
+SCNbLEASTN, 2149
+SCNbMAX, 2150
+SCNbN, 2149
+SCNbPTR, 2150
+SCNdFASTN, 2149
+SCNdLEASTN, 2149
+SCNdMAX, 2150
+SCNdN, 2149
+SCNdPTR, 2150
+SCNiFASTN, 2149
+SCNiLEASTN, 2149
+SCNiMAX, 2150
+SCNiN, 2149
+SCNiPTR, 2150
+SCNoFASTN, 2149
+SCNoLEASTN, 2149
+SCNoMAX, 2150
+SCNoN, 2149
+SCNoPTR, 2150
+SCNuFASTN, 2149
+SCNuLEASTN, 2149
+SCNuMAX, 2150
+SCNuN, 2149
+SCNuPTR, 2150
+SCNxFASTN, 2149
+SCNxLEASTN, 2149
+SCNxMAX, 2150
+SCNxN, 2149
+SCNxPTR, 2150
+scope
+access_context, 785
+scope_association, 2338
+scope_token, 2338
+scoped_allocator_adaptor, 729
+allocate, 731
+const_pointer, 729
+const_void_pointer, 729
+construct, 731
+constructor, 730, 731
+deallocate, 731
+destroy, 731
+difference_type, 729
+inner_allocator, 731
+inner_allocator_type, 730
+is_always_equal, 730
+max_size, 731
+operator==, 732
+outer_allocator, 731
+outer_allocator_type, 729
+pointer, 729
+propagate_on_container_copy_-
+assignment, 730
+propagate_on_container_move_-
+assignment, 730
+propagate_on_container_swap, 730
+select_on_container_copy_construction,
+732
+size_type, 729
+value_type, 729
+void_pointer, 729
+scoped_lock, 2221
+constructor, 2222
+destructor, 2222
+search, 1484, 1486
+search_n, 1485
+second
+local_info, 1985
+second_argument_type
+zombie, 561
+seconds, 1912
+hh_mm_ss, 1980
+seed_seq, 1760
+constructor, 1761
+generate, 1761
+param, 1762
+result_type, 1760
+size, 1762
+SEEK_CUR, 2148
+seek_dir
+zombie, 561
+SEEK_END, 2148
+SEEK_SET, 2148
+seekdir
+ios_base, 2012
+seekg
+basic_istream, 2043
+seekoff
+basic_filebuf, 2089
+basic_spanbuf, 2079
+basic_streambuf, 2030
+basic_stringbuf, 2066
+seekp
+basic_ostream, 2049
+seekpos
+basic_filebuf, 2090
+basic_spanbuf, 2079
+basic_streambuf, 2030
+basic_stringbuf, 2067
+select
+simd, 1900
+select_on_container_copy_construction
+allocator_traits, 678
+Index of library names © ISO/IEC
+2596
+
+===== PAGE 2608 =====
+
+Dxxxx
+polymorphic_allocator, 723
+scoped_allocator_adaptor, 732
+semiregular, 636
+sender, 2285
+sender_adaptor_closure, 2270
+sender_in, 2285
+sender_t, 2268
+sender_to, 2285
+sentinel
+filter_view, 1284
+sentinel_for, 1186
+sentinel_t, 1237
+sentry
+basic_istream, 2036
+basic_ostream, 2048
+constructor, 2036
+destructor, 2037
+seq, 1412
+execution, 1412
+seq_cst
+memory_order, 2176
+sequence
+range_format, 1666
+set, 1033
+allocator_type, 944
+begin, 940
+cbegin, 940
+cend, 940
+clear, 960
+const_iterator, 939
+const_reference, 939
+const_reverse_iterator, 942
+constructor, 956, 1036
+contains, 961
+count, 960
+crbegin, 943
+crend, 943
+difference_type, 939
+emplace, 957
+emplace_hint, 957
+empty, 941
+end, 940
+equal_range, 961
+erase, 959, 960
+erase_if, 1036
+extract, 959
+find, 960
+get_allocator, 944
+insert, 957–959, 1037
+iterator, 939
+key_comp, 957
+key_compare, 955
+key_type, 955
+lower_bound, 961
+mapped_type, 955
+max_size, 941
+merge, 959
+node_type, 955
+operator!=, 940
+operator<, 1036
+operator<=>, 943
+operator=, 939, 945
+operator==, 940, 1036
+range_format, 1666
+rbegin, 942
+reference, 939
+rend, 943
+reverse_iterator, 942
+size, 941
+size_type, 939
+swap, 940, 945
+upper_bound, 961
+value_comp, 957
+value_compare, 955
+value_type, 939, 955
+set (member)
+bitset, 893
+set_brackets
+formatter, 1692
+range-default-formatter , 1686
+range_formatter, 1684
+set_continuation
+with_awaitable_senders, 2330
+set_counter
+philox_engine, 1754
+set_debug_format
+formatter, 2121
+set_default_resource, 724
+set_difference, 1532
+set_difference_result, 1457
+set_emit_on_sync
+basic_osyncstream, 2100
+basic_syncbuf, 2099
+set_error, 2268
+set_error_t, 2268
+set_exception
+promise, 2247
+set_exception_at_thread_exit
+promise, 2248
+set_gid
+perms, 2125
+set_intersection, 1530
+set_intersection_result, 1456
+set_new_handler, 562, 594
+set_rdbuf
+basic_ios, 2021
+set_separator
+formatter, 1691
+range-default-formatter , 1686
+range_formatter, 1684
+set_stopped, 2268
+set_stopped_t, 2268
+set_symmetric_difference, 1533
+set_symmetric_difference_result, 1458
+set_terminate, 562, 601
+set_uid
+perms, 2125
+set_unexpected
+Index of library names © ISO/IEC
+2597
+
+===== PAGE 2609 =====
+
+Dxxxx
+zombie, 561
+set_union, 1529
+set_union_result, 1455
+set_value, 2268
+promise, 2247
+set_value_at_thread_exit
+promise, 2247
+set_value_t, 2268
+setbase, 2055
+setbuf, 2147
+basic_filebuf, 2089
+basic_spanbuf, 2079
+basic_streambuf, 2029, 2067
+setenv, 620
+setf
+ios_base, 2014
+setfill, 2055
+setg
+basic_streambuf, 2029
+setiosflags, 2055
+setjmp, 561, 621
+setlocale, 1656
+setp
+basic_streambuf, 2029
+setprecision, 2055
+setstate
+basic_ios, 2021
+setup_givens_rotation, 1845
+setvbuf, 2147
+setw, 2056
+sgetc
+basic_streambuf, 2028
+sgetn
+basic_streambuf, 2028
+share
+future, 2249
+shared_from_this
+enable_shared_from_this, 704
+shared_future, 2250
+constructor, 2251
+destructor, 2251
+get, 2251
+operator=, 2251
+valid, 2252
+wait, 2252
+wait_for, 2252
+wait_until, 2252
+shared_lock, 2225
+constructor, 2226, 2227
+destructor, 2227
+lock, 2227
+mutex, 2229
+operator bool, 2229
+operator=, 2227
+owns_lock, 2229
+release, 2228
+swap, 2228
+try_lock, 2227
+try_lock_for, 2228
+try_lock_until, 2228
+unlock, 2228
+shared_mutex, 2218
+shared_ptr, 689, 704
+const_pointer_cast, 699
+constructor, 691, 692
+destructor, 692
+dynamic_pointer_cast, 698
+get, 693
+get_deleter, 699
+hash, 704
+operator bool, 694
+operator*, 693
+operator->, 694
+operator<<, 699
+operator<=>, 698
+operator=, 693
+operator==, 698
+operator[], 694
+owner_before, 694
+owner_equal, 694
+owner_hash, 694
+reinterpret_pointer_cast, 699
+reset, 693
+static_pointer_cast, 698
+swap, 693, 698
+use_count, 694
+shared_timed_mutex, 2220
+shift
+valarray, 1793
+shift_left, 1511
+shift_right, 1511
+showbase, 2022
+showmanyc
+basic_filebuf, 2088
+basic_streambuf, 2030, 2088
+showpoint, 2022
+showpos, 2022
+shrink_to_fit
+basic_string, 1597
+deque, 980
+hive, 995
+inplace_vector, 1018
+vector, 1009
+SHRT_MAX, 584
+SHRT_MIN, 584
+SHRT_WIDTH, 583
+shuffle, 1510
+shuffle_order_engine, 1757
+constructor, 1758
+result_type, 1757
+SIG_ATOMIC_MAX, 585
+SIG_ATOMIC_MIN, 585
+sig_atomic_t, 621
+SIG_DFL, 621
+SIG_ERR, 621
+SIG_IGN, 621
+SIGABRT, 621
+SIGFPE, 621
+Index of library names © ISO/IEC
+2598
+
+===== PAGE 2610 =====
+
+Dxxxx
+SIGILL, 621
+SIGINT, 621
+sign
+money_base, 1652
+signal, 621
+signaling_NaN
+numeric_limits, 581
+signbit, 1803
+simd, 1900
+signed_integral, 630
+SIGSEGV, 621
+SIGTERM, 621
+simd
+abs, 1900, 1905
+acos, 1901, 1905
+acosh, 1901, 1905
+alignment, 1883
+alignment_v, 1873
+all_of, 1910
+any_of, 1910
+arg, 1905
+asin, 1901, 1905
+asinh, 1901, 1905
+assoc_laguerre, 1901
+assoc_legendre, 1901
+atan, 1901, 1905
+atan2, 1901
+atanh, 1901, 1905
+beta, 1901
+bit_ceil, 1904
+bit_floor, 1904
+bit_width, 1905
+byteswap, 1904
+cat, 1899
+cbrt, 1901
+ceil, 1900
+chunk, 1898, 1899
+clamp, 1900
+comp_ellint_1, 1901
+comp_ellint_2, 1901
+comp_ellint_3, 1901
+compress, 1896
+conj, 1905
+copysign, 1900
+cos, 1901, 1905
+cosh, 1901, 1905
+countl_one, 1905
+countl_zero, 1905
+countr_one, 1905
+countr_zero, 1905
+cyl_bessel_i, 1901
+cyl_bessel_j, 1901
+cyl_bessel_k, 1901
+cyl_neumann, 1901
+ellint_1, 1901
+ellint_2, 1901
+ellint_3, 1901
+erf, 1901
+erfc, 1901
+exp, 1901, 1905
+exp2, 1901
+expand, 1897
+expint, 1901
+expm1, 1901
+fabs, 1900
+fdim, 1900
+flag_aligned, 1873
+flag_convert, 1873
+flag_default, 1873
+flag_overaligned, 1873
+flags, 1883
+floor, 1900
+fma, 1900
+fmax, 1900
+fmin, 1900
+fmod, 1900
+fpclassify, 1900
+frexp, 1903
+has_single_bit, 1904
+hermite, 1901
+hypot, 1901
+ilogb, 1900
+imag, 1905
+isfinite, 1900
+isgreater, 1900
+isgreaterequal, 1900
+isinf, 1900
+isless, 1900
+islessequal, 1900
+islessgreater, 1900
+isnan, 1900
+isnormal, 1900
+isunordered, 1900
+laguerre, 1901
+ldexp, 1900
+legendre, 1901
+lerp, 1901
+lgamma, 1901
+llrint, 1900
+llround, 1900
+log, 1901, 1905
+log10, 1901, 1905
+log1p, 1901
+log2, 1901
+logb, 1901
+lrint, 1900
+lround, 1900
+mask, 1880
+max, 1899
+min, 1899
+minmax, 1900
+modf, 1904
+nearbyint, 1900
+nextafter, 1900
+none_of, 1910, 1911
+norm, 1905
+partial_gather_from, 1897
+partial_load, 1893
+Index of library names © ISO/IEC
+2599
+
+===== PAGE 2611 =====
+
+Dxxxx
+partial_scatter_to, 1898
+partial_store, 1895
+permute, 1895, 1896
+polar, 1906
+popcount, 1905
+pow, 1901, 1906
+proj, 1905
+real, 1905
+rebind, 1883
+rebind_t, 1873
+reduce, 1891, 1892
+reduce_count, 1910
+reduce_max, 1892
+reduce_max_index, 1910, 1911
+reduce_min, 1892
+reduce_min_index, 1910, 1911
+remainder, 1900
+remquo, 1903
+resize, 1883
+resize_t, 1873
+riemann_zeta, 1901
+rint, 1900
+rotl, 1904, 1905
+rotr, 1904, 1905
+round, 1900
+scalbln, 1900
+scalbn, 1900
+select, 1900
+signbit, 1900
+sin, 1901, 1905
+sinh, 1901, 1905
+sph_bessel, 1901
+sph_legendre, 1901
+sph_neumann, 1901
+sqrt, 1901, 1905
+tan, 1901, 1905
+tanh, 1901, 1905
+tgamma, 1901
+trunc, 1900
+unchecked_gather_from, 1897
+unchecked_load, 1893
+unchecked_scatter_to, 1898
+unchecked_store, 1894
+uninit_element, 1875
+vec, 1873
+zero_element, 1875
+sin, 1803
+complex, 1737
+simd, 1901, 1905
+valarray, 1795
+sinf, 1803
+single
+views, 1262
+single_view, 1262
+begin, 1263
+constructor, 1263
+data, 1263
+empty, 1263
+end, 1263
+size, 1263
+sinh, 1803
+complex, 1737
+simd, 1901, 1905
+valarray, 1795
+sinhf, 1803
+sinhl, 1803
+sinl, 1803
+size, 1248
+adjacent_transform_view, 1359
+adjacent_view, 1354
+array, 974, 976
+basic_mask, 1906
+basic_stacktrace, 656
+basic_string, 1595
+basic_string_view, 1579
+basic_vec, 1886
+bitset, 895
+cache_latest_view, 1395
+cartesian_product_view, 1389
+chunk_view, 1365, 1370
+chunk_view::outer-iterator ::value_-
+type, 1367
+common_view, 1328
+concat_view, 1321
+containers, 941
+drop_view, 1296
+elements_view, 1332
+enumerate_view, 1338
+flat_map, 1087
+format_to_n_result, 1664
+gslice, 1799
+initializer_list, 607
+iota_view, 1266
+match_results, 1712
+mdspan, 1157
+repeat_view, 1271
+reverse_view, 1330
+seed_seq, 1762
+single_view, 1263
+slice, 1796
+slide_view, 1375
+span, 1120
+stride_view, 1383
+subrange, 1258
+take_view, 1291
+to_input_view, 1398
+transform_view, 1284
+valarray, 1792
+zip_transform_view, 1348
+zip_view, 1344
+size(C& c), 1234
+size(T (&array)[N]), 1234
+size_bytes
+span, 1120
+SIZE_MAX, 585
+size_of, 791
+size_t, 152, 567, 568, 1612, 1727, 1728, 2002,
+2147
+Index of library names © ISO/IEC
+2600
+
+===== PAGE 2612 =====
+
+Dxxxx
+size_type
+allocator, 678
+allocator_traits, 677
+basic_string, 1587
+basic_string_view, 1575
+containers, 939
+layout_blas_packed::mapping, 1832
+layout_transpose::mapping, 1842
+scoped_allocator_adaptor, 729
+sized
+subrange_kind, 1238
+sized_range, 1251
+sized_sentinel_for, 1187
+skip_existing
+copy_options, 2124
+skip_permission_denied
+directory_options, 2126
+skip_symlinks
+copy_options, 2124
+skipws, 2022
+sleep_for
+this_thread, 2170
+sleep_until
+this_thread, 2170
+slice, 1796
+constructor, 1796
+size, 1796
+start, 1796
+stride, 1796
+slice_array, 1797
+operator*=, 1797
+operator+=, 1797
+operator-=, 1797
+operator/=, 1797
+operator<<=, 1797
+operator=, 1797
+operator>>=, 1797
+operator%=, 1797
+operator&=, 1797
+operator^=, 1797
+operator|=, 1797
+value_type, 1797
+slide
+views, 1373
+slide_view, 1374
+begin, 1374, 1375
+constructor, 1374
+end, 1375
+reserve_hint, 1375
+size, 1375
+slide_view::iterator , 1375
+constructor, 1376, 1377
+operator*, 1377
+operator+, 1378
+operator++, 1377
+operator+=, 1377
+operator-, 1378
+operator--, 1377
+operator-=, 1377
+operator<, 1378
+operator<=, 1378
+operator<=>, 1378
+operator==, 1378
+operator>, 1378
+operator>=, 1378
+operator[], 1377
+slide_view::sentinel , 1378
+constructor, 1379
+operator-, 1379
+operator==, 1379
+snextc
+basic_streambuf, 2028
+snprintf, 2147
+socket
+file_type, 2124
+sort, 1513
+forward_list, 989
+hive, 997
+list, 1004
+sort_heap, 1536
+sortable, 1197
+source_file
+stacktrace_entry, 653
+source_line
+stacktrace_entry, 653
+source_location, 598
+source_location_of, 777
+space, 2145
+ctype_base, 1625
+money_base, 1652
+span, 1115
+at, 1120
+back, 1120
+basic_ispanstream, 2081
+basic_ospanstream, 2082
+basic_spanbuf, 2078, 2079
+basic_spanstream, 2083
+begin, 1121
+constructor, 1117–1119
+data, 1120
+deduction guide, 1119
+empty, 1120
+end, 1121
+first, 1119, 1120
+front, 1120
+iterator, 1121
+last, 1119, 1120
+operator=, 1119
+rbegin, 1121
+rend, 1121
+size, 1120
+size_bytes, 1120
+subspan, 1119, 1120
+spanbuf, 2076
+spanstream, 2076
+spawn_future, 2270
+spawn_future_t, 2270
+spawn_t, 2271
+Index of library names © ISO/IEC
+2601
+
+===== PAGE 2613 =====
+
+Dxxxx
+sph_bessel, 1815
+simd, 1901
+sph_besself, 1815
+sph_bessell, 1815
+sph_legendre, 1815
+simd, 1901
+sph_legendref, 1815
+sph_legendrel, 1815
+sph_neumann, 1815
+simd, 1901
+sph_neumannf, 1815
+sph_neumannl, 1815
+splice
+hive, 997
+list, 1003
+splice_after
+forward_list, 987, 988
+split_view, 1316
+find-next , 1317
+begin, 1317
+constructor, 1316, 1317
+split_view::iterator , 1317
+base, 1317
+constructor, 1317
+operator*, 1317
+operator++, 1318
+operator==, 1318
+split_view::sentinel , 1318
+constructor, 1318
+operator==, 1318
+sprintf, 2147
+sputbackc
+basic_streambuf, 2028
+sputc
+basic_streambuf, 2028
+sputn
+basic_streambuf, 2028
+sqrt, 1803
+complex, 1737
+simd, 1901, 1905
+valarray, 1795
+sqrt2, 1816
+sqrt2_v, 1816
+sqrt3, 1816
+sqrt3_v, 1816
+sqrtf, 1803
+sqrtl, 1803
+srand, 568, 1783
+sscanf, 2147
+ssize, 1248
+ssize(C& c), 1234
+ssize(T (&array)[N]), 1234
+stable_partition, 1523
+stable_sort, 1513
+stack, 1076
+constructor, 1077, 1078
+operator<, 1078
+operator<=, 1078
+operator<=>, 1078
+operator==, 1078
+operator>, 1078
+operator>=, 1078
+push_range, 1078
+swap, 1078
+stacktrace_entry, 652
+constructor, 653
+description, 653
+native_handle, 653
+operator bool, 653
+operator<<, 657
+operator==, 653
+source_file, 653
+source_line, 653
+start, 2268
+gslice, 1799
+slice, 1796
+task::state , 2335
+task_scheduler::state , 2333
+start_lifetime_as, 672
+start_lifetime_as_array, 672
+start_t, 2268
+starts_on, 2270
+starts_on_t, 2270
+starts_with, 1486
+basic_string, 1606
+basic_string_view, 1581
+state
+fpos, 2017
+state_type
+char_traits, 1571
+codecvt, 1630
+static_data_members_of, 790
+static_extent
+extents, 1125
+static_pointer_cast
+shared_ptr, 698
+status, 2145, 2146
+directory_entry, 2130
+status_known, 2146
+stdc_bit_ceil, 936
+stdc_bit_ceil_uc, 936
+stdc_bit_ceil_ui, 936
+stdc_bit_ceil_ul, 936
+stdc_bit_ceil_ull, 936
+stdc_bit_ceil_us, 936
+stdc_bit_floor, 936
+stdc_bit_floor_uc, 936
+stdc_bit_floor_ui, 936
+stdc_bit_floor_ul, 936
+stdc_bit_floor_ull, 936
+stdc_bit_floor_us, 936
+stdc_bit_width, 936
+stdc_bit_width_uc, 936
+stdc_bit_width_ui, 936
+stdc_bit_width_ul, 936
+stdc_bit_width_ull, 936
+stdc_bit_width_us, 936
+stdc_count_ones_uc, 936
+Index of library names © ISO/IEC
+2602
+
+===== PAGE 2614 =====
+
+Dxxxx
+stdc_count_ones_ui, 936
+stdc_count_ones_ul, 936
+stdc_count_ones_ull, 936
+stdc_count_ones_us, 936
+stdc_count_zeros, 936
+stdc_count_zeros_uc, 936
+stdc_count_zeros_ui, 936
+stdc_count_zeros_ul, 936
+stdc_count_zeros_ull, 936
+stdc_count_zeros_us, 936
+stdc_first_leading_one_uc, 935
+stdc_first_leading_one_ui, 935
+stdc_first_leading_one_ul, 935
+stdc_first_leading_one_ull, 935
+stdc_first_leading_one_us, 935
+stdc_first_leading_zero, 935
+stdc_first_leading_zero_uc, 935
+stdc_first_leading_zero_ui, 935
+stdc_first_leading_zero_ul, 935
+stdc_first_leading_zero_ull, 935
+stdc_first_leading_zero_us, 935
+stdc_first_trailing_one_uc, 936
+stdc_first_trailing_one_ui, 936
+stdc_first_trailing_one_ul, 936
+stdc_first_trailing_one_ull, 936
+stdc_first_trailing_one_us, 936
+stdc_first_trailing_zero_uc, 936
+stdc_first_trailing_zero_ui, 936
+stdc_first_trailing_zero_ul, 936
+stdc_first_trailing_zero_ull, 936
+stdc_first_trailing_zero_us, 936
+stdc_has_single_bit, 936
+stdc_has_single_bit_uc, 936
+stdc_has_single_bit_ui, 936
+stdc_has_single_bit_ul, 936
+stdc_has_single_bit_ull, 936
+stdc_has_single_bit_us, 936
+stdc_leading_ones, 935
+stdc_leading_ones_uc, 935
+stdc_leading_ones_ui, 935
+stdc_leading_ones_ul, 935
+stdc_leading_ones_ull, 935
+stdc_leading_ones_us, 935
+stdc_leading_zeros, 935
+stdc_leading_zeros_uc, 935
+stdc_leading_zeros_ui, 935
+stdc_leading_zeros_ul, 935
+stdc_leading_zeros_ull, 935
+stdc_leading_zeros_us, 935
+stdc_trailing_ones, 935
+stdc_trailing_ones_uc, 935
+stdc_trailing_ones_ui, 935
+stdc_trailing_ones_ul, 935
+stdc_trailing_ones_ull, 935
+stdc_trailing_ones_us, 935
+stdc_trailing_zeros, 935
+stdc_trailing_zeros_uc, 935
+stdc_trailing_zeros_ui, 935
+stdc_trailing_zeros_ul, 935
+stdc_trailing_zeros_ull, 935
+stdc_trailing_zeros_us, 935
+stddev
+normal_distribution, 1774
+stderr, 2148
+stdin, 2148
+stdout, 2148
+steady_clock, 1945
+stem
+path, 2118
+sticky_bit
+perms, 2125
+stod, 1611
+stof, 1611
+stoi, 1610, 1611
+stol, 1610, 1611
+stold, 1611
+stoll, 1610, 1611
+stop_callback, 2160
+callback_type, 2160
+constructor, 2160
+destructor, 2160
+stop_callback_for_t, 2156
+stop_possible
+inplace_stop_source, 2162
+inplace_stop_token, 2161
+never_stop_token, 2161
+stop_source, 2159
+stop_token, 2158
+stop_requested
+inplace_stop_source, 2162
+inplace_stop_token, 2161
+never_stop_token, 2161
+stop_source, 2159
+stop_token, 2158
+stop_source, 2159
+constructor, 2159
+get_token, 2159
+request_stop, 2159
+stop_possible, 2159
+stop_requested, 2159
+swap, 2159
+stop_token, 2158
+callback_type, 2158
+stop_possible, 2158
+stop_requested, 2158
+swap, 2158
+stoppable_token, 2157
+stopped_as_error, 2270
+stopped_as_error_t, 2270
+stopped_as_optional, 2270
+stopped_as_optional_t, 2270
+storage_order_type
+layout_blas_packed, 1832
+store
+atomic, 2190
+atomic<floating-point-type >, 2190
+atomic<integral-type >, 2190
+atomic<shared_ptr<T>>, 2204
+Index of library names © ISO/IEC
+2603
+
+===== PAGE 2615 =====
+
+Dxxxx
+atomic<T*>, 2190
+atomic<weak_ptr<T>>, 2206
+atomic_ref, 2180
+atomic_ref<floating-point-type >, 2180
+atomic_ref<integral-type >, 2180
+atomic_ref<pointer-type >, 2180
+store_add
+atomic<integral-type >, 2196
+atomic<T*>, 2202
+atomic_ref<floating-point-type >, 2186
+atomic_ref<integral-type >, 2184
+atomic_ref<pointer-type >, 2188
+store_and
+atomic<integral-type >, 2196
+atomic_ref<integral-type >, 2184
+store_fmaximum
+atomic<floating-point-type >, 2199
+atomic_ref<floating-point-type >, 2186
+store_fmaximum_num
+atomic<floating-point-type >, 2199
+atomic_ref<floating-point-type >, 2186
+store_fminimum
+atomic<floating-point-type >, 2199
+atomic_ref<floating-point-type >, 2186
+store_fminimum_num
+atomic<floating-point-type >, 2199
+atomic_ref<floating-point-type >, 2186
+store_max
+atomic<floating-point-type >, 2199
+atomic<integral-type >, 2196
+atomic<T*>, 2202
+atomic_ref<floating-point-type >, 2186
+atomic_ref<integral-type >, 2184
+atomic_ref<pointer-type >, 2188
+store_min
+atomic<floating-point-type >, 2199
+atomic<integral-type >, 2196
+atomic<T*>, 2202
+atomic_ref<floating-point-type >, 2186
+atomic_ref<integral-type >, 2184
+atomic_ref<pointer-type >, 2188
+store_or
+atomic<integral-type >, 2196
+atomic_ref<integral-type >, 2184
+store_sub
+atomic<integral-type >, 2196
+atomic<T*>, 2202
+atomic_ref<floating-point-type >, 2186
+atomic_ref<integral-type >, 2184
+atomic_ref<pointer-type >, 2188
+stossc
+zombie, 561
+stoul, 1610, 1611
+stoull, 1610, 1611
+str
+basic_istringstream, 2069, 2070
+basic_ostringstream, 2073
+basic_stringbuf, 2064, 2065
+basic_stringstream, 2075, 2076
+match_results, 1713
+sub_match, 1709
+strcat, 1612
+strchr, 1612
+strcmp, 1612
+strcoll, 1612
+strcpy, 1612
+strcspn, 1612
+stream
+io_errc, 2010
+stream_timeout
+errc, 2418
+streambuf, 2005, 2024
+streamoff, 2004, 2017
+streampos, 2005
+streamsize, 2004
+strerror, 1612
+strftime, 1649, 2002
+strict
+zombie, 561
+strict_weak_order, 637
+stride
+gslice, 1799
+layout_blas_packed::mapping, 1834
+layout_left::mapping, 1131
+layout_right::mapping, 1134
+layout_transpose::mapping, 1843
+slice, 1796
+stride_view, 1383
+stride_view, 1382
+constructor, 1383
+reserve_hint, 1383
+size, 1383
+stride, 1383
+stride_view::iterator , 1383
+base, 1385
+constructor, 1385
+iter_move, 1387
+iter_swap, 1387
+operator+, 1386
+operator++, 1385
+operator+=, 1386
+operator-, 1387
+operator--, 1385, 1386
+operator-=, 1386
+operator<, 1386
+operator<=, 1386
+operator<=>, 1386
+operator==, 1386
+operator>, 1386
+operator>=, 1386
+strided_slice, 1159
+strides
+layout_right_padded::mapping, 1148
+string, 1586
+hash, 1612
+operator""s, 1612
+path, 2116, 2424
+range_format, 1666
+Index of library names © ISO/IEC
+2604
+
+===== PAGE 2616 =====
+
+Dxxxx
+string_type
+collate, 1643
+collate_byname, 1644
+messages, 1655
+messages_byname, 1656
+money_get, 1649
+money_put, 1651
+moneypunct, 1652
+moneypunct_byname, 1654
+numpunct, 1641
+numpunct_byname, 1642
+string_view, 1575
+hash, 1583
+operator""sv, 1583
+stringbuf, 2005, 2060
+stringstream, 2005, 2060
+strlen, 1612
+strncat, 1612
+strncmp, 1612
+strncpy, 1612
+strong_order, 613
+strong_ordering, 610
+equal, 610
+equivalent, 610
+greater, 610
+less, 610
+operator partial_ordering, 611
+operator weak_ordering, 611
+operator<, 611
+operator<=, 611
+operator<=>, 611
+operator==, 611
+operator>, 611
+operator>=, 611
+strpbrk, 1612
+strrchr, 1612
+strspn, 1612
+strstr, 1612
+strstream
+zombie, 561
+strstreambuf
+zombie, 561
+strtod, 568
+strtof, 568
+strtoimax, 2149
+strtok, 1612
+strtol, 568
+strtold, 568
+strtoll, 568
+strtoul, 568
+strtoull, 568
+strtoumax, 2149
+strxfrm, 1612
+student_t_distribution, 1778
+constructor, 1778
+mean, 1778
+result_type, 1778
+sub_match, 1708
+compare, 1709
+constructor, 1708
+length, 1709
+operator basic_string, 1709
+operator<<, 1710
+operator<=>, 1709, 1710
+operator==, 1709, 1710
+str, 1709
+swap, 1709
+sub_sat, 1559
+submdspan, 1166
+submdspan-mapping-impl
+layout_left::mapping, 1163
+layout_left_padded::mapping, 1164
+layout_right::mapping, 1164
+layout_right_padded::mapping, 1165
+layout_stride::mapping, 1164
+submdspan_canonicalize_slices, 1160
+submdspan_extents, 1161
+submdspan_mapping_result, 1159
+subobjects_of, 790
+subrange, 1255
+advance, 1258
+begin, 1257
+constructor, 1257
+empty, 1258
+end, 1257
+get, 1258
+next, 1258
+operator PairLike , 1257
+prev, 1258
+size, 1258
+subrange_kind, 1238
+sized, 1238
+unsized, 1238
+subseconds
+hh_mm_ss, 1980
+subspan
+span, 1119, 1120
+substitute, 794
+substr
+basic_string, 1605
+basic_string_view, 1580
+subtract_with_carry_engine, 1751
+constructor, 1752
+result_type, 1751
+subview
+basic_string, 1605
+basic_string_view, 1580
+suffix
+match_results, 1713
+sum
+valarray, 1793
+sungetc
+basic_streambuf, 2028
+suspend_always, 620
+await_ready, 620
+await_resume, 620
+await_suspend, 620
+suspend_never, 620
+Index of library names © ISO/IEC
+2605
+
+===== PAGE 2617 =====
+
+Dxxxx
+await_ready, 620
+await_resume, 620
+await_suspend, 620
+swap, 631, 808
+allocator-aware containers, 945
+any, 867
+array, 976
+basic_filebuf, 2086
+basic_fstream, 2095, 2096
+basic_ifstream, 2091
+basic_ios, 2021
+basic_iostream, 2045
+basic_ispanstream, 2080, 2081
+basic_istream, 2036
+basic_istringstream, 2069
+basic_ofstream, 2093
+basic_ospanstream, 2082
+basic_ostream, 2048
+basic_ostringstream, 2072
+basic_regex, 1708
+basic_spanbuf, 2078
+basic_spanstream, 2083
+basic_stacktrace, 656, 657
+basic_streambuf, 2029
+basic_string, 1604, 1609
+basic_string_view, 1580
+basic_stringbuf, 2064
+basic_stringstream, 2075
+basic_syncbuf, 2098, 2099
+bitset::reference, 891
+containers, 940
+copyable_function, 925
+expected, 878, 879
+expected<void>, 886, 887
+flat_map, 1090
+flat_multiset, 1113
+flat_set, 1106
+function, 919
+hazard_pointer, 2262
+hive, 997
+indirect, 713, 714
+inplace_stop_token, 2161
+jthread, 2169, 2170
+match_results, 1714
+mdspan, 1157
+move_only_function, 922
+optional, 840, 851
+packaged_task, 2255, 2256
+pair, 816
+path, 2116, 2121
+polymorphic, 719
+priority_queue, 1075
+promise, 2246, 2248
+queue, 1071
+shared_lock, 2228
+shared_ptr, 693, 698
+stack, 1078
+stop_source, 2159
+stop_token, 2158
+sub_match, 1709
+thread, 2166, 2167
+tuple, 827, 832
+unexpected, 870
+unique_lock, 2225
+unique_ptr, 685
+valarray, 1792, 1796
+variant, 859, 863
+vector, 1009
+vector<bool>, 2421
+vector<bool>::reference, 1013
+weak_ptr, 701, 702
+swap(unique_ptr&, unique_ptr&), 687
+swap_elements, 1846
+swap_ranges, 1493
+swap_ranges_result, 1431
+swappable, 631
+swappable_with, 631
+swprintf, 1727
+swscanf, 1727
+symbol
+money_base, 1652
+symbol_of, 776
+symlink
+file_type, 2124
+symlink_status, 2146
+directory_entry, 2130
+symmetric_matrix_product, 1860–1862
+symmetric_matrix_rank_1_update, 1858
+symmetric_matrix_rank_2_update, 1859
+symmetric_matrix_rank_2k_update, 1865, 1866
+symmetric_matrix_rank_k_update, 1864
+symmetric_matrix_vector_product, 1852, 1853
+sync
+basic_filebuf, 2090
+basic_istream, 2043
+basic_streambuf, 2030
+basic_syncbuf, 2099
+sync_wait, 2270
+sync_wait_t, 2270
+sync_wait_with_variant, 2270
+sync_wait_with_variant_t, 2270
+sync_with_stdio
+ios_base, 2015
+syncbuf, 2005, 2096
+synchronized_pool_resource, 724
+constructor, 726
+destructor, 726
+do_allocate, 726
+do_deallocate, 727
+do_is_equal, 727
+options, 726
+release, 726
+upstream_resource, 726
+syntax_option_type, 1699
+awk, 1699
+basic, 1699
+collate, 1699, 1725
+ECMAScript, 1699
+Index of library names © ISO/IEC
+2606
+
+===== PAGE 2618 =====
+
+Dxxxx
+egrep, 1699
+extended, 1699
+grep, 1699
+icase, 1699
+multiline, 1699
+nosubs, 1699
+optimize, 1699
+regex_constants, 1699
+sys_days, 1912
+operator<<, 1939
+sys_info, 1984
+abbrev, 1985
+begin, 1985
+end, 1985
+offset, 1985
+operator<<, 1985
+save, 1985
+sys_seconds, 1912
+sys_time, 1912
+from_stream, 1939
+operator<, 1992
+operator<<, 1939
+operator<=, 1993
+operator<=>, 1993
+operator==, 1992
+operator>, 1993
+operator>=, 1993
+system, 568, 620
+system_category, 645, 647
+system_clock, 1938
+from_time_t, 1939
+rep, 1939
+to_time_t, 1939
+system_context_replaceability, 2272
+system_encoded_string
+path, 2116
+system_error, 643, 651
+code, 651
+constructor, 651
+what, 651
+T
+t
+binomial_distribution, 1766
+table
+ctype<char>, 1629
+table_size
+ctype<char>, 1628
+tai_clock, 1942
+from_utc, 1942
+now, 1942
+to_utc, 1942
+tai_seconds, 1912
+tai_time, 1912
+from_stream, 1943
+operator<<, 1943
+take
+views, 1290
+take_view, 1291
+base, 1291
+begin, 1291
+constructor, 1292
+end, 1291
+size, 1291
+take_view::sentinel , 1292
+base, 1293
+constructor, 1293
+operator==, 1293
+take_while, 1293
+views, 1293
+take_while_view, 1293
+base, 1293
+begin, 1293
+constructor, 1294
+end, 1293
+pred, 1294
+take_while_view::sentinel , 1294
+constructor, 1295
+operator==, 1295
+tan, 1803
+complex, 1737
+simd, 1901, 1905
+valarray, 1795
+tanf, 1803
+tanh, 1803
+complex, 1737
+simd, 1901, 1905
+valarray, 1795
+tanhf, 1803
+tanhl, 1803
+tanl, 1803
+target
+function, 919
+time_zone_link, 1993
+target_type
+function, 919
+task, 2272, 2333
+connect, 2334
+constructor, 2334
+destructor, 2334
+task::state
+constructor, 2335
+destructor, 2335
+start, 2335
+task::promise_type
+await_transform, 2337
+constructor, 2336
+final_suspend, 2336
+get_env, 2337
+get_return_object, 2336
+initial_suspend, 2335
+operator delete, 2338
+operator new, 2337
+return_value, 2337
+return_void, 2337
+unhandled_exception, 2337
+unhandled_stopped, 2337
+Index of library names © ISO/IEC
+2607
+
+===== PAGE 2619 =====
+
+Dxxxx
+yield_value, 2337
+task_scheduler, 2271, 2331
+constructor, 2332
+operator==, 2332
+scheduler, 2332
+task_scheduler::state
+start, 2333
+task_scheduler::ts-sender
+connect, 2333
+tellg
+basic_istream, 2043
+tellp
+basic_ostream, 2049
+temp_directory_path, 2147
+template_arguments_of, 784
+template_of, 784
+tera, 803
+terminate, 587, 588, 601, 602
+terminate_handler, 562, 601
+test
+atomic_flag, 2208
+bitset, 895
+test_and_set
+atomic_flag, 2209
+text_encoding, 1657
+comp-name , 1659
+aliases, 1658
+aliases_view, 1660
+constructor, 1658
+environment, 1659
+environment_is, 1659
+hash, 1664
+id, 1660
+literal, 1659
+mib, 1658
+name, 1658
+operator==, 1659
+text_encoding::aliases_view
+begin, 1660
+end, 1660
+tgamma, 1803
+simd, 1901
+tgammaf, 1803
+tgammal, 1803
+then, 2270
+then_t, 2270
+this_thread
+get_id, 2170
+sleep_for, 2170
+sleep_until, 2170
+yield, 2170
+thousands_sep
+moneypunct, 1653
+numpunct, 1642
+thread, 2164
+constructor, 2165, 2166
+destructor, 2166
+detach, 2167
+get_id, 2167
+hardware_concurrency, 2167
+id, 2164
+join, 2166
+joinable, 2166
+operator=, 2166
+swap, 2166, 2167
+thread::id, 2164
+constructor, 2165
+hash, 2165
+operator<<, 2165
+operator<=>, 2165
+operator==, 2165
+three_way_comparable, 612
+three_way_comparable_with, 612
+throw_with_nested
+nested_exception, 603
+tie, 828
+basic_ios, 2019
+tuple, 828
+time, 2002
+TIME_ACTIVE, 2002
+time_base, 1644
+dateorder, 1644
+dmy, 1644
+mdy, 1644
+no_order, 1644
+ydm, 1644
+ymd, 1644
+time_get, 1644
+char_type, 1644
+date_order, 1645
+do_date_order, 1646
+do_get, 1647
+do_get_date, 1646
+do_get_monthname, 1647
+do_get_time, 1646
+do_get_weekday, 1647
+do_get_year, 1647
+get, 1646
+get_date, 1645
+get_monthname, 1645
+get_time, 1645
+get_weekday, 1645
+get_year, 1645
+id, 1645
+iter_type, 1644
+time_get_byname, 1647
+dateorder, 1648
+iter_type, 1648
+TIME_MONOTONIC, 2002
+time_point, 1935
+ceil, 1938
+constructor, 1936
+floor, 1938
+hash, 2002
+max, 1937
+min, 1937
+operator+, 1937
+operator++, 1936
+Index of library names © ISO/IEC
+2608
+
+===== PAGE 2620 =====
+
+Dxxxx
+operator+=, 1936
+operator-, 1937
+operator--, 1936
+operator-=, 1936
+operator<, 1937
+operator<=, 1937
+operator==, 1937
+operator>, 1937
+operator>=, 1937, 1938
+round, 1938
+time_point_cast, 1938
+time_since_epoch, 1936
+time_point_cast, 1938
+time_point, 1938
+time_put, 1648
+char_type, 1648
+do_put, 1649
+id, 1648
+iter_type, 1648
+put, 1648
+time_put_byname, 1649
+char_type, 1649
+iter_type, 1649
+time_since_epoch
+time_point, 1936
+time_t, 2002
+TIME_THREAD_ACTIVE, 2002
+TIME_UTC, 2002
+time_zone, 1986
+get_info, 1986
+name, 1986
+operator<=>, 1987
+operator==, 1987
+to_local, 1987
+to_sys, 1986, 1987
+time_zone_link, 1993
+name, 1993
+operator<=>, 1994
+operator==, 1993
+target, 1993
+timed_mutex, 2216
+timegm, 2002
+timeout
+cv_status, 2231
+future_status, 2243
+timespec, 2002
+timespec_get, 2002
+timespec_getres, 2002
+tinyness_before
+numeric_limits, 581
+tm, 1727, 2002
+TMP_MAX, 2148
+tmpfile, 2147
+tmpnam, 2147
+to
+ranges, 1260, 1261
+to_address, 671
+pointer_traits, 671
+to_array, 976
+to_bitset
+basic_mask, 1909
+to_bytes
+zombie, 561
+to_chars, 1615
+to_chars_result, 1614
+ec, 1614
+ptr, 1614
+to_duration
+hh_mm_ss, 1980
+to_input_view, 1397
+begin, 1398
+constructor, 1398
+end, 1398
+reserve_hint, 1398
+size, 1398
+to_input_view::iterator , 1398
+base, 1399
+constructor, 1399
+iter_move, 1399
+iter_swap, 1399
+operator++, 1399
+operator-, 1399
+operator==, 1399
+to_integer
+byte, 571
+to_local
+time_zone, 1987
+to_string, 1611
+basic_stacktrace, 657
+bitset, 894
+to_sys
+time_zone, 1986, 1987
+utc_clock, 1940
+to_time_t
+system_clock, 1939
+to_ullong
+basic_mask, 1909
+bitset, 894
+to_ulong
+bitset, 894
+to_underlying, 811
+to_utc
+gps_clock, 1944
+tai_clock, 1942
+to_wstring, 1612
+token
+execution::counting_scope, 2343
+tolower, 1624, 1726
+ctype, 1626
+ctype<char>, 1629
+total_bits
+member_offset, 790
+totally_ordered, 635
+totally_ordered_with, 636
+toupper, 1624, 1726
+ctype, 1626
+ctype<char>, 1629
+towctrans, 1726
+Index of library names © ISO/IEC
+2609
+
+===== PAGE 2621 =====
+
+Dxxxx
+towlower, 1726
+towupper, 1726
+traits_type
+basic_string, 1587
+basic_string_view, 1575
+transform, 1494
+collate, 1643
+expected, 881
+expected<void>, 888
+optional, 842
+regex_traits, 1702
+views, 1284
+transform_env, 2289
+default_domain, 2288
+transform_error
+expected, 882
+expected<void>, 889
+transform_exclusive_scan, 1555
+transform_inclusive_scan, 1556
+transform_primary
+regex_traits, 1702
+transform_reduce, 1551, 1552
+transform_sender, 2289
+default_domain, 2288
+transform_view, 1284
+base, 1284
+begin, 1285
+constructor, 1285
+end, 1286
+size, 1284
+transform_view::iterator , 1286
+base, 1288
+constructor, 1287
+iterator, 1287
+operator+, 1289
+operator++, 1288
+operator+=, 1288
+operator-, 1289
+operator--, 1288
+operator-=, 1288
+operator<, 1288
+operator<=, 1288
+operator<=>, 1289
+operator==, 1288
+operator>, 1288
+operator>=, 1289
+transform_view::sentinel , 1289
+base, 1290
+constructor, 1289, 1290
+operator-, 1290
+operator==, 1290
+translate
+regex_traits, 1702
+translate_nocase
+regex_traits, 1702
+transposed, 1843
+traps
+numeric_limits, 581
+treat_as_floating_point, 1927
+treat_as_floating_point_v, 1912
+triangle_type
+layout_blas_packed, 1832
+triangular_matrix_matrix_left_solve,
+1866–1868
+triangular_matrix_matrix_right_solve,
+1867–1869
+triangular_matrix_product, 1863
+triangular_matrix_right_product, 1863
+triangular_matrix_vector_product, 1854
+triangular_matrix_vector_solve, 1855, 1856
+trim_capacity
+hive, 995
+true_type, 734, 742
+truename
+numpunct, 1642
+trunc, 1803
+simd, 1900
+truncf, 1803
+truncl, 1803
+try_acquire
+counting_semaphore, 2239
+try_acquire_for
+counting_semaphore, 2239
+try_acquire_until
+counting_semaphore, 2239
+try_append_range
+inplace_vector, 1019
+try_associate
+execution::simple_counting_-
+scope::token, 2343
+try_emplace
+flat_map, 1089
+map, 1026
+unordered_map, 1048
+try_emplace_back
+inplace_vector, 1018
+try_lock, 2229
+rcu_domain, 2258
+shared_lock, 2227
+unique_lock, 2224
+try_lock_for
+shared_lock, 2228
+unique_lock, 2225
+try_lock_until
+shared_lock, 2228
+unique_lock, 2224
+try_protect
+hazard_pointer, 2262
+try_push_back
+inplace_vector, 1018
+try_query, 2345
+try_to_lock, 2221
+try_to_lock_t, 2221
+try_wait
+latch, 2240
+tuple, 818, 820, 976
+basic_common_reference, 831
+common_type, 831
+Index of library names © ISO/IEC
+2610
+
+===== PAGE 2622 =====
+
+Dxxxx
+constructor, 822–824
+forward_as_tuple, 828
+get, 830
+make_tuple, 827
+operator<=>, 831
+operator=, 825–827
+operator==, 830
+swap, 827, 832
+tie, 828
+tuple_cat, 828
+tuple_element, 733, 801, 817, 829, 830, 976, 1737
+tuple_element_t, 819
+tuple_size, 733, 801, 817, 829, 976, 1737
+in general, 829
+tuple_size_v, 820
+type
+any, 867
+file_status, 2126
+type_identity, 760
+type_identity_t, 738
+type_index, 596
+constructor, 597
+hash, 597
+hash_code, 597
+name, 597
+operator<, 597
+operator<=, 597
+operator<=>, 597
+operator==, 597
+operator>, 597
+operator>=, 597
+type_info, 144, 595
+before, 596
+hash_code, 596
+name, 596
+operator==, 595
+type_of, 777
+type_order, 615, 802
+operator value_type, 615
+operator(), 615
+value, 615
+value_type, 615
+type_order_v, 607
+tzdb, 1981
+current_zone, 1981
+locate_zone, 1981
+tzdb_list, 1981
+begin, 1982
+cbegin, 1982
+cend, 1982
+end, 1982
+erase_after, 1982
+front, 1982
+U
+u16streampos, 2005
+u16string, 1586
+hash, 1612
+operator""s, 1612
+path, 2116
+u16string_view, 1575
+hash, 1583
+operator""sv, 1583
+u32streampos, 2005
+u32string, 1586
+hash, 1612
+operator""s, 1612
+path, 2116
+u32string_view, 1575
+hash, 1583
+operator""sv, 1583
+u8display_string_of, 777
+u8identifier_of, 777
+u8path, 2423
+u8string, 1586
+hash, 1612
+operator""s, 1612
+path, 2116
+u8string_view, 1575
+hash, 1583
+operator""sv, 1583
+u8symbol_of, 776
+u8what
+exception, 774
+UCHAR_MAX, 583
+UCHAR_WIDTH, 583
+uflow
+basic_filebuf, 2088
+basic_streambuf, 2031
+uint16_t, 585
+uint32_t, 585
+uint64_t, 585
+uint8_t, 585
+uint_fast16_t, 585
+uint_fast32_t, 585
+uint_fast64_t, 585
+uint_fast8_t, 585
+UINT_FASTN_MAX, 585
+uint_least16_t, 585
+uint_least32_t, 585
+uint_least64_t, 585
+uint_least8_t, 585
+UINT_LEASTN_MAX, 585
+UINT_MAX, 584
+UINT_WIDTH, 583
+UINTMAX_C, 585
+UINTMAX_MAX, 585
+uintmax_t, 585
+UINTN_C, 585
+UINTN_MAX, 585
+UINTPTR_MAX, 585
+uintptr_t, 585
+ULLONG_MAX, 584
+ULLONG_WIDTH, 583
+ULONG_MAX, 584
+ULONG_WIDTH, 583
+unary_function
+Index of library names © ISO/IEC
+2611
+
+===== PAGE 2623 =====
+
+Dxxxx
+zombie, 561
+unary_negate
+zombie, 561
+unary_transform_result, 1431
+uncaught_exception
+zombie, 561
+uncaught_exceptions, 505, 602
+unchecked
+access_context, 787
+unchecked_emplace_back
+inplace_vector, 1019
+unchecked_gather_from
+simd, 1897
+unchecked_load
+simd, 1893
+unchecked_push_back
+inplace_vector, 1019
+unchecked_scatter_to
+simd, 1898
+unchecked_store
+simd, 1894
+undeclare_no_pointers
+zombie, 561
+undeclare_reachable
+zombie, 561
+underflow
+basic_filebuf, 2088
+basic_streambuf, 2030
+basic_stringbuf, 2065
+underflow_error, 638, 641
+constructor, 641
+underlying_type, 760, 800
+underlying_type_t, 738
+unexpect, 869
+unexpect_t, 869
+unexpected, 869
+constructor, 870
+error, 870
+operator==, 871
+swap, 870
+unexpected_handler
+zombie, 561
+unexpected_type
+expected, 872
+expected<void>, 882
+unget
+basic_istream, 2043
+ungetc, 2147
+ungetwc, 1727
+unhandled_exception
+generator::promise_type, 1403
+task::promise_type, 2337
+unhandled_stopped
+task::promise_type, 2337
+with_awaitable_senders, 2330
+uniform_int_distribution, 1763
+a, 1764
+b, 1764
+constructor, 1763
+result_type, 1763
+uniform_random_bit_generator, 1743
+uniform_real_distribution, 1764
+a, 1764
+b, 1765
+constructor, 1764
+result_type, 1764
+uninit_element
+simd, 1875
+uninitialized_construct_using_allocator,
+676
+uninitialized_copy, 1563
+uninitialized_copy_n, 1563
+uninitialized_copy_n_result, 663
+uninitialized_copy_result, 663
+uninitialized_default_construct, 1561
+uninitialized_default_construct_n, 1562
+uninitialized_fill, 1565
+uninitialized_fill_n, 1565
+uninitialized_move, 1564
+uninitialized_move_n, 1564
+uninitialized_move_n_result, 664
+uninitialized_move_result, 664
+uninitialized_value_construct, 1562
+uninitialized_value_construct_n, 1562, 1563
+unique, 1504
+forward_list, 988
+hive, 997
+list, 1004
+local_info, 1985
+unique_copy, 1505
+unique_copy_result, 1440
+unique_lock, 2222
+constructor, 2223, 2224
+destructor, 2224
+lock, 2224
+mutex, 2225
+operator bool, 2225
+operator=, 2224
+owns_lock, 2225
+release, 2225
+swap, 2225
+try_lock, 2224
+try_lock_for, 2225
+try_lock_until, 2224
+unlock, 2225
+unique_ptr, 681, 685, 692
+constructor, 682, 683, 686
+destructor, 683
+get, 684
+get_deleter, 684
+hash, 704
+operator bool, 684
+operator*, 684
+operator->, 684
+operator<, 687, 688
+operator<<, 689
+operator<=, 688
+operator<=>, 688, 689
+Index of library names © ISO/IEC
+2612
+
+===== PAGE 2624 =====
+
+Dxxxx
+operator=, 683, 684, 686
+operator==, 687, 688
+operator>, 688
+operator>=, 688
+operator[], 686
+release, 684
+reset, 684, 687
+swap, 685
+unitbuf, 2023
+unknown
+file_type, 2124
+perms, 2125
+unlock
+rcu_domain, 2258
+shared_lock, 2228
+unique_lock, 2225
+unordered
+partial_ordering, 608
+unordered_map, 1041, 1042
+allocator_type, 944
+at, 1047
+begin, 940, 971
+bucket, 971
+bucket_count, 971
+bucket_size, 971
+cbegin, 940, 972
+cend, 940, 972
+clear, 970
+const_iterator, 939
+const_local_iterator, 964
+const_reference, 939
+const_reverse_iterator, 942
+constructor, 965, 1047
+contains, 970
+count, 970
+crbegin, 943
+crend, 943
+difference_type, 939
+emplace, 967
+emplace_hint, 967
+empty, 941
+end, 940, 971
+equal_range, 970, 971
+erase, 969, 970
+erase_if, 1050
+extract, 969
+find, 970
+get_allocator, 944
+hash_function, 967
+hasher, 964
+insert, 967, 968, 1048
+insert_or_assign, 1049
+insert_range, 968
+iterator, 939
+key_eq, 967
+key_equal, 964
+key_type, 964
+load_factor, 972
+local_iterator, 964
+mapped_type, 964
+max_bucket_count, 971
+max_load_factor, 972
+max_size, 941
+merge, 969
+node_type, 965
+operator!=, 940
+operator=, 939, 945
+operator==, 940
+operator[], 1047
+rbegin, 942
+reference, 939
+rehash, 972
+rend, 943
+reserve, 972
+reverse_iterator, 942
+size, 941
+size_type, 939
+swap, 940, 945
+try_emplace, 1048
+value_type, 939, 964
+unordered_multimap, 1041, 1050
+allocator_type, 944
+begin, 940, 971
+bucket, 971
+bucket_count, 971
+bucket_size, 971
+cbegin, 940, 972
+cend, 940, 972
+clear, 970
+const_iterator, 939
+const_local_iterator, 964
+const_reference, 939
+const_reverse_iterator, 942
+constructor, 965, 1054
+contains, 970
+count, 970
+crbegin, 943
+crend, 943
+difference_type, 939
+emplace, 967
+emplace_hint, 967
+empty, 941
+end, 940, 971
+equal_range, 970, 971
+erase, 969, 970
+erase_if, 1055
+extract, 969
+find, 970
+get_allocator, 944
+hash_function, 967
+hasher, 964
+insert, 967, 968, 1055
+insert_range, 968
+iterator, 939
+key_eq, 967
+key_equal, 964
+key_type, 964
+load_factor, 972
+Index of library names © ISO/IEC
+2613
+
+===== PAGE 2625 =====
+
+Dxxxx
+local_iterator, 964
+mapped_type, 964
+max_bucket_count, 971
+max_load_factor, 972
+max_size, 941
+merge, 969
+node_type, 965
+operator!=, 940
+operator=, 939, 945
+operator==, 940
+rbegin, 942
+reference, 939
+rehash, 972
+rend, 943
+reserve, 972
+reverse_iterator, 942
+size, 941
+size_type, 939
+swap, 940, 945
+value_type, 939, 964
+unordered_multiset, 1055, 1061, 1062
+allocator_type, 944
+begin, 940, 971
+bucket, 971
+bucket_count, 971
+bucket_size, 971
+cbegin, 940, 972
+cend, 940, 972
+clear, 970
+const_iterator, 939
+const_local_iterator, 964
+const_reference, 939
+const_reverse_iterator, 942
+constructor, 965, 1066
+contains, 970
+count, 970
+crbegin, 943
+crend, 943
+difference_type, 939
+emplace, 967
+emplace_hint, 967
+empty, 941
+end, 940, 971
+equal_range, 970, 971
+erase, 969, 970
+erase_if, 1066
+extract, 969
+find, 970
+get_allocator, 944
+hash_function, 967
+hasher, 964
+insert, 967, 968
+insert_range, 968
+iterator, 939
+key_eq, 967
+key_equal, 964
+key_type, 964
+load_factor, 972
+local_iterator, 964
+mapped_type, 964
+max_bucket_count, 971
+max_load_factor, 972
+max_size, 941
+merge, 969
+node_type, 965
+operator!=, 940
+operator=, 939, 945
+operator==, 940
+rbegin, 942
+reference, 939
+rehash, 972
+rend, 943
+reserve, 972
+reverse_iterator, 942
+size, 941
+size_type, 939
+swap, 940, 945
+value_type, 939, 964
+unordered_set, 1055, 1056
+allocator_type, 944
+begin, 940, 971
+bucket, 971
+bucket_count, 971
+bucket_size, 971
+cbegin, 940, 972
+cend, 940, 972
+clear, 970
+const_iterator, 939
+const_local_iterator, 964
+const_reference, 939
+const_reverse_iterator, 942
+constructor, 965, 1060, 1061
+contains, 970
+count, 970
+crbegin, 943
+crend, 943
+difference_type, 939
+emplace, 967
+emplace_hint, 967
+empty, 941
+end, 940, 971
+equal_range, 970, 971
+erase, 969, 970
+erase_if, 1061
+extract, 969
+find, 970
+get_allocator, 944
+hash_function, 967
+hasher, 964
+insert, 967, 968, 1061
+insert_range, 968
+iterator, 939
+key_eq, 967
+key_equal, 964
+key_type, 964
+load_factor, 972
+local_iterator, 964
+mapped_type, 964
+Index of library names © ISO/IEC
+2614
+
+===== PAGE 2626 =====
+
+Dxxxx
+max_bucket_count, 971
+max_load_factor, 972
+max_size, 941
+merge, 969
+node_type, 965
+operator!=, 940
+operator=, 939, 945
+operator==, 940
+rbegin, 942
+reference, 939
+rehash, 972
+rend, 943
+reserve, 972
+reverse_iterator, 942
+size, 941
+size_type, 939
+swap, 940, 945
+value_type, 939, 964
+unprivileged
+access_context, 787
+unreachable, 812
+unreachable_sentinel, 1174
+unreachable_sentinel_t, 1227
+operator==, 1227
+unseq, 1412
+execution, 1412
+unsetf
+ios_base, 2014
+unshift
+codecvt, 1631
+unsigned_integral, 630
+unsized
+subrange_kind, 1238
+unstoppable, 2270
+unstoppable_token, 2157
+unsynchronized_pool_resource, 724
+constructor, 726
+destructor, 726
+do_allocate, 726
+do_deallocate, 727
+do_is_equal, 727
+options, 726
+release, 726
+upstream_resource, 726
+unwrap_ref_decay, 761, 800, 896
+unwrap_ref_decay_t, 738, 896
+unwrap_reference, 761, 800
+unwrap_reference_t, 738
+update_existing
+copy_options, 2124
+upon_error, 2270
+upon_error_t, 2270
+upon_stopped, 2270
+upon_stopped_t, 2270
+upper
+ctype_base, 1625
+upper_bound, 1520
+ordered associative containers, 961
+upper_triangle, 1831
+upper_triangle_t, 1831
+uppercase, 2023
+upstream_resource
+monotonic_buffer_resource, 728
+synchronized_pool_resource, 726
+unsynchronized_pool_resource, 726
+use_count
+shared_ptr, 694
+weak_ptr, 701
+use_facet
+locale, 1624
+uses_allocator, 673
+uses_allocator<tuple>, 832
+uses_allocator_construction_args, 673–675
+uses_allocator_v, 660
+USHRT_MAX, 584
+USHRT_WIDTH, 583
+utc_clock, 1940
+from_sys, 1940
+now, 1940
+to_sys, 1940
+utc_seconds, 1912
+utc_time, 1912
+from_stream, 1941
+operator<<, 1941
+V
+va_arg, 140, 177, 621
+va_copy, 621
+va_end, 561, 621
+va_list, 561, 621
+va_start, 177, 621
+valarray, 1786, 1799
+abs, 1795
+acos, 1795
+apply, 1793
+asin, 1795
+atan, 1795
+atan2, 1795
+begin, 1802
+constructor, 1788, 1789
+cos, 1795
+cosh, 1795
+cshift, 1793
+destructor, 1789
+end, 1802
+exp, 1795
+log, 1795
+log10, 1795
+max, 1793
+min, 1793
+operator!, 1791
+operator!=, 1794, 1795
+operator*, 1793, 1794
+operator*=, 1792
+operator+, 1791, 1793, 1794
+operator+=, 1792
+operator-, 1791, 1793, 1794
+Index of library names © ISO/IEC
+2615
+
+===== PAGE 2627 =====
+
+Dxxxx
+operator-=, 1792
+operator/, 1793, 1794
+operator/=, 1792
+operator<, 1794, 1795
+operator<<, 1793, 1794
+operator<<=, 1792
+operator<=, 1794, 1795
+operator=, 1789
+operator==, 1794, 1795
+operator>, 1794, 1795
+operator>=, 1794, 1795
+operator>>, 1793, 1794
+operator>>=, 1792
+operator[], 1790, 1791
+operator%, 1793, 1794
+operator%=, 1792
+operator&, 1793, 1794
+operator&=, 1792
+operator&&, 1794, 1795
+operator^, 1793, 1794
+operator^=, 1792
+operator~, 1791
+operator|, 1793, 1794
+operator|=, 1792
+operator||, 1794, 1795
+pow, 1795
+resize, 1793
+shift, 1793
+sin, 1795
+sinh, 1795
+size, 1792
+sqrt, 1795
+sum, 1793
+swap, 1792, 1796
+tan, 1795
+tanh, 1795
+valid
+future, 2249
+packaged_task, 2255
+shared_future, 2252
+value
+error_code, 648
+error_condition, 650
+expected, 879, 880
+expected<void>, 887
+in_value_result, 1468
+leap_second, 1992
+money_base, 1652
+optional, 841
+out_value_result, 1468
+regex_traits, 1704
+type_order, 615
+value_comp
+ordered associative containers, 957
+value_compare
+ordered associative containers, 955
+value_or
+expected, 880
+optional, 841, 842
+value_type
+allocator, 678
+atomic, 2189
+atomic_ref, 2179
+basic_mask, 1906
+basic_string, 1587
+basic_string_view, 1575
+basic_vec, 1886
+complex, 1733
+containers, 939
+expected, 872
+expected<void>, 882
+gslice_array, 1799
+indirect_array, 1801
+integer_sequence, 733
+integral_constant, 741
+mask_array, 1800
+optional, 834
+ordered associative containers, 955
+path, 2109
+polymorphic_allocator, 721
+scoped_allocator_adaptor, 729
+slice_array, 1797
+type_order, 615
+unordered associative containers, 964
+value_types_of_t, 2323
+valueless_after_move
+indirect, 713
+polymorphic, 719
+valueless_by_exception
+variant, 859
+values
+views, 1242
+values_view, 1242
+variable_of, 785
+variant, 853
+constructor, 855, 856
+destructor, 857
+emplace, 858, 859
+get, 860
+get_if, 861
+hash, 863
+holds_alternative, 860
+index, 859
+operator!=, 861
+operator<, 861
+operator<=, 861
+operator<=>, 862
+operator=, 857
+operator==, 861
+operator>, 861
+operator>=, 861
+swap, 859, 863
+valueless_by_exception, 859
+visit, 862, 863
+variant_alternative, 802, 860
+variant_alternative_t, 852
+variant_size, 802, 859, 860
+variant_size_v, 852
+Index of library names © ISO/IEC
+2616
+
+===== PAGE 2628 =====
+
+Dxxxx
+vec
+simd, 1873
+vector, 1006
+allocator_type, 944
+assign, 948
+assign_range, 948
+begin, 940
+capacity, 1008
+cbegin, 940
+cend, 940
+clear, 948
+const_iterator, 939
+const_reference, 939
+const_reverse_iterator, 942
+constructor, 1008
+crbegin, 943
+crend, 943
+data, 1009
+difference_type, 939
+emplace, 947
+empty, 941
+end, 940
+erase, 948, 1010
+erase_if, 1011
+get_allocator, 944
+insert, 947, 1010
+insert_range, 947
+iterator, 939
+max_size, 941
+operator!=, 940
+operator<, 1008
+operator<=>, 943
+operator=, 939, 945
+operator==, 940, 1008
+rbegin, 942
+reference, 939
+rend, 943
+reserve, 1009
+resize, 1009
+reverse_iterator, 942
+shrink_to_fit, 1009
+size, 941
+size_type, 939
+swap, 940, 945, 1009
+value_type, 939
+vector<bool>, 1011
+flip, 1013
+reference, 1011
+swap, 2421
+vector<bool>::reference
+constructor, 1013
+destructor, 1013
+flip, 1013
+operator=, 1013
+swap, 1013
+vector_abs_sum, 1848, 1849
+vector_idx_abs_max, 1849
+vector_two_norm, 1848
+vformat, 1674
+vformat_to, 1674
+vfprintf, 2147
+vfscanf, 2147
+vfwprintf, 1727
+vfwscanf, 1727
+via
+access_context, 787
+view, 1251
+basic_istringstream, 2070
+basic_ostringstream, 2073
+basic_stringbuf, 2065
+basic_stringstream, 2076
+view_interface, 1254
+back, 1255
+front, 1255
+viewable_range, 1253
+views
+adjacent, 1353
+adjacent_transform, 1359
+all, 1278
+as_rvalue, 1280
+chunk, 1364
+chunk_by, 1379
+common, 1328
+counted, 1327
+drop, 1295
+drop_while, 1297
+elements, 1332
+empty, 1239
+enumerate, 1338
+filter, 1281
+indices, 1263
+iota, 1263
+join, 1298
+join_with, 1303
+keys, 1242
+lazy_split, 1310
+pairwise, 1243
+pairwise_transform, 1243
+repeat, 1270
+reverse, 1329
+single, 1262
+slide, 1373
+take, 1290
+take_while, 1293
+transform, 1284
+values, 1242
+zip, 1342
+zip_transform, 1348
+visit, 862
+basic_format_arg, 1689
+variant, 862, 863
+visit_format_arg, 2423
+void_pointer
+allocator_traits, 677
+scoped_allocator_adaptor, 729
+void_t, 738
+vprint_nonunicode, 2052, 2060
+vprint_nonunicode_buffered, 2060
+Index of library names © ISO/IEC
+2617
+
+===== PAGE 2629 =====
+
+Dxxxx
+vprint_unicode, 2052, 2059
+vprint_unicode_buffered, 2059
+vprintf, 2147
+vscanf, 2147
+vsnprintf, 2147
+vsprintf, 2147
+vsscanf, 2147
+vswprintf, 1727
+vswscanf, 1727
+vwprintf, 1727
+vwscanf, 1727
+W
+wait
+atomic, 2193
+atomic<floating-point-type >, 2193
+atomic<integral-type >, 2193
+atomic<shared_ptr<T>>, 2205
+atomic<T*>, 2193
+atomic<weak_ptr<T>>, 2207
+atomic_flag, 2209
+atomic_ref<T>, 2181
+barrier, 2242
+condition_variable, 2232, 2233
+condition_variable_any, 2235, 2236
+future, 2249
+latch, 2240
+shared_future, 2252
+wait_for
+condition_variable, 2233, 2234
+condition_variable_any, 2236, 2237
+future, 2250
+shared_future, 2252
+wait_until
+condition_variable, 2233, 2234
+condition_variable_any, 2236
+future, 2250
+shared_future, 2252
+wbuffer_convert
+zombie, 561
+wcerr, 2008
+WCHAR_MAX, 585, 1728
+WCHAR_MIN, 585, 1728
+WCHAR_WIDTH, 1728
+wcin, 2008
+wclog, 2009
+wcout, 2008
+wcrtomb, 1727, 1729
+wcscat, 1727
+wcschr, 1727
+wcscmp, 1727
+wcscoll, 1727
+wcscpy, 1727
+wcscspn, 1727
+wcsftime, 1727
+wcslen, 1727
+wcsncat, 1727
+wcsncmp, 1727
+wcsncpy, 1727
+wcspbrk, 1727
+wcsrchr, 1727
+wcsrtombs, 1727, 1729
+wcsspn, 1727
+wcsstr, 1727
+wcstod, 1727
+wcstof, 1727
+wcstoimax, 2149
+wcstok, 1727
+wcstol, 1727
+wcstold, 1727
+wcstoll, 1727
+wcstombs, 568, 1729
+wcstoul, 1727
+wcstoull, 1727
+wcstoumax, 2149
+wcsxfrm, 1727
+wctob, 1727
+wctomb, 568, 1729
+wctrans, 1726
+wctrans_t, 1726
+wctype, 1726
+wctype_t, 1726
+weak_from_this
+enable_shared_from_this, 704
+weak_order, 613
+weak_ordering, 609
+equivalent, 609
+greater, 609
+less, 609
+operator partial_ordering, 610
+operator<, 610
+operator<=, 610
+operator<=>, 610
+operator==, 610
+operator>, 610
+operator>=, 610
+weak_ptr, 692, 699, 704
+constructor, 700
+destructor, 701
+expired, 701
+lock, 701
+operator=, 701
+owner_before, 701
+owner_equal, 701
+owner_hash, 701
+reset, 701
+swap, 701, 702
+use_count, 701
+weakly_canonical, 2147
+weakly_incrementable, 1184
+weekday, 1955
+c_encoding, 1957
+constructor, 1956
+from_stream, 1958
+hash, 2002
+iso_encoding, 1957
+ok, 1957
+Index of library names © ISO/IEC
+2618
+
+===== PAGE 2630 =====
+
+Dxxxx
+operator+, 1957
+operator++, 1956
+operator+=, 1957
+operator-, 1957
+operator--, 1956
+operator-=, 1957
+operator<<, 1957
+operator==, 1957
+operator[], 1957
+weekday_indexed, 1958
+weekday_last, 1959
+year_month_weekday, 1972
+year_month_weekday_last, 1974
+weekday_indexed, 1958
+constructor, 1958
+hash, 2002
+index, 1958
+month_weekday, 1962
+ok, 1958
+operator<<, 1959
+operator==, 1958
+weekday, 1958
+year_month_weekday, 1972
+weekday_last, 1959
+constructor, 1959
+hash, 2002
+month_weekday_last, 1963
+ok, 1959
+operator<<, 1959
+operator==, 1959
+weekday, 1959
+year_month_weekday_last, 1974
+weeks, 1912
+weibull_distribution, 1771
+a, 1772
+b, 1772
+constructor, 1772
+result_type, 1771
+WEOF, 1727, 1728
+wfilebuf, 2005, 2083
+wformat_args, 1664
+wformat_context, 1664, 1682
+wformat_parse_context, 1664
+wformat_string, 1665
+wfstream, 2005, 2083
+what
+bad_alloc, 593
+bad_any_cast, 864
+bad_array_new_length, 593
+bad_cast, 596
+bad_exception, 601
+bad_expected_access, 871, 872
+bad_function_call, 916
+bad_optional_access, 848
+bad_typeid, 596
+bad_variant_access, 863
+bad_weak_ptr, 689
+exception, 601, 774
+filesystem_error, 2123
+future_error, 2245
+system_error, 651
+when_all, 2270
+when_all_t, 2270
+when_all_with_variant, 2270
+when_all_with_variant_t, 2270
+where
+exception, 774
+widen
+basic_ios, 2020
+ctype, 1626
+ctype<char>, 1629
+width
+ios_base, 1624, 2015
+wifstream, 2005, 2083
+WINT_MAX, 585
+WINT_MIN, 585
+wint_t, 1726, 1727
+wios, 2010
+wispanstream, 2076
+wistream, 2005, 2032
+wistream_view, 1239
+wistringstream, 2005, 2060
+with_awaitable_senders, 2329
+await_transform, 2330
+continuation, 2330
+set_continuation, 2330
+unhandled_stopped, 2330
+with_error, 2271
+wmemchr, 1727
+wmemcmp, 1727
+wmemcpy, 1727
+wmemmove, 1727
+wmemset, 1727
+wofstream, 2005, 2083
+wospanstream, 2076
+wostream, 2005, 2033
+wostringstream, 2005, 2060
+wosyncstream, 2005, 2096
+wprintf, 1727
+wrap
+execution::counting_scope::token, 2344
+execution::simple_counting_-
+scope::token, 2343
+wregex, 1695
+write
+basic_ostream, 2053
+write_env, 2270
+ws, 2039, 2044
+wscanf, 1727
+wspanbuf, 2076
+wspanstream, 2076
+wstreambuf, 2005, 2024
+wstreampos, 2005
+wstring, 1586
+hash, 1612
+operator""s, 1612
+path, 2116
+wstring_convert
+Index of library names © ISO/IEC
+2619
+
+===== PAGE 2631 =====
+
+Dxxxx
+zombie, 561
+wstring_view, 1575
+hash, 1583
+operator""sv, 1583
+wstringbuf, 2005, 2060
+wstringstream, 2005, 2060
+wsyncbuf, 2005, 2096
+X
+xalloc
+ios_base, 2015
+xdigit
+ctype_base, 1625
+xsgetn
+basic_streambuf, 2030
+xsputn
+basic_streambuf, 2031
+Y
+ydm
+time_base, 1644
+year, 1953
+constructor, 1954
+from_stream, 1955
+hash, 2002
+is_leap, 1954
+max, 1955
+min, 1955
+ok, 1954
+operator int, 1954
+operator""y, 1955
+operator+, 1954, 1955
+operator++, 1954
+operator+=, 1954
+operator-, 1954, 1955
+operator--, 1954
+operator-=, 1954
+operator<<, 1955
+operator<=>, 1955
+operator==, 1955
+year_month, 1964
+year_month_day, 1966
+year_month_day_last, 1969
+year_month_weekday, 1972
+year_month_weekday_last, 1974
+year_month, 1963
+constructor, 1963
+from_stream, 1965
+hash, 2002
+month, 1964
+ok, 1964
+operator+, 1964, 1965
+operator+=, 1964
+operator-, 1964, 1965
+operator-=, 1964
+operator<<, 1965
+operator<=>, 1964
+operator==, 1964
+year, 1964
+year_month_day, 1965
+constructor, 1966
+day, 1967
+from_stream, 1968
+hash, 2002
+month, 1966
+ok, 1967
+operator local_days, 1967
+operator sys_days, 1967
+operator+, 1967, 1968
+operator+=, 1966
+operator-, 1967, 1968
+operator-=, 1966
+operator<<, 1968
+operator<=>, 1967
+operator==, 1967
+year, 1966
+year_month_day_last, 1968
+constructor, 1969
+day, 1969
+hash, 2002
+month, 1969
+month_day_last, 1969
+ok, 1969
+operator local_days, 1969
+operator sys_days, 1969
+operator+, 1970
+operator+=, 1969
+operator-, 1970
+operator-=, 1969
+operator<<, 1970
+operator<=>, 1970
+operator==, 1969
+year, 1969
+year_month_weekday, 1970
+constructor, 1971
+hash, 2002
+index, 1972
+month, 1972
+ok, 1972
+operator local_days, 1972
+operator sys_days, 1972
+operator+, 1972
+operator+=, 1971
+operator-, 1972
+operator-=, 1971
+operator<<, 1973
+operator==, 1972
+weekday, 1972
+weekday_indexed, 1972
+year, 1972
+year_month_weekday_last, 1973
+constructor, 1973
+hash, 2002
+month, 1974
+ok, 1974
+operator local_days, 1974
+operator sys_days, 1974
+Index of library names © ISO/IEC
+2620
+
+===== PAGE 2632 =====
+
+Dxxxx
+operator+, 1974, 1975
+operator+=, 1973, 1974
+operator-, 1974, 1975
+operator-=, 1973, 1974
+operator<<, 1975
+operator==, 1974
+weekday, 1974
+weekday_last, 1974
+year, 1974
+years, 1912
+yield
+this_thread, 2170
+yield_value
+generator::promise_type, 1403
+task::promise_type, 2337
+ymd
+time_base, 1644
+yocto, 802, 804
+yotta, 803, 804
+Z
+zepto, 802, 804
+zero
+duration, 1931
+duration_values, 1927
+zero_element
+simd, 1875
+zetta, 803, 804
+zip
+views, 1342
+zip_transform
+views, 1348
+zip_transform_view, 1348
+begin, 1348
+constructor, 1349
+end, 1348
+size, 1348
+zip_transform_view::iterator , 1350
+constructor, 1351
+operator*, 1351
+operator+, 1352
+operator++, 1351
+operator+=, 1351, 1352
+operator-, 1352
+operator--, 1351
+operator==, 1352
+operator[], 1352
+zip_transform_view::sentinel , 1352
+constructor, 1353
+operator-, 1353
+operator==, 1353
+zip_view, 1342, 1343
+begin, 1343
+constructor, 1344
+end, 1343
+size, 1344
+zip_view::iterator , 1344
+constructor, 1345
+zip_view::sentinel , 1347
+constructor, 1348
+operator-, 1348
+operator==, 1348
+zoned_time, 1987
+constructor, 1989–1990
+get_info, 1991
+get_local_time, 1991
+get_sys_time, 1991
+get_time_zone, 1991
+hash, 2002
+operator local_time, 1991
+operator sys_time, 1991
+operator<<, 1991
+operator=, 1990, 1991
+operator==, 1991
+zoned_traits, 1987
+zoned_traits<const time_zone*>
+default_zone, 1987
+locate_zone, 1987
+Index of library names © ISO/IEC
+2621
+
+===== PAGE 2633 =====
+
+Dxxxx
+Index of library concepts
+The bold page number for each entry is the page where the concept is defined. Other page numbers refer to
+pages where the concept is mentioned in the general text. Concepts whose name appears initalics are for
+exposition only.
+advanceable , 1264,1265, 1265–1269
+all-bidirectional , 1278, 1320, 1344–1346
+all-forward , 1278, 1321, 1322, 1324, 1344, 1345
+all-random-access , 1278, 1320, 1322, 1325,
+1344–1346, 1390, 1393
+always-true , 2323
+approximately_sized_range, 946, 948, 1008,
+1010, 1251, 1251, 1261, 1278, 1279, 1281,
+1285, 1292, 1296, 1329–1331, 1333, 1338,
+1354, 1360, 1365, 1369, 1370, 1374, 1375,
+1383, 1395, 1398
+assignable_from, 627,630, 630, 631, 636, 948,
+1186, 1196, 1199, 1202, 1215, 1217, 1218,
+1220, 1223, 1224, 1426
+await-suspend-result , 2287, 2287
+awaitable-sender , 2328, 2329
+bidirectional-common , 1304, 1306, 1308, 1309
+bidirectional_iterator, 1170, 1172, 1176,
+1188, 1188, 1189, 1199, 1200, 1202,
+1209–1211, 1214, 1223, 1225, 1247, 1252,
+1256, 1258, 1406, 1427, 1429, 1430, 1440,
+1441, 1451, 1454, 1465, 1466, 1488, 1491,
+1493, 1507, 1512, 1523, 1527, 1544, 1545,
+1561, 1715, 1716
+bidirectional_range, 1242,1252, 1252, 1255,
+1278, 1282, 1283, 1286–1288, 1300–1302,
+1304, 1306, 1308, 1309, 1330, 1334–1336,
+1339–1341, 1343, 1350, 1351, 1355, 1356,
+1361, 1362, 1369–1372, 1374, 1376, 1377,
+1380–1386, 1388, 1427, 1429, 1430, 1440,
+1441, 1451, 1454, 1465, 1466, 1488, 1491,
+1493, 1507, 1523, 1527, 1545
+boolean-testable , 539, 550, 553, 612, 614, 615,
+633, 634, 634, 635, 637, 816, 831, 1190,
+1193, 1194, 1407, 2151
+boolean-testable-impl , 633, 633, 634
+borrowed_range, 1118,1250, 1250, 1256, 1257,
+1259, 1660, 2080, 2081
+callable , 899, 899, 2276, 2279, 2281, 2283, 2324
+can-reference , 1168, 1168, 1169, 1180, 1186,
+1221, 1240, 1243, 1285, 1286, 1289, 1349,
+1350, 1352, 1359, 1360, 1363
+cartesian-is-sized-sentinel , 1388, 1390,
+1393, 1394
+cartesian-product-common-arg , 1388, 1388
+cartesian-product-is-bidirectional , 1388,
+1390–1392
+cartesian-product-is-common , 1388, 1388,
+1389
+cartesian-product-is-random-access , 1388,
+1390–1393
+cartesian-product-is-sized , 1388, 1389
+class-type , 2267, 2270, 2271, 2329, 2345
+common_range, 1242,1253, 1253, 1255, 1260,
+1280, 1281, 1285, 1286, 1299–1302, 1304,
+1305, 1307, 1311, 1316, 1320, 1321, 1328,
+1330, 1333, 1338, 1343, 1346, 1349, 1354,
+1360, 1369, 1374, 1375, 1380, 1382, 1383,
+1388, 1397, 1660
+common_reference_with, 627,629, 629–631,
+1149, 1183, 1194, 1320, 1401, 2382
+common_with, 627,629, 630, 1173, 1223, 1224,
+1226
+compares-as , 612, 612, 613
+comparison-common-type-with , 612,635, 635
+comparison-common-type-with-impl , 634, 635
+completion-signature , 2271,2323, 2323
+completion-tag , 2280
+concat-indirectly-readable , 1319, 1319,
+1320
+concat-indirectly-readable-impl , 1320,
+1320
+concat-is-bidirectional , 1319,1320, 1320,
+1322–1325
+concat-is-random-access , 1319,1320, 1320,
+1322, 1323, 1325, 1326
+concatable , 1304, 1305, 1309, 1319,1320, 1320,
+1321
+const-formattable-range , 1666, 1666
+constant-iterator , 1173,1208, 1208, 1209,
+1212, 1246, 1248, 1253
+constant_range, 1253, 1253, 1331
+constexpr-param , 735, 742–745
+constexpr-wrapper-like , 1870, 1888
+constructible_from, 627,632, 632, 633,
+663–665, 795, 796, 1149, 1180, 1196,
+1220, 1221, 1253, 1256, 1260–1263, 1270,
+1271, 1304, 1305, 1311, 1316, 1317, 1321,
+1324, 1402, 1403, 1427, 1428, 1487, 1488,
+1563–1565, 2156, 2160, 2163, 2264, 2275,
+2285, 2303, 2315, 2328, 2335
+container-compatible-range , 939, 946, 955,
+963, 978–981, 983–986, 991–993, 996,
+999, 1000, 1002, 1006–1008, 1010–1012,
+1015–1019, 1022, 1023, 1025, 1029–1031,
+1033, 1034, 1036–1038, 1040, 1043, 1044,
+Index of library concepts © ISO/IEC
+2622
+
+===== PAGE 2634 =====
+
+Dxxxx
+1047, 1051, 1052, 1054, 1057, 1058,
+1061–1063, 1066, 1069–1078, 1081–1083,
+1087–1089, 1093–1095, 1098, 1101, 1102,
+1105, 1106, 1108–1110, 1112, 1113,
+1588–1590, 1594, 1599–1601, 1603
+contiguous_iterator, 840, 846, 942, 1117–1119,
+1121, 1170, 1176, 1177,1189, 1189, 1210,
+1211, 1223–1225, 1249, 1253, 1255, 1327,
+1578, 1802, 1873–1875, 1893–1895
+contiguous_range, 1118, 1119, 1252,1253, 1253,
+1278–1280, 1578, 1873–1876, 1888, 1889,
+1893–1895, 1897, 1898
+convertible-to-non-slicing , 1256, 1256,
+1257
+convertible_to, 133, 452, 539, 626,629, 629,
+633, 634, 903, 939, 1115, 1122, 1180,
+1202, 1209, 1211, 1212, 1215, 1217, 1218,
+1220, 1223, 1224, 1255–1257, 1260, 1265,
+1279, 1286, 1287, 1289, 1290, 1293–1295,
+1300, 1302, 1303, 1306, 1308–1310, 1312,
+1320, 1322, 1324, 1327, 1334, 1335, 1337,
+1339, 1340, 1342, 1344, 1345, 1347, 1348,
+1350–1353, 1355, 1356, 1358, 1361–1364,
+1370, 1371, 1376, 1377, 1384, 1385, 1390,
+1392, 1398, 1399, 1402–1404, 1426, 1427,
+1466–1469, 1673, 1870, 1888, 2080, 2081,
+2328
+copy_constructible, 559, 627,633, 633, 636,
+773, 842, 1194, 1195, 1252, 1262, 1263,
+1270, 1271, 1276, 1280, 1281, 1285, 1291,
+1294, 1296–1298, 1304, 1311, 1316, 1328,
+1330, 1331, 1333, 1338, 1354, 1360, 1365,
+1369, 1374, 1380, 1382, 1394, 1397, 1401,
+1426, 1431, 1432, 1436, 1472, 1473, 1494,
+1495, 1500, 1501, 1525, 2286, 2304, 2306,
+2312, 2314
+copyable, 636, 636, 926, 1127, 1149, 1154, 1174,
+1180, 1196, 1218, 1238, 1239, 1242, 1252,
+1256–1258, 1264, 1266, 1269, 1276, 1282,
+1283, 1300, 1302, 1328, 1461, 1462, 1506,
+1538–1540, 1660, 2157, 2159, 2275, 2338
+cpp17-bidirectional-iterator , 1180, 1180,
+1181
+cpp17-forward-iterator , 1180, 1180, 1181
+cpp17-input-iterator , 1180, 1180, 1181
+cpp17-iterator , 1180, 1180, 1181
+cpp17-random-access-iterator , 1180, 1181
+decays-to , 2267, 2267, 2282, 2284
+decrementable , 1264, 1264, 1265, 1267, 1268
+default_initializable, 627,633, 636, 662, 663,
+1209, 1218, 1223, 1256, 1262, 1264, 1266,
+1270, 1274, 1276, 1279–1282, 1285, 1286,
+1291, 1294, 1296–1298, 1304, 1310, 1316,
+1328, 1330, 1331, 1333, 1334, 1338, 1339,
+1354, 1380, 1384, 1394, 1397, 1398, 1402,
+1403, 1561–1563, 1660, 2316, 2338
+dependent_sender, 2268, 2280,2285, 2285
+dereferenceable , 1168, 1168, 1169, 1219, 1220,
+1223, 1225
+derived_from, 626,628, 628, 1187–1189, 1201,
+1214, 1219, 1252, 1255, 1260, 1273, 1275,
+1276, 1283, 1287, 1301, 1307, 1315, 1323,
+1335, 1351, 1361, 1362, 1385, 2273, 2275,
+2276, 2285, 2289, 2294
+destructible, 537, 627,632, 632, 666, 1566,
+2160, 2163, 2264
+different-from , 815, 816, 824, 827, 1209–1212,
+1254, 1256, 1257, 1278, 1279
+enable-sender , 2285, 2285
+equality_comparable, 559, 627,635, 635, 636,
+1127, 1180, 1184, 1186, 1187, 1267, 1268,
+1282, 1284, 1287, 1288, 1300, 1303, 1306,
+1309, 1322, 1325, 1334, 1336, 1344, 1346,
+1350, 1352, 1384, 1386, 1390, 1393, 2157,
+2159, 2275
+equality_comparable_with, 635, 635, 636, 908,
+909, 1115, 1219, 1222, 1870, 2382
+equivalence_relation, 628,637, 637, 1195
+execution-policy , 662–666,1408, 1411,
+1413–1426, 1428–1448, 1450–1458,
+1460–1465, 1469–1479, 1481, 1482,
+1484–1487, 1489–1495, 1497–1509,
+1511–1519, 1522–1524, 1526–1534,
+1537–1543
+explicitly-convertible-to , 1870, 1888, 1894,
+1895, 1897, 1898
+floating_point, 630, 1816, 1870
+formattable, 1068, 1076, 1114, 1666, 1667,1677,
+1677, 1683–1685, 1691, 1692
+formattable-with , 1677, 1677, 1688, 1689
+forward_iterator, 1169, 1176, 1177,1188, 1188,
+1197, 1209–1211, 1214, 1215, 1219, 1221,
+1223, 1225, 1248–1252, 1256, 1258, 1306,
+1308, 1406, 1414, 1417–1420, 1423–1426,
+1440, 1442, 1447–1450, 1452, 1462–1464,
+1470, 1475–1478, 1483–1486, 1505, 1506,
+1509, 1510, 1517–1521, 1525, 1541, 1542,
+1561
+forward_range, 946, 948, 1008, 1010, 1241, 1243,
+1244, 1252, 1252, 1254, 1255, 1278, 1282,
+1283, 1286–1288, 1297–1318, 1328, 1334,
+1335, 1338–1340, 1350, 1351, 1353, 1355,
+1358–1360, 1363, 1369, 1370, 1374, 1375,
+1378, 1379, 1381–1385, 1387, 1388,
+1390–1392, 1397, 1408, 1414, 1417–1420,
+1423–1426, 1437, 1439, 1441–1443, 1447,
+1449, 1450, 1452, 1462–1464, 1471,
+1475–1478, 1483–1485, 1487, 1501, 1502,
+1504, 1508–1512, 1517, 1518, 1520–1522,
+1525, 1541, 1542
+forwarding-query , 2267, 2302, 2307, 2329
+has-arrow , 1253, 1282, 1283, 1300, 1302
+has-as-awaitable , 2287, 2287
+Index of library concepts © ISO/IEC
+2623
+
+===== PAGE 2635 =====
+
+Dxxxx
+has-completions , 2276, 2276
+has-elem-type , 670, 670
+has-member-element-type , 1179, 1179
+has-member-value-type , 1178, 1179
+has-query , 2325, 2325
+has-queryable-await-completion-adaptor ,
+2328
+has-tuple-element , 1332, 1333, 1337
+in-matrix , 1817, 1820–1828,1835, 1836, 1837,
+1850–1869
+in-object , 1817, 1819,1836, 1836, 1846, 1847
+in-vector , 1817, 1819–1824,1835, 1836, 1837,
+1847–1849, 1851–1860
+incrementable, 1169,1186, 1186, 1188, 1264,
+1266, 1267
+index-pair-like , 1122
+indirect_binary_predicate, 1195, 1197, 1244,
+1379, 1381, 1414, 1416, 1417, 1420, 1421,
+1433–1435, 1437, 1438, 1470, 1474, 1475,
+1478, 1479, 1496–1498, 1501, 1503
+indirect_equivalence_relation, 1195, 1423,
+1439, 1440, 1483, 1504–1506
+indirect_strict_weak_order, 1195, 1197,
+1446–1450, 1454, 1455, 1460–1465,
+1516–1521, 1528, 1537–1543
+indirect_unary_predicate, 1194, 1217, 1240,
+1241, 1281, 1282, 1284, 1294, 1297, 1413,
+1414, 1416–1418, 1421, 1429, 1433–1435,
+1437–1439, 1450–1452, 1469, 1470, 1474,
+1475, 1479, 1490, 1491, 1497, 1499, 1502,
+1503, 1522–1525
+indirectly-binary-left-foldable , 1426,
+1427, 1428, 1487, 1488
+indirectly-binary-left-foldable-impl ,
+1426, 1427
+indirectly-binary-right-foldable , 1427,
+1427, 1488
+indirectly-readable-impl , 1183, 1183
+indirectly_comparable, 1171, 1195,1197, 1197,
+1241, 1310, 1311, 1313, 1314, 1316–1318,
+1414, 1415, 1418, 1419, 1422–1426, 1470,
+1471, 1476, 1477, 1480–1482, 1484–1487
+indirectly_copyable, 1170, 1195,1196, 1196,
+1197, 1428, 1429, 1434, 1435, 1438–1442,
+1446, 1451, 1452, 1489–1491, 1498, 1499,
+1503, 1505–1510, 1516, 1524
+indirectly_copyable_storable, 1196, 1196,
+1440, 1461, 1462, 1505, 1539, 1540
+indirectly_movable, 1170, 1195,1196, 1196,
+1217, 1430, 1492, 1493
+indirectly_movable_storable, 1183,1196,
+1196, 1197
+indirectly_readable, 1169, 1170, 1173, 1178,
+1179, 1183, 1183, 1184, 1187, 1194–1196,
+1208, 1220, 1221, 1223, 1401, 1426
+indirectly_regular_unary_invocable, 1170,
+1194, 1195
+indirectly_swappable, 1170, 1195,1196, 1196,
+1197, 1201, 1204, 1214, 1217, 1219, 1222,
+1224, 1227, 1282, 1284, 1300, 1303, 1306,
+1314, 1315, 1327, 1345, 1347, 1355, 1358,
+1368, 1369, 1385, 1387, 1391, 1394–1396,
+1399, 1431, 1493, 1494
+indirectly_unary_invocable, 1194, 1415,
+1471–1473
+indirectly_writable, 1169,1184, 1184, 1187,
+1195, 1196, 1431–1436, 1494–1501, 1549,
+1558, 1895, 1898
+inout-matrix , 1817, 1826, 1828,1836, 1836,
+1863, 1868, 1869
+inout-object , 1817, 1819,1836, 1836, 1846
+inout-vector , 1817–1819, 1821, 1822,1835,
+1836, 1846, 1854, 1856
+input_iterator, 663, 664, 1169, 1173, 1174,
+1176, 1181,1187, 1187, 1188, 1197, 1208,
+1214, 1217, 1219, 1222, 1224, 1227, 1246,
+1248, 1252, 1253, 1401, 1413–1417,
+1419–1423, 1425–1435, 1438, 1440, 1442,
+1446, 1450, 1451, 1453–1458, 1464,
+1469–1471, 1473, 1474, 1477, 1479, 1480,
+1482, 1486–1490, 1492–1499, 1503, 1505,
+1510, 1516, 1522, 1524, 1526, 1528, 1529,
+1531, 1532, 1534, 1543, 1560, 1563, 1564
+input_or_output_iterator, 1169, 1171, 1172,
+1174, 1176,1186, 1186, 1187, 1199, 1200,
+1218, 1223, 1238, 1245–1248, 1250, 1256,
+1257, 1436, 1500, 1549, 1558
+input_range, 663, 664, 766, 772, 773, 794, 939,
+946, 948, 979, 984, 992, 993, 1001, 1008,
+1020, 1025, 1031, 1036, 1040, 1046, 1053,
+1054, 1059, 1060, 1065, 1069, 1072, 1073,
+1077, 1085, 1096, 1097, 1104, 1111, 1238,
+1240–1244, 1252, 1252–1254, 1259–1261,
+1273, 1280–1282, 1284, 1286, 1289, 1294,
+1297–1299, 1303–1305, 1309–1311, 1313,
+1314, 1318, 1319, 1321, 1331, 1333, 1337,
+1343, 1344, 1347, 1348, 1350, 1352,
+1365–1367, 1382, 1383, 1388, 1390,
+1394–1398, 1401–1403, 1413–1417,
+1419–1423, 1425–1435, 1438, 1440, 1442,
+1446, 1450, 1452–1458, 1461, 1462, 1465,
+1469, 1470, 1472, 1474, 1477, 1479, 1481,
+1482, 1486–1490, 1492, 1493, 1495,
+1497–1499, 1503, 1505, 1510, 1516, 1522,
+1524, 1526, 1528, 1529, 1531, 1532, 1534,
+1539, 1540, 1543, 1563, 1564, 1592, 1666,
+1667, 1683–1688
+integer-like-with-usable-difference-type ,
+1270, 1270, 1271
+integral, 382,630, 630, 933, 1178, 1184, 1870,
+1896, 1904, 2304
+integral-constant-like , 1115, 1115, 1159,
+1160
+invocable, 542, 628,637, 637, 842, 843, 847,
+1170, 1194, 1426, 1436, 1500, 1501, 1567,
+Index of library concepts © ISO/IEC
+2624
+
+===== PAGE 2636 =====
+
+Dxxxx
+1740, 1743, 2156, 2160, 2163, 2301, 2303,
+2305, 2306, 2315, 2335
+is-awaitable , 2285,2287, 2287, 2290, 2329
+is-awaiter , 2287, 2287, 2329
+is-constant , 2285, 2285
+is-derived-from-optional , 833, 833, 851
+is-sender , 2285, 2285
+is-strided-slice , 1160, 1160
+layout-mapping-alike , 1136, 1136–1138
+math-floating-point , 1871, 1871, 1872,
+1876–1879, 1900–1903
+maybe-static-ext , 1115, 1115, 1117, 1119,
+1125, 1154
+mergeable, 1171, 1195,1197, 1197, 1453,
+1455–1458, 1526, 1529–1534
+movable, 636, 636, 1184, 1196, 1239, 1251, 1253,
+1274, 1276, 1277, 1279, 1426, 2338
+movable-value , 2264, 2267, 2280, 2292, 2301,
+2311
+move_constructible, 627, 631,633, 633, 636,
+843, 1221, 1239, 1240, 1243, 1254, 1262,
+1270, 1271, 1276, 1284, 1286, 1289, 1332,
+1348, 1350, 1352, 1359, 1360, 1363, 1491,
+1504, 2264, 2275, 2285, 2289
+not-a-const-iterator , 1208, 1209,1210, 1210,
+1212, 1213
+nothrow-bidirectional-iterator , 661,1561,
+1561
+nothrow-bidirectional-range , 661,1561,
+1561
+nothrow-callable , 899, 2279, 2282, 2314, 2340
+nothrow-forward-iterator , 661–665,1561,
+1561–1565
+nothrow-forward-range , 661–665,1561,
+1561–1565
+nothrow-input-iterator , 661, 666,1560, 1560,
+1561, 1566
+nothrow-input-range , 661, 666,1560, 1560,
+1561, 1566
+nothrow-random-access-iterator , 661–666,
+1561, 1561
+nothrow-random-access-range , 661,1561,
+1561
+nothrow-sentinel-for , 661–666,1560,
+1560–1566
+nothrow-sized-random-access-range , 661–666,
+1561, 1561
+nothrow-sized-sentinel-for , 661–666,1560,
+1560, 1561
+operation_state, 2268,2276, 2276, 2277, 2292,
+2333
+out-matrix , 1817, 1822, 1824–1828,1835, 1836,
+1856, 1857, 1860–1863, 1866–1868
+out-object , 1817, 1819,1836, 1836, 1846, 1847
+out-vector , 1817, 1820–1822,1835, 1836,
+1851–1855
+output_iterator, 1169, 1176,1187, 1187, 1252,
+1434–1436, 1498–1500, 1567, 1675, 1677,
+1682, 1740
+output_range, 1252, 1252, 1436, 1500, 1549,
+1558, 1566, 1567, 1740
+pair-like , 660, 675, 812–816,818, 1122, 1256
+pair-like-convertible-from , 1256, 1256,
+1257
+partially-ordered-with , 612, 612, 613, 635,
+636
+permutable, 1171, 1195,1197, 1197, 1437,
+1439–1444, 1450, 1451, 1501, 1502, 1504,
+1505, 1507, 1508, 1510–1512, 1522, 1523
+possibly-packed-out-matrix , 1817, 1823, 1824,
+1826, 1827,1836, 1836, 1858–1860,
+1864–1866
+predicate, 628,637, 637, 1194, 1195
+queryable , 2264, 2264, 2267, 2269, 2271, 2273,
+2275, 2277, 2278, 2285, 2288, 2289, 2294,
+2295, 2302, 2307, 2315, 2321, 2324
+random_access_iterator, 655, 663–665, 1079,
+1091, 1099, 1107, 1170, 1176, 1187, 1188,
+1189, 1189, 1199, 1201, 1202, 1209–1214,
+1223, 1225, 1226, 1250, 1252, 1328, 1407,
+1413–1426, 1428–1448, 1450–1461,
+1463–1465, 1469–1479, 1481, 1482,
+1484–1487, 1489, 1490, 1492, 1493, 1495,
+1497–1504, 1506–1518, 1522–1524,
+1526–1529, 1531, 1532, 1534–1538,
+1541–1543, 1561
+random_access_range, 1252, 1252, 1253, 1255,
+1278, 1287–1292, 1295–1297, 1328, 1329,
+1334–1336, 1339–1341, 1343, 1350–1352,
+1355–1357, 1361–1363, 1370–1374,
+1376–1378, 1384–1388, 1443–1446, 1448,
+1459–1461, 1510, 1513–1516, 1519,
+1535–1538, 1660
+range, 1171, 1200, 1237, 1238, 1240,1250,
+1250–1253, 1255, 1256, 1259, 1275,
+1278–1280, 1282, 1285, 1286, 1291, 1292,
+1294, 1296–1298, 1317, 1319–1321,
+1328–1331, 1333, 1343, 1349, 1354, 1360,
+1375, 1380, 1382, 1383, 1388, 1389, 1397,
+1398, 1408, 1560
+range-with-movable-references , 1254, 1338,
+1339, 1341
+receiver, 2268,2275, 2275, 2276, 2282, 2290,
+2292, 2317, 2331–2334
+receiver_of, 2268, 2275,2276, 2285, 2291, 2292,
+2326, 2331
+reduction-binary-operation , 1871,1872,
+1872, 1891, 1892
+ref-wrap-common-reference-exists-with ,
+903, 903
+reflection_range, 769–771,794, 794, 797–800
+Index of library concepts © ISO/IEC
+2625
+
+===== PAGE 2637 =====
+
+Dxxxx
+regular, 636, 636, 653, 1123, 1130, 1133, 1135,
+1139, 1144, 1185, 1186, 1833
+regular_invocable, 628,637, 637, 1194, 1240,
+1243, 1285, 1286, 1289, 1348–1350, 1352,
+1359, 1360, 1363, 1409
+relation, 628,637, 637
+returnable-element , 1332, 1333, 1337
+same-as-impl , 628, 628
+same_as, 135, 559, 612, 626,628, 628–630, 634,
+794, 1035, 1039, 1058, 1064, 1102, 1110,
+1136, 1174, 1179, 1180, 1183, 1184,
+1186–1189, 1199, 1208, 1209, 1211, 1218,
+1224, 1238, 1239, 1253, 1254, 1259, 1260,
+1264–1266, 1270, 1271, 1280, 1402–1404,
+1440, 1505, 1560, 1666, 1677, 1683–1685,
+1687, 1743, 1870–1872, 1881, 1894, 1897,
+1906–1908, 1910, 1911, 2156, 2157, 2264,
+2267, 2275, 2280, 2282, 2286, 2292,
+2298–2301, 2303, 2305, 2307, 2309–2311,
+2317, 2319, 2320, 2324, 2329–2332, 2337,
+2338
+scalar , 1817, 1819, 1820, 1823, 1826, 1830,1836,
+1846–1851, 1858, 1864, 1865
+scheduler, 2268, 2270, 2271, 2273, 2274,2275,
+2275, 2295, 2296, 2299, 2326, 2330–2332,
+2344
+scope_association, 2272,2338, 2338, 2341
+scope_token, 2272, 2312, 2313, 2315–2317, 2321,
+2338, 2338, 2339
+semiregular, 542,636, 636, 1150, 1151, 1173,
+1174, 1186, 1208, 1217, 1239, 1264, 1266,
+1269–1271, 1677, 1836, 1838, 2084, 2280
+sender, 2268, 2269, 2274, 2275, 2280, 2284,2285,
+2285, 2286, 2288, 2289, 2292, 2294–2296,
+2299, 2301, 2303, 2304, 2306, 2307,
+2310–2317, 2321, 2324–2326, 2328,
+2330–2332, 2334, 2337, 2339, 2341–2344
+sender-for , 2278,2286, 2286, 2295, 2296, 2299,
+2304, 2310, 2311
+sender-in-of , 2275,2286, 2286
+sender-in-of-impl , 2286, 2286
+sender-of , 2286, 2286
+sender_in, 2268, 2269, 2272, 2275, 2280, 2284,
+2285, 2285, 2286, 2290, 2292, 2296–2298,
+2300, 2303, 2311, 2319, 2320, 2323, 2324,
+2331, 2338, 2339
+sender_to, 2268, 2277,2285, 2285, 2320, 2328
+sentinel_for, 663, 664, 1169, 1171, 1172, 1174,
+1186, 1186–1188, 1199, 1200, 1209, 1212,
+1214, 1216–1219, 1221, 1222, 1238,
+1246–1248, 1250, 1256, 1257, 1289, 1290,
+1293, 1295, 1303, 1309, 1310, 1337, 1342,
+1347, 1348, 1352, 1353, 1358, 1359, 1363,
+1364, 1413–1460, 1462–1466, 1469–1471,
+1474–1480, 1482–1505, 1507–1511,
+1513–1529, 1531, 1532, 1534–1538,
+1541–1545, 1549, 1558, 1560, 1563, 1564,
+1567, 1740
+signed_integral, 630, 630, 1180, 1184, 1877,
+1900
+simd-complex , 1871, 1880, 1889, 1905, 1906
+simd-floating-point , 1870, 1871, 1880, 1906
+simd-integral , 1870, 1875, 1876, 1886, 1889,
+1896–1898, 1906, 1908
+simd-mask-type , 1870, 1875, 1895–1897
+simd-vec-type , 1870, 1870, 1871, 1875, 1876,
+1879, 1880, 1895–1898, 1904, 1905
+simple-allocator , 559, 559, 2273
+simple-view , 1253, 1280, 1291, 1294, 1296, 1297,
+1299, 1304, 1305, 1311, 1319, 1320, 1328,
+1329, 1331, 1333, 1338, 1343, 1354, 1369,
+1374, 1375, 1382, 1388, 1389, 1397, 1398
+single-sender , 2269,2272, 2272, 2328
+sized-random-access-range , 664, 665,1238,
+1253, 1253, 1413–1426, 1428–1448,
+1450–1458, 1460–1465, 1469–1472,
+1474–1479, 1481, 1482, 1484, 1486, 1487,
+1489, 1491, 1492, 1494, 1495, 1497–1503,
+1505–1509, 1511–1519, 1522–1524,
+1526–1528, 1530, 1531, 1533, 1534,
+1537–1543
+sized_range, 946, 948, 1118, 1200, 1237, 1250,
+1251, 1251, 1253–1257, 1260, 1278, 1279,
+1281, 1285, 1290–1292, 1295–1297, 1310,
+1319, 1321, 1326–1331, 1333, 1338, 1343,
+1344, 1349, 1354, 1360, 1365, 1369, 1370,
+1374, 1375, 1382, 1383, 1388, 1394, 1395,
+1397, 1398, 1426, 1482, 1483, 1487, 1561,
+1566, 1567, 1578, 1873–1876, 1888, 1889,
+1893–1895, 1897, 1898
+sized_sentinel_for, 663, 664, 1117, 1118, 1169,
+1171, 1173, 1174,1187, 1187, 1189, 1199,
+1200, 1210, 1213, 1214, 1217, 1219, 1222,
+1238, 1248, 1255–1257, 1266, 1269, 1270,
+1287, 1289–1292, 1326, 1327, 1334, 1336,
+1337, 1342, 1345, 1347, 1348, 1350, 1352,
+1353, 1355, 1358, 1359, 1361, 1363, 1364,
+1366–1368, 1371, 1373, 1376, 1378, 1379,
+1384, 1387, 1388, 1397, 1399, 1413–1426,
+1428–1448, 1450–1458, 1460, 1461,
+1463–1465, 1469–1472, 1474–1479,
+1481–1487, 1489, 1490, 1492, 1493, 1495,
+1497–1504, 1506–1509, 1511–1518,
+1522–1524, 1526–1529, 1531, 1532, 1534,
+1537, 1538, 1541–1543, 1560, 1578,
+1873–1875, 1893–1895
+sliceable-mapping , 1162, 1162, 1166
+slide-caches-first , 1374, 1374–1377, 1379
+slide-caches-last , 1374, 1374, 1375
+slide-caches-nothing , 1374, 1374, 1375, 1377
+sortable, 1171, 1195,1197, 1197, 1444–1446,
+1448, 1454, 1459, 1460, 1465, 1466,
+1513–1516, 1518, 1519, 1527, 1535–1537,
+1544, 1545
+stoppable-callback-for , 2154, 2155,2156,
+2156, 2157, 2160, 2163, 2315, 2335
+Index of library concepts © ISO/IEC
+2626
+
+===== PAGE 2638 =====
+
+Dxxxx
+stoppable-source , 2154, 2155,2157, 2157–2159,
+2161, 2316
+stoppable_token, 2154, 2155,2157, 2157, 2158,
+2161, 2273, 2314, 2315
+stream-extractable , 1273, 1274
+strict_weak_order, 628,637, 637, 1195
+swappable, 627,631, 632, 636, 2159
+swappable_with, 631, 632, 1183, 1327
+three_way_comparable, 607,612, 612, 613, 653,
+667, 689, 853, 862, 943, 990, 1068, 1071,
+1075, 1078, 1185, 1209, 1212, 1267, 1269,
+1287, 1289, 1322, 1325, 1334, 1336, 1355,
+1357, 1361, 1363, 1371, 1373, 1376, 1378,
+1384, 1386, 1932
+three_way_comparable_with, 540,612, 613, 667,
+688, 833, 849, 851, 908, 1172, 1174, 1204,
+1210, 1212, 1216, 1914, 1923, 1938, 1993
+tiny-range , 1241,1310, 1310, 1311, 1313–1315
+totally_ordered, 537, 612, 627,635, 636, 1180,
+1189, 1265, 1267–1269, 1892, 1899, 1900
+totally_ordered_with, 613,636, 636, 909, 910,
+1209, 1210, 1212, 1213, 1265
+tuple-like , 757, 761, 818, 819,820, 820–822,
+824, 825, 827–831, 1332
+uniform_random_bit_generator, 1442, 1443,
+1510, 1566, 1567, 1740,1743, 1743
+unsigned_integral, 630, 630, 1185, 1743, 1906,
+1908
+unstoppable_token, 2155,2157, 2157, 2160,
+2314
+uses-nonqualification-pointer-conversion ,
+1255, 1256
+valid-completion-for , 2276, 2276
+valid-completion-signatures , 2269, 2271,
+2272, 2289, 2290, 2323
+valid-specialization , 2280, 2280–2282
+view, 1238, 1240–1244, 1250,1251, 1251–1253,
+1255, 1260, 1261, 1278, 1280–1282, 1284,
+1286, 1289–1299, 1303–1305, 1309–1311,
+1313, 1314, 1316–1319, 1321, 1328–1331,
+1333, 1337–1339, 1341, 1343, 1344, 1347,
+1348, 1350, 1352, 1353, 1355, 1358–1360,
+1363, 1365–1367, 1369, 1370, 1374, 1375,
+1378, 1379, 1381–1383, 1388, 1390,
+1394–1398, 1401, 1660
+viewable_range, 1239,1253, 1253, 1276
+weakly-equality-comparable-with , 612, 613,
+635, 635, 1186, 1239, 1264, 1266, 1269
+weakly_incrementable, 1169, 1178,1184,
+1184–1186, 1195, 1197, 1217, 1227, 1239,
+1264, 1266, 1269, 1270, 1428–1432, 1438,
+1440–1442, 1451–1453, 1455–1458, 1489,
+1490, 1492, 1494, 1495, 1503, 1505, 1507,
+1509, 1510, 1524, 1526, 1529, 1531, 1532,
+1534, 1549, 1558
+zip-is-common , 1343, 1343
+Index of library concepts © ISO/IEC
+2627
+
+===== PAGE 2639 =====
+
+Dxxxx
+Index of implementation-defined behavior
+The entries in this index are rough descriptions; exact specifications are at the indicated page in the general
+text.
+#pragma, 530
+additional execution policies supported by parallel
+algorithms, 1411, 1412
+additional file_type enumerators for file systems
+supporting additional types of file, 2124
+additional formats fortime_get::do_get_date,
+1647
+additional supported forms of preprocessing
+directive, 514
+algorithms for producing the standard random
+number distributions, 1763
+alignment, 68
+alignment additional values, 68
+alignment of bit-fields within a class object, 328
+allocation of bit-fields within a class object, 328
+argument values to construct
+ios_base::failure, 2021
+assignability of placeholder objects, 915
+barrier phrase completion withoutwait, 2241
+behavior of any function instd::meta for
+implementation-specific constructs, 772
+behavior of iostream classes when
+traits::pos_type is notstreampos or
+when traits::off_type is not
+streamoff, 2004
+behavior of non-standard attributes, 285
+bits in a byte, 64
+character encoding scheme of the environment,
+1659
+choice of larger or smaller value of
+floating-point-literal, 26
+code unit sequence forconditional-escape-sequence,
+29
+column value ofsource_location::current,
+599
+conversions between pointers and integers, 147
+conversions ofbasic_mask from/to
+implementation-specific vector types,
+1907
+conversions ofbasic_vec from/to
+implementation-specific vector types,
+1887
+converting function pointer to object pointer and
+vice versa, 147
+default ABI tag forbasic_vec and basic_mask,
+1872
+default configuration of a pool, 726
+default next_buffer_size for a
+monotonic_buffer_resource, 727
+default number of buckets inunordered_map,
+1047
+default number of buckets in
+unordered_multimap, 1054, 1055
+default number of buckets in
+unordered_multiset, 1066
+default number of buckets inunordered_set,
+1060, 1061
+default semantics ofis_debugger_present, 658
+default value forleast_max_value template
+parameter ofcounting_semaphore,
+2238
+defining main in freestanding environment, 97
+definition and meaning of__STDC__, 533, 2414
+definition and meaning of__STDC_VERSION__,
+533
+definition ofNULL, 570, 2414
+derived type fortypeid, 144
+determination of kind of input file, 13
+determination of places and identification of
+headers during header search, 517
+determination of places and identification of
+resources during bracket resource search,
+519
+diagnostic message, 4
+dynamic initialization of static inline variables
+before main, 99
+dynamic initialization of static variables before
+main, 98, 99
+dynamic initialization of thread-local variables
+before entry, 99
+effect of calling associated Laguerre polynomials
+with n >= 128 or m >= 128, 1811
+effect of calling associated Legendre polynomials
+with l >= 128, 1811
+effect of callingbasic_filebuf::setbuf with
+nonzero arguments, 2089
+effect of callingbasic_filebuf::sync when a
+get area exists, 2090
+effect of callingbasic_streambuf::setbuf with
+nonzero arguments, 2067
+effect of calling cylindrical Bessel functions of the
+first kind withnu >= 128, 1812
+effect of calling cylindrical Neumann functions
+with nu >= 128, 1813
+effect of calling Hermite polynomials withn >=
+128, 1814
+Index of implementation-defined behavior © ISO/IEC
+2628
+
+===== PAGE 2640 =====
+
+Dxxxx
+effect of callingios_base::sync_with_stdio
+after any input or output operation on
+standard streams, 2015
+effect of calling irregular modified cylindrical
+Bessel functions withnu >= 128, 1812
+effect of calling Laguerre polynomials withn >=
+128, 1814
+effect of calling Legendre polynomials withl >=
+128, 1814
+effect of calling regular modified cylindrical Bessel
+functions withnu >= 128, 1812
+effect of calling spherical associated Legendre
+functions withl >= 128, 1815
+effect of calling spherical Bessel functions withn
+>= 128, 1815
+effect of calling spherical Neumann functions with
+n >= 128, 1815
+effect ofconditional-escape-sequence on encoding
+state, 29
+effect offilesystem::copy, 2136
+effect on C locale of callinglocale::global, 1623
+encoding assumption forformat width
+computation, 1670
+error_category for errors originating outside the
+operating system, 566
+evaluation semantic used for the evaluation of a
+contract assertion, 101
+exception type whenrandom_device constructor
+fails, 1760
+exception type when
+random_device::operator() fails, 1760
+exception type whenshared_ptr constructor
+fails, 691, 692
+exceptions thrown by standard library functions
+that have a potentially-throwing
+exception specification, 566
+exit status, 588
+extended signed integer types, 81
+file type of the file argument of
+filesystem::status, 2146
+floating-point conversion subrank, 89
+format of diagnostic created byassert macro’s
+expression, 641
+formatted character sequence generated by
+time_put::do_put in C locale, 1649
+forward progress guarantees for implicit threads of
+parallel algorithms (if not defined for
+thread), 1410
+growth factor formonotonic_buffer_resource,
+728
+growth factor ofhive active block capacities, 990
+headers for freestanding implementation, 547
+how random_device::operator() generates
+values, 1760
+how text_encoding objects are determined to be
+representative of a character encoding
+scheme, 1658
+how the set of importable headers is determined,
+297
+interactive device, 12
+interpretation of the path character sequence with
+format path::auto_format, 2123
+invalid pointer value in the context of an
+evaluation, 87
+largest supported value to configure the largest
+allocation satisfied directly by a pool,
+726
+largest supported value to configure the maximum
+number of blocks to replenish a pool, 726
+last enumerator oflaunch, 2243
+linkage of entities between C++ and other
+languages, 284
+linkage ofmain, 97
+linkage of names from C standard library, 549
+locale names, 1622
+locales with Unicode support for chrono types,
+1994
+lvalue-to-rvalue conversion of an invalid pointer
+value, 109
+mapping from name to catalog when calling
+messages::do_open, 1655
+mapping header name to header or external
+source file, 19
+mapping input file characters to translation
+character set, 13, 2392
+mapping of pointer to integer, 147
+mapping to message when calling
+messages::do_get, 1655
+maximum depth of recursive template
+instantiations, 474
+maximum number of repeated evaluations of a
+contract assertion, 103
+maximum size of an allocated object, 154, 593
+maximum width forvec and mask, 1872
+meaning of’, \, /*, or// in aq-char-sequence or
+an h-char-sequence, 19
+meaning ofasm declaration, 281
+meaning of attribute declaration, 203
+meaning of dot-dot inroot-directory, 2110
+method by which contract termination occurs, 102
+nesting limit for#include directives, 518
+NTCTS inbasic_ostream<charT, traits>&
+operator<<(nullptr_t), 2051
+number of placeholders for bind expressions, 898,
+915
+number of threads in a program under a
+freestanding implementation, 92
+operating system on which implementation
+depends, 2102
+operator<< for large extended floating-point
+types, 2050
+Index of implementation-defined behavior © ISO/IEC
+2629
+
+===== PAGE 2641 =====
+
+Dxxxx
+operator>> for large extended floating-point
+types, 2038
+ordinary and wide literal encodings, 15
+parameters tomain, 97
+passing argument of class type through ellipsis,
+140
+presence and meaning ofnative_handle_type
+and native_handle, 2151
+presence and value of__STDC_ISO_10646__, 533
+rank of extended signed integer type, 88
+replaceability of the contract-violation handler,
+103
+representation of floating-point types, 83
+required alignment foratomic_ref type’s
+operations, 2179, 2182, 2184, 2187
+resource limits on a message catalog, 1656
+result of evaluatinghash<indirect<T,
+Allocator>>()(i) if i is valueless, 714
+result offilesystem::file_size, 2141
+result of inexact floating-point conversion, 111,
+146
+resuming a coroutine on a different execution
+agent, 618
+return type ofcartesian_product_view::size,
+1389
+return types for<stdbit.h> functions, 936
+return value ofbad_alloc::what, 593
+return value ofbad_any_cast::what, 864
+return value ofbad_array_new_length::what,
+593
+return value ofbad_cast::what, 596
+return value ofbad_exception::what, 601
+return value ofbad_expected_access<E>::what,
+871
+return value of
+bad_expected_access<void>::what,
+872
+return value ofbad_function_call::what, 916
+return value ofbad_optional_access::what,
+848
+return value ofbad_typeid::what, 596
+return value ofbad_variant_access::what, 863
+return value ofbad_weak_ptr::what, 689
+return value ofchar_traits<char16_t>::eof,
+1573
+return value ofchar_traits<char32_t>::eof,
+1573
+return value ofchar_traits<char8_t>::eof,
+1572
+return value ofexception::what, 601
+return value ofsource_location::current, 598
+return value oftype_info::name(), 596
+search for resources during quote resource search,
+519
+search for source files during source file search, 517
+semantics of an access through a volatile glvalue,
+212
+semantics ofbreakpoint, 658
+semantics of linkage specifiers, 282
+semantics of parallel algorithms invoked with
+implementation-defined execution
+policies, 1411
+semantics of
+stacktrace_entry::native_handle,
+653
+semantics oftoken parameter and default token
+value used byrandom_device
+constructors, 1760
+sequence of places searched for a header, 519
+set of aliases of a known registered character
+encoding, 1658
+set of character container types that iostreams
+templates can be instantiated for, 1620,
+2004
+set of enabledbasic_mask<Bytes, Abi>
+specializations, 1907
+set of enabledbasic_vec<T, Abi>
+specializations, 1887
+set of integer-class types, 1184
+signedness ofchar, 213
+size in bits of a resource, 519
+sizeof applied to fundamental types other than
+char, signed char, andunsigned
+char, 152
+stack unwinding before invocation of
+std::terminate, 508, 511
+stacktrace_entry::native_handle_type, 652
+startup and termination in freestanding
+environment, 97
+strict total order over pointer values, 5
+string resulting from__func__, 260
+support for extended alignments, 68
+support formodule-import-declarations with
+non-C++ language linkage, 282
+supported forms of #embed prefix parameters,
+514
+supported input files, 13
+supported multibyte character encoding rules,
+1572
+supported root-names in addition to any operating
+system dependentroot-names, 2109, 2110
+text of__DATE__ when date of translation is not
+available, 531
+text of__TIME__ when time of translation is not
+available, 532
+the contents provided in thecomment field of
+contract_violation, 605
+the contents provided in thelocation field of
+contract_violation, 605
+the result ofdisplay_string_of and
+u8display_string_of, 777
+Index of implementation-defined behavior © ISO/IEC
+2630
+
+===== PAGE 2642 =====
+
+Dxxxx
+the result ofstd::meta::has_parent for entities
+with neither C nor C++ language linkage,
+783
+the value returned by
+std::meta::source_location_of, 777
+threads and program points at which deferred
+dynamic initialization is performed, 98,
+99
+total ordering of all types, 615
+transcoding of a formatted path whencharT and
+path::value_type differ, 2122
+treatment of whitespace when processing a
+#embed directive, 520
+treatment of whitespace when processing a
+#include directive, 518
+type of a directory-like file, 2130, 2132
+type ofarray::const_iterator, 975
+type ofarray::iterator, 975
+type ofbasic_stacktrace::const_iterator,
+653
+type ofbasic_stacktrace::difference_type,
+654
+type ofbasic_stacktrace::size_type, 654
+type ofbasic_string::const_iterator, 1587
+type ofbasic_string::iterator, 1587
+type ofbasic_string_view::const_iterator,
+1575, 1578
+type ofdefault_random_engine, 1759
+type ofdeque::const_iterator, 978
+type ofdeque::difference_type, 978
+type ofdeque::iterator, 978
+type ofdeque::size_type, 978
+type offlat_map::const_iterator, 1080
+type offlat_map::iterator, 1080
+type offlat_multimap::const_iterator, 1092
+type offlat_multimap::iterator, 1092
+type offlat_multiset::const_iterator, 1107
+type offlat_multiset::iterator, 1107
+type offlat_set::const_iterator, 1100
+type offlat_set::iterator, 1100
+type offorward_list::const_iterator, 983
+type offorward_list::difference_type, 983
+type offorward_list::iterator, 983
+type offorward_list::size_type, 983
+type of inplace_vector::const_iterator, 1015
+type ofinplace_vector::iterator, 1015
+type oflist::const_iterator, 999
+type oflist::difference_type, 999
+type oflist::iterator, 999
+type oflist::size_type, 999
+type ofmap::const_iterator, 1022
+type ofmap::difference_type, 1022
+type ofmap::iterator, 1022
+type ofmap::size_type, 1022
+type ofmatch_results::const_iterator, 1711
+type ofmultimap::const_iterator, 1028
+type ofmultimap::difference_type, 1028
+type ofmultimap::iterator, 1028
+type ofmultimap::size_type, 1028
+type ofmultiset::const_iterator, 1037
+type ofmultiset::difference_type, 1037
+type ofmultiset::iterator, 1037
+type ofmultiset::size_type, 1037
+type ofnative_handle_type, 2084
+type ofptrdiff_t, 570
+type ofranges::cartesian_product_-
+view::iterator ::difference_type,
+1391
+type ofregex_constants::error_type, 1701
+type ofregex_constants::match_flag_type,
+1700
+type ofset::const_iterator, 1033
+type ofset::difference_type, 1033
+type ofset::iterator, 1033
+type ofset::size_type, 1033
+type ofsize_t, 570
+type ofspan::iterator, 1116, 1121
+type ofstd::bfloat16_t, 587
+type ofstd::float128_t, 587
+type ofstd::float16_t, 587
+type ofstd::float32_t, 587
+type ofstd::float64_t, 587
+type ofstreamoff, 2004
+type ofsyntax_option_type, 1699
+type oftext_encoding::aliases_-
+view::begin(), 1660
+type oftext_encoding::aliases_view::end(),
+1660
+type ofunordered_map::const_iterator, 1042
+type ofunordered_map::const_local_-
+iterator, 1042
+type of unordered_map::difference_type, 1042
+type ofunordered_map::iterator, 1042
+type ofunordered_map::local_iterator, 1042
+type ofunordered_map::size_type, 1042
+type ofunordered_multimap::const_iterator,
+1050
+type ofunordered_multimap::const_local_it-
+erator, 1050
+type ofunordered_multimap::difference_-
+type, 1050
+type ofunordered_multimap::iterator, 1050
+type ofunordered_multimap::local_iterator,
+1050
+type ofunordered_multimap::size_type, 1050
+type ofunordered_multiset::const_iterator,
+1062
+type ofunordered_multiset::const_local_it-
+erator, 1062
+type ofunordered_multiset::difference_-
+type, 1062
+type ofunordered_multiset::iterator, 1062
+type ofunordered_multiset::local_iterator,
+1062
+type ofunordered_multiset::size_type, 1062
+type ofunordered_set::const_iterator, 1057
+type ofunordered_set::const_local_-
+iterator, 1057
+Index of implementation-defined behavior © ISO/IEC
+2631
+
+===== PAGE 2643 =====
+
+Dxxxx
+type of unordered_set::difference_type, 1057
+type ofunordered_set::iterator, 1057
+type ofunordered_set::local_iterator, 1057
+type ofunordered_set::size_type, 1057
+type ofvector::const_iterator, 1006
+type ofvector::difference_type, 1006
+type ofvector::iterator, 1006
+type ofvector::size_type, 1006
+type ofvector<bool>::const_iterator, 1011
+type ofvector<bool>::const_pointer, 1011
+type ofvector<bool>::difference_type, 1011
+type ofvector<bool>::iterator, 1011
+type ofvector<bool>::pointer, 1011
+type ofvector<bool>::size_type, 1011
+underlying type for enumeration, 269
+underlying type ofbool, 83
+underlying type ofchar, 82
+underlying type ofwchar_t, 83
+unit suffix whenPeriod::type is micro, 1934
+value of bit-field that cannot represent
+assigned value, 172
+initializer, 245
+value ofconditional-escape-sequence, 25
+value ofctype<char>::table_size, 1628
+value offuture_errc::broken_promise, 2243
+value offuture_errc::future_already_-
+retrieved, 2243
+value offuture_errc::no_state, 2243
+value offuture_errc::promise_already_-
+satisfied, 2243
+value ofhas-attribute-expression for non-standard
+attributes, 515
+value ofhas-attribute-expression for standard
+attributes, 515
+value of non-encodable character literal or
+multicharacter literal, 24
+value ofpow(0,0), 1737
+value of result of inexact integer to floating-point
+conversion, 112
+value ofsimd::uninit_element, 1875
+value ofsimd::zero_element, 1875
+value ofstd::execution::counting_-
+scope::max_associations, 2343
+value ofstd::execution::simple_counting_-
+scope::max_associations, 2341
+value representation of pointer types, 87
+values of a trivially copyable type, 80
+values of variousATOMIC_..._LOCK_FREE macros,
+2178
+whether <cfenv> functions can be used to manage
+floating-point status, 1731
+whether a freestanding deleted function is a
+deleted function, 543
+whether a givenatomic type’s operations are
+always lock free, 2189, 2190, 2193, 2196,
+2200, 2203, 2206
+whether a givenatomic_ref type’s operations are
+always lock free, 2179, 2182, 2184, 2187
+whether a parameter is destroyed when the
+function exits or at the end of the
+enclosing full-expression, 139
+whether an expression is a core constant
+expression, 177
+whether basic_spanbuf’s move source is empty
+after a move, 2078
+whether contract_violation has a virtual
+destructor, 605
+whether declarations of some members of a closure
+type Q are Q-members-of-eligible, 788
+whether freestanding default replaceable global
+allocation functions satisfy required
+behavior, 589
+whether freestanding implementations replace the
+statement of a trivial infinite loop with a
+call to the function
+std::this_thread::yield, 190
+whether functions from Annex K of the C
+standard library are declared when C++
+headers are included, 546
+whether locale object is global or per-thread, 1619
+whether pragmaFENV_ACCESS is supported, 1731
+whether rand may introduce a data race, 1784
+whether runtime-undefined behavior results in the
+expression being deemed non-constant, 7
+whether sequence pointers are copied by
+basic_filebuf move constructor, 2086
+whether sequence pointers are copied by
+basic_stringbuf move constructor,
+2063
+whether sequence pointers are initialized to null
+pointers, 2062
+whether source file inclusion of importable header
+is replaced withimport directive, 518
+whether stack is unwound before invoking the
+function std::terminate when a
+noexcept specification is violated, 511
+whether the implementation is a hardened
+implementation, 11
+whether the implementation is hosted or
+freestanding, 547
+whether the sources for module units and header
+units on which the current translation
+unit has an interface dependency are
+required to be available during
+translation, 14
+whether the thread that executesmain and the
+threads created bystd::thread or
+std::jthread provide concurrent
+forward progress guarantees, 96
+whether time_get::do_get_year accepts
+two-digit year numbers, 1647
+whether values are rounded or truncated to the
+required precision when converting
+between time_t values andtime_point
+objects, 1939
+Index of implementation-defined behavior © ISO/IEC
+2632
+
+===== PAGE 2644 =====
+
+Dxxxx
+which functions in the C++ standard library may
+be recursively reentered, 565
+which non-standard-layout objects containing no
+data are considered empty, 66
+which scalar types have unique object
+representations, 754
+width of integral type, 82
+Index of implementation-defined behavior © ISO/IEC
+2633

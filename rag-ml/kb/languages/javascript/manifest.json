@@ -2,7 +2,7 @@
   "language": "javascript",
   "displayName": "JavaScript",
   "defaultVersion": "ES202x",
-  "docRoots": ["docs", "raw/ecma262"],
+  "docRoots": ["docs"],
   "sources": [
     {
       "sourceId": "ecma-262",

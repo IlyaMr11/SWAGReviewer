@@ -83,3 +83,20 @@ sourceUrl: https://docs.python.org/3/download.html
 ```
 
 В MVP можно начать с подхода (1), потому что он проще и не требует парсинга front matter.
+
+## Быстрый старт (получить тексты под коммит)
+
+1) Скачать сырьё (zip/pdf/html) в gitignored папки:
+
+```bash
+./rag-ml/kb/pull-docs.sh
+```
+
+2) Собрать “commit-ready” тексты в `docs/<sourceId>/...`:
+
+```bash
+python3 -m pip install -r rag-ml/requirements.txt
+./rag-ml/kb/build-docs.py
+```
+
+После этого можно коммитить `rag-ml/kb/languages/*/docs/**` (а `raw/` и `downloads/` останутся локально и не попадут в git).

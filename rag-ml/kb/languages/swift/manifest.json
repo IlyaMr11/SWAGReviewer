@@ -2,7 +2,7 @@
   "language": "swift",
   "displayName": "Swift",
   "defaultVersion": "5.x",
-  "docRoots": ["docs", "raw/swift-book"],
+  "docRoots": ["docs"],
   "sources": [
     {
       "sourceId": "swift-book",
