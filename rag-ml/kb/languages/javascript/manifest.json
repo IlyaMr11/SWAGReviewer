@@ -1,0 +1,16 @@
+{
+  "language": "javascript",
+  "displayName": "JavaScript",
+  "defaultVersion": "ES202x",
+  "docRoots": ["docs", "raw/ecma262"],
+  "sources": [
+    {
+      "sourceId": "ecma-262",
+      "title": "ECMAScript Language Specification (ECMA-262)",
+      "url": "https://ecma-international.org/publications-and-standards/standards/ecma-262/",
+      "format": "pdf/html",
+      "license": "ECMA"
+    }
+  ],
+  "notes": "Для MVP обычно полезнее best practices (security, async, errors) чем полный стандарт."
+}

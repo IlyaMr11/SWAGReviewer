@@ -1,0 +1,16 @@
+{
+  "language": "html",
+  "displayName": "HTML",
+  "defaultVersion": "living-standard",
+  "sources": [
+    {
+      "sourceId": "todo-html-standard",
+      "title": "HTML Living Standard (WHATWG)",
+      "url": "TODO",
+      "format": "html",
+      "license": "TODO"
+    }
+  ],
+  "notes": "Для MVP полезнее guidance по безопасности (XSS) и best practices, чем весь стандарт."
+}
+

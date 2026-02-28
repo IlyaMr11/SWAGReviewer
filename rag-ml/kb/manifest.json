@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "updatedAt": "2026-02-28",
+  "languages": [
+    { "slug": "go", "displayName": "Go", "path": "languages/go/manifest.json" },
+    { "slug": "python", "displayName": "Python", "path": "languages/python/manifest.json" },
+    { "slug": "java", "displayName": "Java", "path": "languages/java/manifest.json" },
+    { "slug": "cpp", "displayName": "C++", "path": "languages/cpp/manifest.json" },
+    { "slug": "javascript", "displayName": "JavaScript", "path": "languages/javascript/manifest.json" },
+    { "slug": "typescript", "displayName": "TypeScript", "path": "languages/typescript/manifest.json" },
+    { "slug": "dart", "displayName": "Dart", "path": "languages/dart/manifest.json" },
+    { "slug": "swift", "displayName": "Swift", "path": "languages/swift/manifest.json" },
+    { "slug": "html", "displayName": "HTML", "path": "languages/html/manifest.json" },
+    { "slug": "css", "displayName": "CSS", "path": "languages/css/manifest.json" }
+  ]
+}
+

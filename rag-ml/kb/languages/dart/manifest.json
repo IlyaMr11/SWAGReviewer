@@ -1,0 +1,16 @@
+{
+  "language": "dart",
+  "displayName": "Dart",
+  "defaultVersion": "TODO",
+  "sources": [
+    {
+      "sourceId": "todo-dart-lang",
+      "title": "Dart language tour / docs",
+      "url": "TODO",
+      "format": "html",
+      "license": "TODO"
+    }
+  ],
+  "notes": "Для MVP полезны темы: async/await, null safety, collections, style guide."
+}
+

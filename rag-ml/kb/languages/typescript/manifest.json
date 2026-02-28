@@ -1,0 +1,16 @@
+{
+  "language": "typescript",
+  "displayName": "TypeScript",
+  "defaultVersion": "TODO",
+  "sources": [
+    {
+      "sourceId": "todo-ts-handbook",
+      "title": "TypeScript Handbook (single page / downloads)",
+      "url": "TODO",
+      "format": "html",
+      "license": "TODO"
+    }
+  ],
+  "notes": "Сфокусируйся на типовых ошибках типов/any/unknown, narrowing, публичные API типы."
+}
+

@@ -1,0 +1,16 @@
+{
+  "language": "go",
+  "displayName": "Go",
+  "defaultVersion": "TODO",
+  "sources": [
+    {
+      "sourceId": "todo-go-spec",
+      "title": "Go Language Specification (single page)",
+      "url": "TODO",
+      "format": "html",
+      "license": "TODO"
+    }
+  ],
+  "notes": "Добавь сюда курированные доки/выдержки в docs/*.md."
+}
+

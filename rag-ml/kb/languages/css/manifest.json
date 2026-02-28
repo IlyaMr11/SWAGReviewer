@@ -1,0 +1,16 @@
+{
+  "language": "css",
+  "displayName": "CSS",
+  "defaultVersion": "TODO",
+  "sources": [
+    {
+      "sourceId": "todo-css-specs",
+      "title": "CSS specs / docs",
+      "url": "TODO",
+      "format": "html",
+      "license": "TODO"
+    }
+  ],
+  "notes": "Для MVP полезнее best practices (architecture, performance) и доступность."
+}
+

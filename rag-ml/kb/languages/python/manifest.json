@@ -1,0 +1,16 @@
+{
+  "language": "python",
+  "displayName": "Python",
+  "defaultVersion": "3.x",
+  "docRoots": ["docs", "raw/python-docs-text"],
+  "sources": [
+    {
+      "sourceId": "python-docs-text",
+      "title": "Python docs (plain text archive)",
+      "url": "https://docs.python.org/3/download.html",
+      "format": "zip",
+      "license": "PSF"
+    }
+  ],
+  "notes": "Для MVP можно держать извлеченный текст из python-*-docs-text.zip, разбитый на главы."
+}

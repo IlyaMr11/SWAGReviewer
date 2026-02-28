@@ -1,0 +1,16 @@
+{
+  "language": "java",
+  "displayName": "Java",
+  "defaultVersion": "TODO",
+  "sources": [
+    {
+      "sourceId": "todo-java-docs",
+      "title": "Java documentation (pick official sources + license-safe extracts)",
+      "url": "TODO",
+      "format": "html",
+      "license": "TODO"
+    }
+  ],
+  "notes": "Важно: у Java источники и лицензии могут отличаться. Для MVP можно начать с best practices и security guidance."
+}
+

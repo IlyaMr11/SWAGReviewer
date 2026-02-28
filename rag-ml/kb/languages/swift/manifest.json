@@ -1,0 +1,23 @@
+{
+  "language": "swift",
+  "displayName": "Swift",
+  "defaultVersion": "5.x",
+  "docRoots": ["docs", "raw/swift-book"],
+  "sources": [
+    {
+      "sourceId": "swift-book",
+      "title": "The Swift Programming Language (book)",
+      "url": "https://docs.swift.org/swift-book/",
+      "format": "html/epub",
+      "license": "Apple (see source)"
+    },
+    {
+      "sourceId": "swift-book-repo",
+      "title": "Swift Book sources (GitHub)",
+      "url": "https://github.com/swiftlang/swift-book",
+      "format": "git/zip",
+      "license": "See repo"
+    }
+  ],
+  "notes": "Для MVP можно взять только разделы про concurrency, memory, common pitfalls."
+}

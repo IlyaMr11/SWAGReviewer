@@ -1,0 +1,16 @@
+{
+  "language": "cpp",
+  "displayName": "C++",
+  "defaultVersion": "draft",
+  "docRoots": ["docs"],
+  "sources": [
+    {
+      "sourceId": "cpp-working-draft-pdf",
+      "title": "C++ Working Draft (PDF)",
+      "url": "https://timsong-cpp.github.io/cppwp/draft.pdf",
+      "format": "pdf",
+      "license": "ISO draft (see source)"
+    }
+  ],
+  "notes": "PDF лучше заранее конвертировать в текст и разложить по темам (memory, UB, concurrency). В MVP можно оставить PDF как reference и добавить курированные .md главы."
+}

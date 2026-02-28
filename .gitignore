@@ -6,3 +6,10 @@ backend/dist/
 frontend/node_modules/
 frontend/dist/
 *.tsbuildinfo
+
+# RAG/ML knowledge base working dirs (keep repo light)
+rag-ml/kb/**/raw/
+rag-ml/kb/**/downloads/
+rag-ml/kb/**/build/
+rag-ml/kb/**/.cache/
+rag-ml/kb/**/index/
